@@ -13,15 +13,19 @@
 
 <style>
 
-  .nav-item {
+  .nav-link {
     font-family: 'Proxima Nova',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(225, 127, 62);
+    color: #FFFFFF;
   }
   .social {
     margin: 10px;
     fill: lightsalmon;
   }
 
+  .header-navbar{
+    background: linear-gradient(.25turn, #FEC9A8, rgba(0,0,0,0) 100%);
+    /* background-color: #FEC9A8; */
+  }
   .header-1 {
   font-family: Baskerville, serif;
   font-size: 70px;
@@ -95,7 +99,7 @@ a {
 
   <body class="portfolio-page fltrs-fx-fade fltrs-scale top-page">
     <!-- This is my nav bar -->
-    <nav class="header-navbar navbar-expand-sm navbar navbar-with-menu navbar-hide-on-scroll fixed-top navbar-light navbar-shadow navbar-border" style="background: linear-gradient(to bottom, rgba(255, 160, 122, 0.791), rgba(0,0,0,0) 100%)">
+    <nav class="header-navbar navbar-expand-sm navbar navbar-hide-on-scroll fixed-top fixed-bottomnavbar-light navbar-shadow navbar-border">
       <div class="collapse navbar-collapse"  id="navbarsExampleDefault" style="margin-left: 10px; margin-bottom: 5px;">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -117,7 +121,7 @@ a {
     </nav>
 
   <!-- This is my intro -->
-    <div class='container'>
+    <div class='container-fluid'>
       <div class='row justify-content-center'>
         <div class='col-9'>
           <h1 class="header-1" style="margin-top: 200px">Hi! I'm Cynthia Tu.</h1>
@@ -155,7 +159,7 @@ a {
     </div>
 
 <!-- This is where my projects will go -->
-    <div class='container' style="margin-top: 100px">
+    <div class='container-fluid' style="margin-top: 100px">
       <!-- This is one row -->
       <div class="row justify-content-center" style="margin-top: 40px">
 
@@ -206,7 +210,7 @@ a {
       
     </div>
     <footer class="footer">
-      <div class="container text-center" style="margin-top: 150px; margin-bottom: 100px; font-family: Georgia, 'Times New Roman', Times, serif;">
+      <div class="container-fluid text-center" style="margin-top: 150px; margin-bottom: 100px; font-family: Georgia, 'Times New Roman', Times, serif;">
         <div class="row justify-content-center">
           <div class="col-md-3 text-center">
             <div>Cynthia Tu<br>Data Journalist</div>
