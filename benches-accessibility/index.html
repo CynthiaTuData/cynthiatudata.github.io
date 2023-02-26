@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css2?family=Proxima+Nova' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    
+    <title>How far from a bench?</title>
+    
+    <link rel="icon" href="grammy-awards-clipart.png">
+  </head>
+
+  <style>
+	/* These are the styles for ai2html */
+	
+	#g-bench-map-Artboard_1, #g-bench-map-mobile, #g-map-desktop, #g-map-mobile {
+		display: none;
+	}
+
+	@media (max-width: 490px) {
+		#g-bench-map-mobile {
+			display: block;
+		}
+		#g-map-mobile {
+			display: block;
+		}
+	}
+
+	@media (min-width: 490px) and (max-width: 620px) {
+		#g-bench-map-mobile {
+			display: block;
+		}
+		#g-map-mobile {
+			display: block;
+		}
+	}
+
+	@media (min-width: 620px)  {
+		#g-bench-map-Artboard_1 {
+			display: block;
+		}
+		#g-map-desktop {
+			display: block;
+		}
+	}
+
+</style>
+<!-- content stylesheet -->
+<style>
+  .container{
+    max-width: 900px;
+    display:flex;
+  }
+
+  .nav-item {
+    font-family: 'Proxima Nova',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 145, 85);
+    font-size: large;
+  }
+
+  .social {
+    margin: 10px;
+    fill: lightsalmon;
+  }
+
+
+  .head-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .headline {
+    font-family: 'Outfit', 'Open Sans', 'Times New Roman', Times, serif;
+    font-size: 5vw;
+    font-style: heavy;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 5.5vw;
+    text-shadow : 0 0 32px black
+  }
+
+  .deck {
+    font-family: 'Outfit','Open Sans', 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    line-height: 2.5vw;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .byline {
+    font-family:  sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 18px;
+    color: #757474;
+    margin-top: 80px;
+
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .datetime {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 16px;
+    color: #757474;
+    margin-bottom: 2 px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .content {
+    font-family: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: light;
+    font-weight: light;
+    letter-spacing: normal;
+    line-height: 30px;
+    color: #4e4d4d;
+    margin-top: 30px;
+    margin-bottom: 2 px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .data-diary{
+    color:#757474;
+  }
+
+  .banner{
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner.image{
+    opacity:95%;
+    border: 0px;
+    width:100%;
+    height: 100%;
+    position: relative;
+    filter: blur(4px);
+  }
+  
+  a:hover {
+   opacity:  70%;
+  }
+
+  a:link {
+    color:rgb(241, 147, 109);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a {
+      color:rgb(241, 147, 109) ;
+  }
+
+  p{
+    margin-top:5px;
+  }
+
+  h5{
+    color: rgb(6, 5, 5);
+  }
+
+  .footer {
+    margin-top: 150px; 
+    margin-bottom: 100px; 
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
+    color: rgb(103, 103, 103);
+  }
+
+  figcaption {
+    font-family: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 12px;
+    font-style: light;
+    font-weight: light;
+    letter-spacing: normal;
+    line-height: 20px;
+    color: #838282;
+    margin-top: 2px
+
+  }
+
+</style>
+<!-- chart style sheet -->
+<style>
+  p.chart-head{
+    font-family: 'Source Serif Pro', sans-serif, 'Open Sans', 'Helvetica Neue';
+    font-size: 30px;
+    font-style: bold;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 32px;
+    color: #000000;
+    max-width: 800px;
+    margin-top: 30px;
+    margin-bottom: 0 px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    margin-top:0px;
+  }
+
+  p.chart-deck{
+    font-family: 'Source Serif Pro', sans-serif, 'Open Sans', 'Helvetica Neue';
+    font-size: 18px;
+    font-style: regular;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+    color: #4a4a4a;
+    max-width: 800px;
+    margin-bottom: 0 px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    margin-top:0px;
+  }
+
+  p.chart-note{
+    font-family: 'Source Sans Pro', sans-serif, 'Open Sans', 'Helvetica Neue';
+    font-size: 15px;
+    font-style: light;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 16px;
+    color: #3e3e3e;
+    max-width: 800px;
+    margin-bottom: 0 px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    margin-top:2px;
+  }
+
+  p.chart-source{
+    font-family: 'Source Sans Pro', sans-serif, 'Open Sans', 'Helvetica Neue';
+    font-size: 14px;
+    font-style: regular;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 14px;
+    color: #4a4a4a;
+    max-width: 800px;
+    margin-bottom: 0 px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
+    margin-top:0px;
+  }
+
+  /* span.white{
+    color:rgb(208,28,139);
+  }
+
+  span.non-white{
+    color:rgb(77,172,38);
+  } */
+</style>
+
+  <body style="background-color: antiquewhite;">
+    <!-- This is my nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white">
+      <div class="collapse navbar-collapse"  id="navbarsExampleDefault" style="margin-left: 10px">
+        <a class="navbar-brand" href="https://xinyitu.github.io/">
+          <img src="../tab-icon.png" width="30" height="30" class="d-inline-block align-top" style="margin-left: 5%;" alt="homepage">
+        </a>
+      </div>
+    </nav> 
+
+    <!-- Feature photo here -->
+    <!-- This is my headline --> 
+    <div class="banner">
+      	<img class ="banner image" src="img/banner.jpeg" alt="a bench under nyc's skyline">
+      	<div class="head-text">
+        	<p class="headline"><strong>City That Never Sits</strong></p>
+        	<p class="deck">Pedestrians beware!</p>
+      	</div>
+    </div>
+
+    <!-- This is the byline -->
+    <div class="container-fluid">
+        <div class="row byline justify-content-center">
+            <div class="col-sm-7">
+                <p>By Cynthia Tu</p>
+            </div>
+        </div>
+    </div>
+
+      <!-- This is the time stamp -->
+    <div class="container-fluid">
+        <div class="row datetime justify-content-center">
+            <div class="col-sm-7">
+                <p>Published: Feburary 26, 2023</p>
+            </div>
+        </div>
+    </div>
+    <!-- This is my content -->
+    <div class="container-fluid">
+        <div class="row content justify-content-center">
+            <div class="col-sm-7">
+              	<p>“I’m not a New Yorker, I’m a New Yorker,” said the late, great David Bowie. “I’m a New Yorker, I’m a New Yorker.”</p>
+				<p></p>
+				<p></p>
+				<br>
+				<p class="chart-head">Where are public street benches located?</p>
+				<p class="chart-deck">Pedestrian-use street bench locations in New York City.</p>
+				<!-- My first chart -->
+
+				<!-- Generated by ai2html v0.102.0 - 2023-02-26 14:00 -->
+				<!-- ai file: bench map.ai -->
+				<style media="screen,print">
+					#g-bench-map-box ,
+					#g-bench-map-box .g-artboard {
+						margin:0 auto;
+					}
+					#g-bench-map-box p {
+						margin:0;
+					}
+					#g-bench-map-box .g-aiAbs {
+						position:absolute;
+					}
+					#g-bench-map-box .g-aiImg {
+						position:absolute;
+						top:0;
+						display:block;
+						width:100% !important;
+					}
+					#g-bench-map-box .g-aiSymbol {
+						position: absolute;
+						box-sizing: border-box;
+					}
+					#g-bench-map-box .g-aiPointText p { white-space: nowrap; }
+					#g-bench-map-Artboard_1 {
+						position:relative;
+						overflow:hidden;
+					}
+					#g-bench-map-Artboard_1 p {
+						font-family:Source Sans Pro;
+						font-weight:200;
+						line-height:19px;
+						filter:alpha(opacity=100);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+						opacity:1;
+						letter-spacing:0em;
+						font-size:16px;
+						text-align:left;
+						color:rgb(69,69,69);
+						text-transform:none;
+						padding-bottom:0;
+						padding-top:0;
+						mix-blend-mode:normal;
+						font-style:normal;
+						height:auto;
+						position:static;
+					}
+					#g-bench-map-Artboard_1 .g-pstyle0 {
+						text-align:center;
+					}
+					#g-bench-map-Artboard_1 .g-pstyle1 {
+						line-height:18px;
+						filter:alpha(opacity=82);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+						opacity:0.8235;
+						font-size:15px;
+						color:rgb(102,194,165);
+					}
+					#g-bench-map-Artboard_1 .g-pstyle2 {
+						line-height:18px;
+						filter:alpha(opacity=82);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+						opacity:0.8235;
+						font-size:15px;
+						color:rgb(141,160,203);
+					}
+					#g-bench-map-Artboard_1 .g-pstyle3 {
+						line-height:18px;
+						filter:alpha(opacity=82);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+						opacity:0.8235;
+						font-size:15px;
+						color:rgb(252,141,98);
+					}
+					#g-bench-map-mobile {
+						position:relative;
+						overflow:hidden;
+					}
+					#g-bench-map-mobile p {
+						font-family:Source Sans Pro;
+						font-weight:200;
+						line-height:17px;
+						filter:alpha(opacity=100);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+						opacity:1;
+						letter-spacing:0em;
+						font-size:14px;
+						text-align:left;
+						color:rgb(69,69,69);
+						text-transform:none;
+						padding-bottom:0;
+						padding-top:0;
+						mix-blend-mode:normal;
+						font-style:normal;
+						height:auto;
+						position:static;
+					}
+					#g-bench-map-mobile .g-pstyle0 {
+						line-height:14px;
+						filter:alpha(opacity=82);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+						opacity:0.8235;
+						font-size:12px;
+						color:rgb(102,194,165);
+					}
+					#g-bench-map-mobile .g-pstyle1 {
+						line-height:14px;
+						filter:alpha(opacity=82);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+						opacity:0.8235;
+						font-size:12px;
+						color:rgb(141,160,203);
+					}
+					#g-bench-map-mobile .g-pstyle2 {
+						line-height:14px;
+						filter:alpha(opacity=82);
+						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+						opacity:0.8235;
+						font-size:12px;
+						color:rgb(252,141,98);
+					}
+
+				</style>
+
+				<div id="g-bench-map-box" class="ai2html">
+
+					<!-- Artboard: Artboard_1 -->
+					<div id="g-bench-map-Artboard_1" class="g-artboard" style="width:650px; height:600px;" data-aspect-ratio="1.083" data-min-width="650">
+				<div style=""></div>
+						<img id="g-bench-map-Artboard_1-img" class="g-aiImg" alt="" src="img/bench-map-Artboard_1.png"/>
+						<div id="g-ai0-1" class="g-annotation g-aiAbs" style="top:8.8333%;left:28.1716%;margin-left:-11.8462%;width:23.6923%;">
+							<p class="g-pstyle0">There are 2,200+ public street benches across NYC&rsquo;s 5 boroughs.</p>
+						</div>
+						<div id="g-ai0-2" class="g-annotation g-aiAbs" style="top:35%;left:7.8253%;width:14.7692%;">
+							<p class="g-pstyle1">backed bench</p>
+						</div>
+						<div id="g-ai0-3" class="g-annotation g-aiAbs" style="top:40.5%;left:7.8253%;width:14.3077%;">
+							<p class="g-pstyle2">backless bench </p>
+						</div>
+						<div id="g-ai0-4" class="g-annotation g-aiAbs" style="top:46%;left:7.8253%;width:11.8462%;">
+							<p class="g-pstyle3">leaning bar </p>
+						</div>
+					</div>
+
+					<!-- Artboard: mobile -->
+					<div id="g-bench-map-mobile" class="g-artboard" style="max-width: 350px;max-height: 450px" data-aspect-ratio="0.778" data-min-width="0" data-max-width="649">
+				<div style="padding: 0 0 128.5714% 0;"></div>
+						<img id="g-bench-map-mobile-img" class="g-aiImg" alt="" src="img/bench-map-mobile.png"/>
+						<div id="g-ai1-1" class="g-annotation g-aiAbs" style="top:12.2222%;left:8.8791%;width:21.7143%;">
+							<p class="g-pstyle0">backed bench</p>
+						</div>
+						<div id="g-ai1-2" class="g-annotation g-aiAbs" style="top:16.6667%;left:9.1241%;width:20.8571%;">
+							<p class="g-pstyle1">backless bench </p>
+						</div>
+						<div id="g-ai1-3" class="g-annotation g-aiAbs" style="top:20.8889%;left:9.1241%;width:17.4286%;">
+							<p class="g-pstyle2">leaning bar </p>
+						</div>
+						<div id="g-ai1-4" class="g-annotation g-aiAbs" style="top:80.6667%;left:44.1774%;width:45.7143%;">
+							<p>There are 2,200+ public street benches across NYC&rsquo;s 5 boroughs.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- End ai2html - 2023-02-26 14:00 -->
+				<!-- End of first chart -->
+
+				<p class="chart-note"><em>
+					* Street pedestrian benches installed by the NYC Department of Transportation. Data collected in 2022.
+				</em></p>
+				<p class="chart-source">
+					Map: Cynthia Tu · Source: NYC DOT · <a href="https://github.com/XinyiTu/grammy-awards">Get the Data</a></p>
+				<br>
+				<p></p>
+				<p>yayyy text bench woohoo</p>
+				<p></p>
+				<br>
+				<p class="chart-head">In some NYC neighborhoods, it's tough to be seated</p>
+				<p class="chart-deck">Public street bench locations in New York City.</p>
+
+				<!-- This this my second chart -->
+
+				<!-- Generated by ai2html v0.102.0 - 2023-02-26 13:52 -->
+				<!-- ai file: map.ai -->
+				<style media="screen,print">
+				#g-map-box ,
+				#g-map-box .g-artboard {
+					margin:0 auto;
+				}
+				#g-map-box p {
+					margin:0;
+				}
+				#g-map-box .g-aiAbs {
+					position:absolute;
+				}
+				#g-map-box .g-aiImg {
+					position:absolute;
+					top:0;
+					display:block;
+					width:100% !important;
+				}
+				#g-map-box .g-aiSymbol {
+					position: absolute;
+					box-sizing: border-box;
+				}
+				#g-map-box .g-aiPointText p { white-space: nowrap; }
+				#g-map-desktop {
+					position:relative;
+					overflow:hidden;
+				}
+				#g-map-desktop p {
+					font-family:Source Sans Pro;
+					font-weight:200;
+					line-height:17px;
+					filter:alpha(opacity=100);
+					-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+					opacity:1;
+					letter-spacing:0em;
+					font-size:14px;
+					text-align:left;
+					color:rgb(69,69,69);
+					text-transform:none;
+					padding-bottom:0;
+					padding-top:0;
+					mix-blend-mode:normal;
+					font-style:normal;
+					height:auto;
+					position:static;
+				}
+				#g-map-desktop .g-pstyle0 {
+					text-align:center;
+				}
+				#g-map-mobile {
+					position:relative;
+					overflow:hidden;
+				}
+				#g-map-mobile p {
+					font-family:Source Sans Pro;
+					font-weight:200;
+					line-height:13px;
+					filter:alpha(opacity=100);
+					-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+					opacity:1;
+					letter-spacing:0em;
+					font-size:11px;
+					text-align:left;
+					color:rgb(69,69,69);
+					text-transform:none;
+					padding-bottom:0;
+					padding-top:0;
+					mix-blend-mode:normal;
+					font-style:normal;
+					height:auto;
+					position:static;
+				}
+
+				</style>
+
+				<div id="g-map-box" class="ai2html">
+
+				<!-- Artboard: desktop -->
+				<div id="g-map-desktop" class="g-artboard" style="width:650px; height:600px;" data-aspect-ratio="1.083" data-min-width="650">
+				<div style=""></div>
+					<img id="g-map-desktop-img" class="g-aiImg" alt="" src="img/map-desktop.png"/>
+					<div id="g-ai0-1" class="g-annotation g-aiAbs" style="top:3.3333%;left:4.1119%;width:23.2308%;">
+						<p>Travel time (minute)</p>
+					</div>
+					<div id="g-ai0-2" class="g-annotation g-aiAbs" style="top:9.6667%;left:4.2597%;margin-left:-1.6923%;width:3.3846%;">
+						<p class="g-pstyle0">0</p>
+					</div>
+					<div id="g-ai0-3" class="g-annotation g-aiAbs" style="top:9.6667%;left:9.2609%;margin-left:-1.7692%;width:3.5385%;">
+						<p class="g-pstyle0">5</p>
+					</div>
+					<div id="g-ai0-4" class="g-annotation g-aiAbs" style="top:9.6667%;left:14.1512%;margin-left:-2.0769%;width:4.1538%;">
+						<p class="g-pstyle0">10</p>
+					</div>
+					<div id="g-ai0-5" class="g-annotation g-aiAbs" style="top:9.6667%;left:19.2981%;margin-left:-2.3077%;width:4.6154%;">
+						<p class="g-pstyle0">15</p>
+					</div>
+					<div id="g-ai0-6" class="g-annotation g-aiAbs" style="top:9.6667%;left:24.8166%;margin-left:-3.0769%;width:6.1538%;">
+						<p class="g-pstyle0">30</p>
+					</div>
+					<div id="g-ai0-7" class="g-annotation g-aiAbs" style="top:9.6667%;left:30.3551%;margin-left:-3.0769%;width:6.1538%;">
+						<p class="g-pstyle0">60+</p>
+					</div>
+				</div>
+
+				<!-- Artboard: mobile -->
+				<div id="g-map-mobile" class="g-artboard" style="max-width: 350px;max-height: 450px" data-aspect-ratio="0.778" data-min-width="0" data-max-width="649">
+				<div style="padding: 0 0 128.5714% 0;"></div>
+					<img id="g-map-mobile-img" class="g-aiImg" alt="" src="img/map-mobile.png"/>
+					<div id="g-ai1-1" class="g-annotation g-aiAbs" style="top:1.5556%;left:3.2137%;width:37.1429%;">
+						<p>Travel time</p>
+						<p>(minute)</p>
+					</div>
+					<div id="g-ai1-2" class="g-annotation g-aiAbs" style="top:8.6667%;left:7.6365%;width:6%;">
+						<p>0</p>
+					</div>
+					<div id="g-ai1-3" class="g-annotation g-aiAbs" style="top:14.4444%;left:7.6365%;width:6.2857%;">
+						<p>5</p>
+					</div>
+					<div id="g-ai1-4" class="g-annotation g-aiAbs" style="top:21.3333%;left:7.3507%;width:7.4286%;">
+						<p>10</p>
+					</div>
+					<div id="g-ai1-5" class="g-annotation g-aiAbs" style="top:28.4444%;left:7.3507%;width:8.2857%;">
+						<p>15</p>
+					</div>
+					<div id="g-ai1-6" class="g-annotation g-aiAbs" style="top:35.1111%;left:7.3507%;width:11.1429%;">
+						<p>30</p>
+					</div>
+					<div id="g-ai1-7" class="g-annotation g-aiAbs" style="top:41.1111%;left:7.3507%;width:11.1429%;">
+						<p>60+</p>
+					</div>
+				</div>
+
+				</div>
+
+				<!-- End ai2html - 2023-02-26 13:52 -->
+				<!-- End of second chart -->
+				<p class="chart-note"><em>
+					* Street pedestrian benches installed by the NYC Department of Transportation. Data collected in 2022.
+				</em></p>
+				<p class="chart-source">
+					Map: Cynthia Tu · Source: NYC DOT, Google Maps API, NHGIS · <a href="https://github.com/XinyiTu/grammy-awards">Get the Data</a></p>
+				<br>
+				<p>more text</p>
+				<p>even more text</p>
+                <p class="data-diary"><em><a href="https://github.com/XinyiTu/grammy-awards" target="_blank">Learn more</a> about the data analysis in this story.</em></p>
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- This is my footer -->
+    <footer class="footer">
+      <div class="container-fluid text-center" >
+        <div class="row justify-content-center">
+          <div class="col-md-3 text-center">
+            <div>Cynthia Tu<br>Data Journalist</div>
+          </div>
+      
+          <div class="col-md-3 text-center">
+            <div>646 801 7087</div>
+            <div>xt2274@columbia.edu</div>
+          </div>
+          <div class="col-md-3 text-center">
+            <address>New York, New York<br>10027</address>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
+
