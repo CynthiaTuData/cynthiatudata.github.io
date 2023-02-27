@@ -16,9 +16,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     
-    <title>How far from a bench?</title>
+    <title>Benches in NYC</title>
     
-    <link rel="icon" href="grammy-awards-clipart.png">
+    <link rel="icon" href="../tab-icon.png">
   </head>
 
   <style>
@@ -72,7 +72,7 @@
 
 
   .container{
-    max-width: 900px;
+    max-width: 80%;
     display:flex;
 	flex-direction: column;
   }
@@ -215,7 +215,10 @@
     line-height: 20px;
     color: #838282;
     margin-top: 2px
+  }
 
+  .multi-col{
+	border: 15px solid transparent;
   }
 
 </style>
@@ -305,16 +308,17 @@
     <!-- This is my headline --> 
     <div class="banner">
       	<img class ="banner image" src="img/banner.jpeg" alt="a bench under nyc's skyline">
+		  <figcaption>Source: Unsplash</figcaption>
       	<div class="head-text col">
         	<p class="headline"><strong>Please Be Seated</strong></p>
-        	<p class="deck">New York City's public benches</p>
+        	<p class="deck">Analyzing the accessibility of New York City's public benches</p>
       	</div>
     </div>
 
     <!-- This is the byline -->
     <div class="container container-fluid">
         <div class="row byline justify-content-center">
-            <div class="col">
+            <div class="col-9">
                 <p>By Cynthia Tu</p>
             </div>
         </div>
@@ -323,7 +327,7 @@
       <!-- This is the time stamp -->
     <div class="container container-fluid">
         <div class="row datetime justify-content-center">
-            <div class="col">
+            <div class="col-9">
                 <p>Published: Feburary 26, 2023</p>
             </div>
         </div>
@@ -331,11 +335,45 @@
     <!-- This is my content -->
     <div class="container container-fluid flexible">
         <div class="row content justify-content-center">
-            <div class="col">
-              	<p>“I’m not a New Yorker, I’m a New Yorker,” said the late, great David Bowie. “I’m a New Yorker, I’m a New Yorker.”</p>
-				<p></p>
-				<p></p>
+            <div class="col-9">
+				<p>
+					New York City is one of America's most walkable and least car-dependent cities. 
+					However, the city's public benches are not as accessible as they should be.
+				</p>
+				<p>
+					Nearly 1.2 million New Yorkers are older than 65 years old, and the number has increased drastically in the past decade.
+					As the city's population ages, the need for accessible benches in public places, especially streetside benches, becomes more urgent.
+				</p>
+				<p>
+					New York City’s Department of Transportation manages 2,200+ public benches (CityBenches) across five boroughs.
+					 There are three types of benches: backed bench, backless bench, and leaning bars. 
+				</p>
+			</div>
+		</div>
+		<div class="row content flexible justify-content-center">
+			<div class="col-lg-4 col-md-12 justify-content-center" style="margin: auto; display: block;">
+				<img  class = "img-fluid rounded" src="img/backed.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
+					<figcaption>Backed CityBench<br>Source: NYC DOT</figcaption>
+			</div>
+			<div class="col-lg-4 col-md-12 justify-content-center" style="margin: auto; display: block;">
+				<img  class = "img-fluid rounded" src="img/backless.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
+					<figcaption>Backless CityBench<br>Source: NYC DOT</figcaption>
+			</div>
+			<div class="col-lg-4 col-md-12 justify-content-center" style="margin: auto; display: block;">
+				<img class = "img-fluid rounded" src="img/leaning-bar.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
+					<figcaption>Leaning Bar<br>Source: NYC DOT</figcaption>
+			</div>
+		</div>
+		<div class="row content justify-content-center">
+			<div class="col-9">
 				<br>
+				<p>
+					Leaning bars: a new addtion to the CityBench family since 2017, has been critized for its lack of accessibility for older folks as well as people with moving disabilities.
+				</p>
+			</div>
+		</div>
+		<div class="row content justify-content-center">
+			<div class="col-9">
 				<p class="chart-head text-center">Where are public street benches located?</p>
 				<p class="chart-deck text-center">Pedestrian-use street bench locations in New York City.</p>
 				<!-- My first chart -->
@@ -370,7 +408,7 @@
 					}
 					#g-bench-map-Artboard_1 p {
 						font-family:Source Sans Pro;
-						font-weight:400;
+						font-weight:300;
 						line-height:19px;
 						filter:alpha(opacity=100);
 						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -420,7 +458,7 @@
 					}
 					#g-bench-map-mobile p {
 						font-family:Source Sans Pro;
-						font-weight:400;
+						font-weight:300;
 						line-height:17px;
 						filter:alpha(opacity=100);
 						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -513,12 +551,19 @@
 				<p class="chart-source text-center">
 					Map: Cynthia Tu · Source: NYC DOT · <a href="https://github.com/XinyiTu/grammy-awards">Get the Data</a></p>
 				<br>
-				<p></p>
-				<p>yayyy text bench woohoo</p>
-				<p></p>
+				<p>
+					Addtionally, streetside benches are not evenly distributed across the city. In some neighborhoods, it's tough to find a place to sit; in others, you can find a bench on every block.
+				</p>
+				<p>
+					In order to see which neighborhoods are the most bench-deficient, I plotted the distance between each census tract's geographic population center and the nearest bench location.
+					Using Google Maps' distance API, I calculated the walking distance and the time of these trips.
+				</p>
+				<p>
+					Leaning bars are excluded from this analysis because they are not designed for sitting.
+				</p>
 				<br>
 				<p class="chart-head text-center">In some NYC neighborhoods, it's tough to be seated</p>
-				<p class="chart-deck text-center">How far does it take to get to the nearest bench*?</p>
+				<p class="chart-deck text-center">How far does it take to walk to the nearest bench* from each census tract?</p>
 
 				<!-- This this my second chart -->
 
@@ -668,16 +713,26 @@
 				<p class="chart-source text-center">
 					Map: Cynthia Tu · Source: NYC DOT, Google Maps API, NHGIS · <a href="https://github.com/XinyiTu/grammy-awards">Get the Data</a></p>
 				<br>
-				<p>more text</p>
+				<p>
+					As the map shows, residents in most neighborhoods in Manhattan can easily find a bench within 5 minutes of walking. Brooklyn and West Bronx are also relatively well-served.
+				</p>
+				<p>
+					Queens and Staten Island are the most bench-deserted boroughs, with the majority of the population living in areas where it would take more than 10 minutes to walk to the nearest bench.
+				</p>
 			</div>
 		</div>
 
 		<div class="row content flexible">
-			<div class="col-xxl-4 col-md-12">
-				<p>Midtown Manhattan, New York city's tourist hotspot, is a "bench desert."</p>
+			<div class="col-xl-4 col-lg-12 col-sm-12 multi-col">
+				<p>
+					However, Midtown Manhattan, New York city's tourist hotspot, turns out to be a "bench desert" compared to other places in Manhattan.
+				</p>
 				<p>It would take over 10 minutes to walk to the nearest pedestrian bench in this area.</p>
-			</div>
-			<div class="col-xxl-8 col-md-12">
+				<p>
+					Although some leaning bars are installed in Midtown Manhattan, they are not enough to meet the needs of the residents, not to mention those with speical needs.
+				</p>
+			</div>	
+			<div class="col-xl-8 col-lg-12 col-sm-12 multi-col">
 				<!-- My third chart -->
 
 				<!-- Generated by ai2html v0.102.0 - 2023-02-26 17:46 -->
@@ -918,9 +973,21 @@
 			</div>
 		</div>
 
-		<div class="row content">
-			<div class="col">
-				<p>even more text</p>
+		<div class="row content justify-content-center">
+			<div class="col-9">
+				<p>
+					To make New York a truly accessible and aged-friendly city, simply adding more seatings on its streets is not enough.
+					The city's urban planner must also incorporate more welcoming and comfortable seating options for the elderly.
+				</p>
+				<p>
+					For instance, benches made of metal are not as comfortable as wooden benches under the hot summer sun and in winter.
+					Benches with back support are also more comfortable than backless benches.
+					It is also worth considering the height of the bench, which is important for the elderly to sit down and get up.
+				</p>
+				<p>
+					You can request a seat for your neighborhood by <a href="https://www.nyc.gov/html/dot/html/pedestrians/citybench.shtml">contacting the Department of Transportation</a>.
+				</p>
+				<br>
                 <p class="data-diary"><em><a href="https://github.com/XinyiTu/grammy-awards" target="_blank">Learn more</a> about the data analysis in this story.</em></p>
             </div>
         </div>
