@@ -28,7 +28,7 @@
 		display: none;
 	}
 
-	@media (max-width: 730px) {
+	@media (max-width: 650px) {
 		#g-bench-map-_Recovered_-mobile {
 			display: block;
 		}
@@ -40,20 +40,7 @@
 		}
 	}
 
-	@media (min-width: 730px) and (max-width: 980px) {
-		#g-bench-map-_Recovered_-Artboard_1 {
-			display: block;
-		}
-		#g-map-desktop {
-			display: block;
-		}
-		#g-manhattan-desktop {
-			display: block;
-		}
-	}
-
-
-	@media screen and (min-width: 980px)  {
+	@media screen and (min-width: 650px)  {
 		#g-bench-map-_Recovered_-Artboard_1 {
 			display: block;
 		}
@@ -72,7 +59,7 @@
 
 
   .container{
-    max-width: 80%;
+    max-width: 1200px;
     display:flex;
 	flex-direction: column;
   }
@@ -217,7 +204,9 @@
     line-height: 20px;
     color: #838282;
     margin-top: 2px
+
   }
+
 
 </style>
 <!-- chart style sheet -->
@@ -310,7 +299,7 @@
     <div class="banner">
       	<img class ="banner image" src="img/banner.png" alt="map of nyc's bench locations">
 		  <!-- <figcaption>Source: Unsplash</figcaption> -->
-      	<div class="head-text justify-content-center">
+      	<div class="head-text ">
         	<p class="headline"><strong>Please Be Seated</strong></p>
         	<p class="deck">Accessibility of New York City's public benches</p>
       	</div>
@@ -352,16 +341,16 @@
 			</div>
 		</div>
 		<div class="row content flexible justify-content-center">
-			<div class="col-lg-4 col-md-12 justify-content-center">
-				<img  class = "img-fluid rounded" src="img/backed.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
+			<div class="col-xl-3 col-lg-12 center">
+				<img  class = "img-fluid rounded" src="img/backed.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto; text-align: center;">
 					<figcaption>Backed CityBench<br>Source: NYC DOT</figcaption>
 			</div>
-			<div class="col-lg-4 col-md-12" style="margin: auto;">
-				<img  class = "img-fluid rounded" src="img/backless.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
+			<div class="col-xl-3 col-lg-12 center">
+				<img  class = "img-fluid rounded" src="img/backless.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto; text-align: center;">
 					<figcaption>Backless CityBench<br>Source: NYC DOT</figcaption>
 			</div>
-			<div class="col-lg-4 col-md-12" style="margin: auto;">
-				<img class = "img-fluid rounded" src="img/leaning-bar.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
+			<div class="col-xl-3 col-lg-12 center">
+				<img class = "img-fluid rounded" src="img/leaning-bar.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto; text-align: center;">
 					<figcaption>Leaning Bar<br>Source: NYC DOT</figcaption>
 			</div>
 		</div>
