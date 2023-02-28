@@ -24,12 +24,12 @@
   <style>
 	/* These are the styles for ai2html */
 	
-	#g-bench-map-Artboard_1, #g-bench-map-mobile, #g-map-desktop, #g-map-mobile, #g-manhattan-Artboard_3, #g-manhattan-desktop {
+	#g-bench-map-_Recovered_-Artboard_1, #g-bench-map-_Recovered_-mobile, #g-map-desktop, #g-map-mobile, #g-manhattan-Artboard_3, #g-manhattan-desktop {
 		display: none;
 	}
 
 	@media (max-width: 730px) {
-		#g-bench-map-mobile {
+		#g-bench-map-_Recovered_-mobile {
 			display: block;
 		}
 		#g-map-mobile {
@@ -41,10 +41,10 @@
 	}
 
 	@media (min-width: 730px) and (max-width: 980px) {
-		#g-bench-map-mobile {
+		#g-bench-map-_Recovered_-Artboard_1 {
 			display: block;
 		}
-		#g-map-mobile {
+		#g-map-desktop {
 			display: block;
 		}
 		#g-manhattan-desktop {
@@ -54,7 +54,7 @@
 
 
 	@media screen and (min-width: 980px)  {
-		#g-bench-map-Artboard_1 {
+		#g-bench-map-_Recovered_-Artboard_1 {
 			display: block;
 		}
 		#g-map-desktop {
@@ -91,28 +91,28 @@
 
   .head-text{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+	left: 30%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #4e4d4d;
   }
 
   .headline {
     font-family: 'Source Serif Pro', 'Outfit', 'Open Sans', 'Times New Roman', Times, serif;
     font-size: 5vw;
     font-style: normal;
-    font-weight:400;
+    font-weight:300;
     letter-spacing: normal;
-    line-height: 5.5vw;
-    text-shadow : 0 0 32px black
+    line-height: 5.2vw;
+    text-shadow : 0 0 5.2vw rgba(184, 184, 184, 0.8);
   }
 
   .deck {
     font-family: 'Source Serif Pro','Open Sans', 'Times New Roman', Times, serif;
     font-size: 2vw;
-    line-height: 2.5vw;
+    line-height: 2.2vw;
 	font-weight:300;
-	text-shadow : 0 0 32px black
+	text-shadow : 0 0 2.2vw rgba(184, 184, 184, 0.8);
     /* margin-left: 150px;
     margin-right: 150px; */
   }
@@ -169,12 +169,12 @@
   }
 
   .banner.image{
-    opacity:95%;
+    opacity:100%;
     border: 0px;
     width:100%;
     height: 100%;
     position: relative;
-    filter: blur(4px);
+    filter: blur(0.8px);
   }
   
   a:hover {
@@ -215,10 +215,6 @@
     line-height: 20px;
     color: #838282;
     margin-top: 2px
-  }
-
-  .multi-col{
-	border: 15px solid transparent;
   }
 
 </style>
@@ -307,18 +303,18 @@
     <!-- Feature photo here -->
     <!-- This is my headline --> 
     <div class="banner">
-      	<img class ="banner image" src="img/banner.jpeg" alt="a bench under nyc's skyline">
-		  <figcaption>Source: Unsplash</figcaption>
-      	<div class="head-text col">
+      	<img class ="banner image" src="img/banner.png" alt="map of nyc's bench locations">
+		  <!-- <figcaption>Source: Unsplash</figcaption> -->
+      	<div class="head-text justify-content-center">
         	<p class="headline"><strong>Please Be Seated</strong></p>
-        	<p class="deck">Analyzing the accessibility of New York City's public benches</p>
+        	<p class="deck">Accessibility of New York City's public benches</p>
       	</div>
     </div>
 
     <!-- This is the byline -->
     <div class="container container-fluid">
         <div class="row byline justify-content-center">
-            <div class="col-9">
+            <div class="col-md-9 col-sm-12">
                 <p>By Cynthia Tu</p>
             </div>
         </div>
@@ -327,15 +323,15 @@
       <!-- This is the time stamp -->
     <div class="container container-fluid">
         <div class="row datetime justify-content-center">
-            <div class="col-9">
+            <div class="col-md-9 col-sm-12">
                 <p>Published: Feburary 26, 2023</p>
             </div>
         </div>
     </div>
     <!-- This is my content -->
-    <div class="container container-fluid flexible">
-        <div class="row content justify-content-center">
-            <div class="col-9">
+    <div class="container container-fluid">
+        <div class="row content flexible justify-content-center">
+            <div class="col-md-9 col-sm-12">
 				<p>
 					New York City is one of America's most walkable and least car-dependent cities. 
 					However, the city's public benches are not as accessible as they should be.
@@ -351,198 +347,203 @@
 			</div>
 		</div>
 		<div class="row content flexible justify-content-center">
-			<div class="col-lg-4 col-md-12 justify-content-center" style="margin: auto; display: block;">
+			<div class="col-lg-4 col-md-12" style="margin: auto;">
 				<img  class = "img-fluid rounded" src="img/backed.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
 					<figcaption>Backed CityBench<br>Source: NYC DOT</figcaption>
 			</div>
-			<div class="col-lg-4 col-md-12 justify-content-center" style="margin: auto; display: block;">
+			<div class="col-lg-4 col-md-12" style="margin: auto;">
 				<img  class = "img-fluid rounded" src="img/backless.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
 					<figcaption>Backless CityBench<br>Source: NYC DOT</figcaption>
 			</div>
-			<div class="col-lg-4 col-md-12 justify-content-center" style="margin: auto; display: block;">
+			<div class="col-lg-4 col-md-12" style="margin: auto;">
 				<img class = "img-fluid rounded" src="img/leaning-bar.png" alt="map of nyc with bench locations" style="max-width:280px; height:auto;">
 					<figcaption>Leaning Bar<br>Source: NYC DOT</figcaption>
 			</div>
 		</div>
-		<div class="row content justify-content-center">
-			<div class="col-9">
+		<div class="row content flexible justify-content-center">
+			<div class="col-md-9 col-sm-12">
 				<br>
 				<p>
 					Leaning bars: a new addtion to the CityBench family since 2017, has been critized for its lack of accessibility for older folks as well as people with moving disabilities.
 				</p>
 			</div>
 		</div>
-		<div class="row content justify-content-center">
-			<div class="col-9">
+		<div class="row content flexible justify-content-center">
+			<div class="col-md-9 col-sm-12">
 				<p class="chart-head text-center">Where are public street benches located?</p>
-				<p class="chart-deck text-center">Pedestrian-use street bench locations in New York City.</p>
+				<p class="chart-deck text-center">2,000+ pedestrian-use street bench locations in New York City.</p>
 				<!-- My first chart -->
 
-				<!-- Generated by ai2html v0.102.0 - 2023-02-26 14:00 -->
-				<!-- ai file: bench map.ai -->
-				<style media="screen,print">
-					#g-bench-map-box ,
-					#g-bench-map-box .g-artboard {
-						margin:0 auto;
-					}
-					#g-bench-map-box p {
-						margin:0;
-					}
-					#g-bench-map-box .g-aiAbs {
-						position:absolute;
-					}
-					#g-bench-map-box .g-aiImg {
-						position:absolute;
-						top:0;
-						display:block;
-						width:100% !important;
-					}
-					#g-bench-map-box .g-aiSymbol {
-						position: absolute;
-						box-sizing: border-box;
-					}
-					#g-bench-map-box .g-aiPointText p { white-space: nowrap; }
-					#g-bench-map-Artboard_1 {
-						position:relative;
-						overflow:hidden;
-					}
-					#g-bench-map-Artboard_1 p {
-						font-family:Source Sans Pro;
-						font-weight:300;
-						line-height:19px;
-						filter:alpha(opacity=100);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-						opacity:1;
-						letter-spacing:0em;
-						font-size:16px;
-						text-align:left;
-						color:rgb(69,69,69);
-						text-transform:none;
-						padding-bottom:0;
-						padding-top:0;
-						mix-blend-mode:normal;
-						font-style:normal;
-						height:auto;
-						position:static;
-					}
-					#g-bench-map-Artboard_1 .g-pstyle0 {
-						text-align:center;
-					}
-					#g-bench-map-Artboard_1 .g-pstyle1 {
-						line-height:18px;
-						filter:alpha(opacity=82);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
-						opacity:0.8235;
-						font-size:15px;
-						color:rgb(102,194,165);
-					}
-					#g-bench-map-Artboard_1 .g-pstyle2 {
-						line-height:18px;
-						filter:alpha(opacity=82);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
-						opacity:0.8235;
-						font-size:15px;
-						color:rgb(141,160,203);
-					}
-					#g-bench-map-Artboard_1 .g-pstyle3 {
-						line-height:18px;
-						filter:alpha(opacity=82);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
-						opacity:0.8235;
-						font-size:15px;
-						color:rgb(252,141,98);
-					}
-					#g-bench-map-mobile {
-						position:relative;
-						overflow:hidden;
-					}
-					#g-bench-map-mobile p {
-						font-family:Source Sans Pro;
-						font-weight:300;
-						line-height:17px;
-						filter:alpha(opacity=100);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-						opacity:1;
-						letter-spacing:0em;
-						font-size:14px;
-						text-align:left;
-						color:rgb(69,69,69);
-						text-transform:none;
-						padding-bottom:0;
-						padding-top:0;
-						mix-blend-mode:normal;
-						font-style:normal;
-						height:auto;
-						position:static;
-					}
-					#g-bench-map-mobile .g-pstyle0 {
-						line-height:14px;
-						filter:alpha(opacity=82);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
-						opacity:0.8235;
-						font-size:12px;
-						color:rgb(102,194,165);
-					}
-					#g-bench-map-mobile .g-pstyle1 {
-						line-height:14px;
-						filter:alpha(opacity=82);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
-						opacity:0.8235;
-						font-size:12px;
-						color:rgb(141,160,203);
-					}
-					#g-bench-map-mobile .g-pstyle2 {
-						line-height:14px;
-						filter:alpha(opacity=82);
-						-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
-						opacity:0.8235;
-						font-size:12px;
-						color:rgb(252,141,98);
-					}
+				
+<!-- Generated by ai2html v0.102.0 - 2023-02-27 20:43 -->
+<!-- ai file: bench map [Recovered].ai -->
+<style media="screen,print">
+	#g-bench-map-_Recovered_-box ,
+	#g-bench-map-_Recovered_-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-bench-map-_Recovered_-box p {
+		margin:0;
+	}
+	#g-bench-map-_Recovered_-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-bench-map-_Recovered_-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-bench-map-_Recovered_-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-bench-map-_Recovered_-box .g-aiPointText p { white-space: nowrap; }
+	#g-bench-map-_Recovered_-Artboard_1 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-bench-map-_Recovered_-Artboard_1 p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(69,69,69);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-bench-map-_Recovered_-Artboard_1 .g-pstyle0 {
+		text-align:center;
+	}
+	#g-bench-map-_Recovered_-Artboard_1 .g-pstyle1 {
+		line-height:18px;
+		filter:alpha(opacity=82);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+		opacity:0.8235;
+		font-size:15px;
+		color:rgb(102,194,165);
+	}
+	#g-bench-map-_Recovered_-Artboard_1 .g-pstyle2 {
+		line-height:18px;
+		filter:alpha(opacity=82);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+		opacity:0.8235;
+		font-size:15px;
+		color:rgb(141,160,203);
+	}
+	#g-bench-map-_Recovered_-Artboard_1 .g-pstyle3 {
+		line-height:18px;
+		filter:alpha(opacity=82);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+		opacity:0.8235;
+		font-size:15px;
+		color:rgb(252,141,98);
+	}
+	#g-bench-map-_Recovered_-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-bench-map-_Recovered_-mobile p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:18px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:15px;
+		text-align:left;
+		color:rgb(69,69,69);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-bench-map-_Recovered_-mobile .g-pstyle0 {
+		text-align:center;
+	}
+	#g-bench-map-_Recovered_-mobile .g-pstyle1 {
+		line-height:14px;
+		filter:alpha(opacity=82);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+		opacity:0.8235;
+		font-size:12px;
+		color:rgb(102,194,165);
+	}
+	#g-bench-map-_Recovered_-mobile .g-pstyle2 {
+		line-height:14px;
+		filter:alpha(opacity=82);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+		opacity:0.8235;
+		font-size:12px;
+		color:rgb(141,160,203);
+	}
+	#g-bench-map-_Recovered_-mobile .g-pstyle3 {
+		line-height:14px;
+		filter:alpha(opacity=82);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=82);
+		opacity:0.8235;
+		font-size:12px;
+		color:rgb(252,141,98);
+	}
 
-				</style>
+</style>
 
-				<div id="g-bench-map-box" class="ai2html">
+<div id="g-bench-map-_Recovered_-box" class="ai2html">
 
-					<!-- Artboard: Artboard_1 -->
-					<div id="g-bench-map-Artboard_1" class="g-artboard" style="width:650px; height:600px;" data-aspect-ratio="1.083" data-min-width="650">
-				<div style=""></div>
-						<img id="g-bench-map-Artboard_1-img" class="g-aiImg" alt="" src="img/bench-map-Artboard_1.png"/>
-						<div id="g-ai0-1" class="g-annotation g-aiAbs" style="top:8.8333%;left:28.1716%;margin-left:-11.8462%;width:23.6923%;">
-							<p class="g-pstyle0">There are 2,200+ public street benches across NYC&rsquo;s 5 boroughs.</p>
-						</div>
-						<div id="g-ai0-2" class="g-annotation g-aiAbs" style="top:35%;left:7.8253%;width:14.7692%;">
-							<p class="g-pstyle1">backed bench</p>
-						</div>
-						<div id="g-ai0-3" class="g-annotation g-aiAbs" style="top:40.5%;left:7.8253%;width:14.3077%;">
-							<p class="g-pstyle2">backless</p>
-						</div>
-						<div id="g-ai0-4" class="g-annotation g-aiAbs" style="top:46%;left:7.8253%;width:11.8462%;">
-							<p class="g-pstyle3">leaning bar</p>
-						</div>
-					</div>
+	<!-- Artboard: Artboard_1 -->
+	<div id="g-bench-map-_Recovered_-Artboard_1" class="g-artboard" style="width:650px; height:600px;" data-aspect-ratio="1.083" data-min-width="650">
+<div style=""></div>
+		<img id="g-bench-map-_Recovered_-Artboard_1-img" class="g-aiImg" alt="" src="img/bench-map-Artboard_1.png"/>
+		<div id="g-ai0-1" class="g-annotation g-aiAbs" style="top:13.1667%;left:32.739%;margin-left:-13.3077%;width:26.6154%;">
+			<p class="g-pstyle0">In 2016, the first batch of leaning bars were installed along 34th St and 1st Ave.</p>
+		</div>
+		<div id="g-ai0-2" class="g-annotation g-aiAbs" style="top:35%;left:7.8253%;width:14.7692%;">
+			<p class="g-pstyle1">backed bench</p>
+		</div>
+		<div id="g-ai0-3" class="g-annotation g-aiAbs" style="top:40.5%;left:7.8253%;width:14.3077%;">
+			<p class="g-pstyle2">backless bench </p>
+		</div>
+		<div id="g-ai0-4" class="g-annotation g-aiAbs" style="top:46%;left:7.8253%;width:11.8462%;">
+			<p class="g-pstyle3">leaning bar </p>
+		</div>
+	</div>
 
-					<!-- Artboard: mobile -->
-					<div id="g-bench-map-mobile" class="g-artboard" style="max-width: 350px;max-height: 450px" data-aspect-ratio="0.778" data-min-width="0" data-max-width="649">
-				<div style="padding: 0 0 128.5714% 0;"></div>
-						<img id="g-bench-map-mobile-img" class="g-aiImg" alt="" src="img/bench-map-mobile.png"/>
-						<div id="g-ai1-1" class="g-annotation g-aiAbs" style="top:12.2222%;left:8.8791%;width:21.7143%;">
-							<p class="g-pstyle0">backed bench</p>
-						</div>
-						<div id="g-ai1-2" class="g-annotation g-aiAbs" style="top:16.6667%;left:9.1241%;width:20.8571%;">
-							<p class="g-pstyle1">backless</p>
-						</div>
-						<div id="g-ai1-3" class="g-annotation g-aiAbs" style="top:20.8889%;left:9.1241%;width:17.4286%;">
-							<p class="g-pstyle2">leaning bar</p>
-						</div>
-						<div id="g-ai1-4" class="g-annotation g-aiAbs" style="top:80.6667%;left:44.1774%;width:45.7143%;">
-							<p>There are 2,200+ public street benches across NYC&rsquo;s 5 boroughs.</p>
-						</div>
-					</div>
+	<!-- Artboard: mobile -->
+	<div id="g-bench-map-_Recovered_-mobile" class="g-artboard" style="max-width: 350px;max-height: 450px" data-aspect-ratio="0.778" data-min-width="0" data-max-width="649">
+<div style="padding: 0 0 128.5714% 0;"></div>
+		<img id="g-bench-map-_Recovered_-mobile-img" class="g-aiImg" alt="" src="img/bench-map-mobile.png"/>
+		<div id="g-ai1-1" class="g-annotation g-aiAbs" style="top:3.7778%;left:17.2772%;margin-left:-13.4286%;width:26.8571%;">
+			<p class="g-pstyle0">In 2016, the first batch of leaning bars were installed along 34th St and 1st Ave.</p>
+		</div>
+		<div id="g-ai1-2" class="g-annotation g-aiAbs" style="top:81.1111%;left:69.2726%;width:21.7143%;">
+			<p class="g-pstyle1">backed bench</p>
+		</div>
+		<div id="g-ai1-3" class="g-annotation g-aiAbs" style="top:85.5556%;left:69.5176%;width:20.8571%;">
+			<p class="g-pstyle2">backless</p>
+		</div>
+		<div id="g-ai1-4" class="g-annotation g-aiAbs" style="top:89.7778%;left:69.5176%;width:17.4286%;">
+			<p class="g-pstyle3">leaning bar </p>
+		</div>
+	</div>
 
-				</div>
+</div>
 
-				<!-- End ai2html - 2023-02-26 14:00 -->
+<!-- End ai2html - 2023-02-27 20:43 -->
+
 				<!-- End of first chart -->
 
 				<p class="chart-note text-center"><em>
@@ -722,8 +723,8 @@
 			</div>
 		</div>
 
-		<div class="row content flexible">
-			<div class="col-xl-4 col-lg-12 col-sm-12 multi-col">
+		<div class="row content flexible justify-content-center">
+			<div class="col-xl-4 col-md-9 col-sm-12">
 				<p>
 					However, Midtown Manhattan, New York city's tourist hotspot, turns out to be a "bench desert" compared to other places in Manhattan.
 				</p>
@@ -732,7 +733,7 @@
 					Although some leaning bars are installed in Midtown Manhattan, they are not enough to meet the needs of the residents, not to mention those with speical needs.
 				</p>
 			</div>	
-			<div class="col-xl-8 col-lg-12 col-sm-12 multi-col">
+			<div class="col-xl-8 col-md-9 col-sm-12">
 				<!-- My third chart -->
 
 				<!-- Generated by ai2html v0.102.0 - 2023-02-26 17:46 -->
@@ -973,8 +974,8 @@
 			</div>
 		</div>
 
-		<div class="row content justify-content-center">
-			<div class="col-9">
+		<div class="row content flexible justify-content-center">
+			<div class="col-md-9 col-sm-12">
 				<p>
 					To make New York a truly accessible and aged-friendly city, simply adding more seatings on its streets is not enough.
 					The city's urban planner must also incorporate more welcoming and comfortable seating options for the elderly.
@@ -998,15 +999,15 @@
     <footer class="footer">
       <div class="container container-fluid text-center" >
         <div class="row justify-content-center">
-          <div class="col-3 text-center">
+          <div class="col-4 text-center">
             <div>Cynthia Tu<br>Data Journalist</div>
           </div>
       
-          <div class="col-3 text-center">
+          <div class="col-4 text-center">
             <div>646 801 7087</div>
             <div>xt2274@columbia.edu</div>
           </div>
-          <div class="col-3 text-center">
+          <div class="col-4 text-center">
             <address>New York, New York<br>10027</address>
           </div>
         </div>
