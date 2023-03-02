@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css2?family=Proxima+Nova' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    
+    <title>Gentrification in Boston's Chinatown</title>
+    
+    <link rel="icon" href="../images/tab-icon.png">
+  </head>
+
+<!-- content stylesheet -->
+<style>
+	
+
+
+  .container{
+    max-width: 1200px;
+    display:flex;
+	flex-direction: column;
+  }
+
+  .nav-item {
+    font-family: 'Proxima Nova',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 145, 85);
+    font-size: large;
+  }
+
+  .social {
+    margin: 10px;
+    fill: lightsalmon;
+  }
+
+
+  .head-text{
+    position: absolute;
+    top: 45%;
+	left: 30%;
+    transform: translate(-50%, -50%);
+    color: #4e4d4d;
+  }
+
+  .headline {
+    font-family: 'Source Serif Pro', 'Outfit', 'Open Sans', 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight:300;
+    letter-spacing: normal;
+    line-height: 45px;
+    color: #4e4d4d;
+    margin-top:30px;
+    text-shadow : 0 0 5.2vw rgba(184, 184, 184, 0.8);
+  }
+
+  .deck {
+    font-family: 'Source Serif Pro','Open Sans', 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    line-height: 2.2vw;
+	font-weight:300;
+	text-shadow : 0 0 2.2vw rgba(184, 184, 184, 0.8);
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .byline {
+    font-family:  sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 18px;
+    color: #757474;
+    margin-top: 20px;
+
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .datetime {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 16px;
+    color: #757474;
+    margin-bottom: 2 px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .content {
+    font-family: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: light;
+    font-weight: light;
+    letter-spacing: normal;
+    line-height: 30px;
+    color: #4e4d4d;
+    margin-top: 30px;
+    margin-bottom: 2 px;
+    /* margin-left: 150px;
+    margin-right: 150px; */
+  }
+
+  .data-diary{
+    color:#757474;
+  }
+
+  .banner{
+    position: relative;
+    width: 100%;
+    text-align: left;
+  }
+
+  .banner.image{
+    opacity:100%;
+    border: 0px;
+    width:100%;
+    height: 100%;
+    position: relative;
+    filter: blur(0.8px);
+  }
+  
+  a:hover {
+   opacity:  70%;
+   text-decoration: none;
+  }
+
+  a:link {
+    color: #2a73ab;
+    background-color: transparent;
+  }
+
+  a {
+	color: #2a73ab;
+	text-decoration: underline;
+	
+  }
+
+  p{
+    margin-top:5px;
+  }
+
+  h5{
+    color: rgb(6, 5, 5);
+  }
+
+  .footer {
+    margin-top: 150px; 
+    margin-bottom: 100px; 
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
+    color: rgb(103, 103, 103);
+  }
+
+  figcaption {
+    font-family: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 12px;
+    font-style: light;
+    font-weight: light;
+    letter-spacing: normal;
+    line-height: 20px;
+    color: #838282;
+    margin-top: 2px
+  }
+
+
+</style>
+
+
+  <body style="background-color: antiquewhite;">
+    <!-- This is my nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top text-white">
+      <div class="collapse navbar-collapse"  id="navbarsExampleDefault" style="margin-left: 10px">
+        <a class="navbar-brand" href="https://xinyitu.github.io/">
+          <img src="../images/tab-icon.png" width="30" height="30" class="d-inline-block align-top" style="margin-left: 5%;" alt="homepage">
+        </a>
+      </div>
+    </nav> 
+
+    <!-- Feature photo here -->
+    <!-- This is my headline --> 
+    <div class="container container-fluid">
+      <div class="row byline justify-content-center">
+        <div class="col-md-9 col-sm-12">
+        	<p class="headline"><strong>As Boston’s Chinatown Changes, Asian Residents Face an Uncertain Future</strong></p>
+      	</div>
+      </div>
+    </div>
+
+    <!-- This is the byline -->
+    <div class="container container-fluid">
+        <div class="row byline justify-content-center">
+            <div class="col-md-9 col-sm-12">
+                <p>By Cynthia Tu</p>
+            </div>
+        </div>
+    </div>
+
+      <!-- This is the time stamp -->
+    <div class="container container-fluid">
+        <div class="row datetime justify-content-center">
+            <div class="col-md-9 col-sm-12">
+                <p>Published: December 12, 2021</p>
+            </div>
+        </div>
+    </div>
+    <!-- This is my content -->
+    <div class="container container-fluid">
+        <div class="row content flexible justify-content-center">
+            <div class="col-md-9 col-sm-12">
+              <img src="img/house.webp" class = "mx-auto d-block" style="width:400px; height:auto"></img>
+              <figcaption class = "text-center">Cynthia Yee’s childhood home on 116 Hudson Street. Courtesy of Cynthia Yee</figcaption>
+              <p>
+                <br>
+                Born and raised in a row house on Chinatown's Hudson Street in the 1950s, Cynthia Yee calls her childhood "a paradise." Fathers worked in the same restaurant; mothers sewed together in the same factory. Yee and her friends shared bicycles and played rope on the street. 
+                <br><br>
+                Yee’s carefree days in the thriving Hudson Street community quickly came to an abrupt end. In 1962, the <a href="https://www.boston.gov/news/community-culture-and-resilience-chinese-immigrant-populations-and-around-bostons-chinatown">construction of the Massachusetts Turnpike</a> and I-93 highways displaced approximately 1,200 residential units in the neighborhood. Yee’s Hudson family house was seized and demolished—along with the entire East side of Hudson Street.
+                <br><br>
+                <img src="img/geo-img.webp" class = "mx-auto d-block" style="width:500px; height:auto"><figcaption class = "text-center">Aerial map of Hudson Street and Mass Turnpike in 1952 (left) and 1969 (right). Historical maps from Boston Planning & Development Agency. Visualization: Cynthia Tu</figcaption></img>                 
+                <br>
+                Yee’s family relocated to an apartment few blocks away from Chinatown, right next to the adult entertainment district in downtown Boston. In her blog <a href="https://hudsonstreetchronicles.com/2019/06/03/mo-hi-dont-look/">Hudson Street Chronicles</a>, Yee documents the transition from the jolly Hudson Street to a clamorous red-light district, where sex workers and police officials strolled around her house every night. “It was like going from heaven to hell,” she recalls. 
+                <br><br>
+                Yee’s childhood story reflects the plight of the Chinese immigrant community during Boston’s urban development in the last century. After 60 years, the displacement crisis in Chinatown has only become more devastating. With waves of gentrification crashing through the city, Chinatown's long-time residents are still living with the fear of losing their homes. 
+                <br><br>
+                <h4>The Disappearing Chinatown</h4>
+                
+                For generations, Chinatown has been a refuge for immigrants when they first landed in the United States. Since the 1870s, the <a href="https://www.nps.gov/articles/000/boston-chinatown.html">immigrant community in Chinatown grew slowly but steadily</a>. Following the repeal of the Chinese Exclusion Act in 1943, the immigrant population further increased and diversified. Waves of Chinese immigrants built a tight-knit community to shelter its residents from anti-Asian sentiment. Boston’s Chinatown has been a haven for Chinese immigrants in Massachusetts, providing access to vital housing, multilingual social services, and entry into the American job markets. 
+                <br><br>
+                With <a href="https://statisticalatlas.com/neighborhood/Massachusetts/Boston/Chinatown/Population">an estimated 12,000</a> residents, Chinatown is now the most densely populated neighborhood in Boston. The white population in the area has grown exponentially compared to a slowly stagnating Asian population over the past decades. 
+                <br><br>
+                <iframe title="As more white residents move in, Chinatown loses its share of Asian residents" aria-label="Grouped Column Chart" id="datawrapper-chart-dFDjr" src="https://datawrapper.dwcdn.net/dFDjr/1/" scrolling="no" frameborder="0" style="max-width: 0; min-width: 100% !important; border: none;" height="372" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                </script>
+                <br><br>
+                Meanwhile, Chinatown sees huge racial disparity in household income. According to <a href="https://statisticalatlas.com/neighborhood/Massachusetts/Boston/Chinatown/Household-Income">Statistical Atlas’ data</a> on household income distribution by race, most white households in Chinatown earned more than the Median Income of Massachusetts ($81,215), while 24% of Asian households fall under the <a href="https://www.nbcnews.com/news/asian-america/bostons-chinatown-sees-declining-asian-population-cost-living-grows-n459971">federal poverty line.</a>
+                <br><br>
+                Besides the demographic shift, the culture of Chinatown is also changing. By analyzing <a href="https://data.boston.gov/dataset/boston-buildings-inventory">property data</a> gathered by the City of Boston, it became clear that the housing crisis in Chinatown is further exacerbating as the area becomes more commercialized.
+                <br><br>
+                <iframe title="Distribution of Land Use in Boston's Chinatown" aria-label="Bar Chart" id="datawrapper-chart-3yQBk" src="https://datawrapper.dwcdn.net/3yQBk/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="233" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                </script>
+                <br><br>
+                In 2020, 30.48% of all properties in Chinatown were commercial buildings, making Chinatown the third most commercialized neighborhood in the city.
+                <br><br>
+                <iframe title="Boston's Chinatown is more commercial than residential" aria-label="Split Bars" id="datawrapper-chart-YmfBy" src="https://datawrapper.dwcdn.net/YmfBy/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="543" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                </script>
+                <br><br>
+                What comes along with the commercialization of Chinatown is rising rent prices. From 1990 to 2010, the <a href="http://codeforboston.github.io/ungentry/#data/medianrent">median rent</a> in Chinatown doubled from $1063 to $1960. The influx of real estate developers in the past years further worsened the housing crisis in Chinatown. Currently, the monthly rent for a two-bedroom apartment in Chinatown ranges from $2,500 to more than $6,000, <a href="https://www.zillow.com/chinatown-boston-ma/apartments/2-bedrooms/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-71.06933689688111%2C%22east%22%3A-71.0545311031189%2C%22south%22%3A42.3448696994073%2C%22north%22%3A42.35700100593307%7D%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A416396%2C%22regionType%22%3A8%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%2C%22sf%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22sort%22%3A%7B%22value%22%3A%22paymenta%22%7D%2C%22beds%22%3A%7B%22max%22%3A2%2C%22min%22%3A2%7D%7D%2C%22isListVisible%22%3Atrue%2C%22mapZoom%22%3A16%7D">according to zillow.com</a>. 
+                <br><br>
+                These high-end housing developments, however, are not meant to benefit the Asian residents in Chinatown.
+                <br><br>
+                <a href="https://static1.squarespace.com/static/56340b91e4b017e2546998c0/t/5c7811640852290f392207ca/1551372655581/CPA+report+final+2019.pdf">A survey done by Displacement Research and Action Network at MIT</a> in 2019 illustrated the staggering burden on Asian renters in Chinatown. The households surveyed earn an average of $26,280 per year—just above the <a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines/prior-hhs-poverty-guidelines-federal-register-references/2019-poverty-guidelines">federal poverty line</a> for households of four people ($25,750). 
+                <br><br>
+                On average, households in Chinatown spend 48% of their income on rent on average. According to the MIT report, 24 out of 35 respondents reported that they were evicted due to rent burden, while four respondents reported being evicted due to conversion or ownership transfer.
+                <br><br>
+                <img src="img/rent-map.webp" class = "mx-auto d-block" style="width:500px; height:auto"></img>
+                  <figcaption class = "text-center">
+                    Boston's Rent Map shows the price of a 2-bedroom apartment as of November 19, 2021. <a href="https://www.jefftk.com/apartment_prices/#2023-02-21&2">Visualization by Jeff Kaufman</a></figcaption>
+                <br><br>
+                The displacement issue faced by Asian residents in Chinatown reflects the plight of many tenants in Boston and nationwide. A 2019 study conducted by <a href="https://evictionlab.org/national-estimates/">the Eviction Lab at Princeton University</a> found that Boston had an eviction rate of 1.3%, which puts the city in the 178th on the eviction ranking out of more than 30,000 large cities across America. This means that 6.34 Boston households were evicted daily—and the number does not include cases that have slipped through the courts. 
+                <br><br>
+                <h4>In the Heart of Boston, an Invisible Community</h4>
+                
+                In 2016, activists and Chinatown residents organized a protest after MassDOT released a plan to sell off Reggie Wong Memorial Park to real estate developers.
+                <br><br>
+                <img src="img/reggie-wong.webp" class = "mx-auto d-block" style="width:500px; height:auto"></img>
+                  <figcaption class = "text-center">
+                    Reggie Wong Memorial Park is only steps away from the I-93 Highway. Source: Satellites Pro. Visualization: Cynthia Tu</figcaption>
+                <br>
+                The agenda of the protest was not to overturn MassDOT’s plan but to question the developer's negligence to address <a href="https://sites.tufts.edu/cafeh/files/2011/10/Reggie-Wong-Park-report-2.pdf">air quality concerns</a> in the location chosen for the replacement park, which developers were mandated to build.
+                <br><br>
+                Located between the on- and off-ramps for the I-93 expressway, the park had continuously suffered from air pollution due to traffic brought by the highway.
+                <br><br>
+                Community spaces like Reggie Wong park, where children go out to play and elders congregate, are plagued by gentrification and development. Many of the residents now feel insecure about living in Chinatown— the place that generations of Asian immigrants had called “home”.
+                <br><br>
+                A survey done by <a href="https://static1.squarespace.com/static/56340b91e4b017e2546998c0/t/5c7811640852290f392207ca/1551372655581/CPA+report+final+2019.pdf">the Chinese Progressive Association</a> revealed the importance of community, identity, and participation plays in the well-being of the neighborhood’s residents. Ninety percent of respondents reported that living in Chinatown keeps their connection close to the community. However, 25 of 39 respondents replied that new developments in their area have made them feel less secure in their neighborhood. 
+                <br><br>
+                <h4>What Does the Future Hold for Chinatown?</h4>
+                
+                In November, Michelle Wu made history as the first woman and Asian American to be elected mayor of Boston. Many Chinatown residents felt a sense of optimism, cheering on a milestone step toward Asian representation.
+                <br><br>  
+                Before Wu’s win, Wu <a href="https://www.michelleforboston.com/plans/housing-justice">released detailed plans</a> for housing justice with actions to prioritize federal funds and reform zoning. 
+                <br><br>
+                Wu shared her vision to combat gentrification in Chinatown, during a rally at the Chinatown gate. "It is urgent to ensure that we are stabilizing our families," she said, "and that’s why we need leadership at the local level apart from the government to do everything we can to keep families in their homes."
+                <br><br>
+                <img src="img/rally.webp" class = "mx-auto d-block" style="width:500px; height:auto"></img>
+                <figcaption class = "text-center">
+                  Supporter of Michelle Wu holding a sign during a Wu rally in Chinatown on September 11, 2021. Photo by Cynthia Tu</figcaption>
+                <br>
+                Although city officials had made promises to tackle gentrification, Cynthia Yee believes the word “gentrification” does not capture the essence of the housing crisis Chinatown has experienced for decades: from urban renewal projects to the influx of luxurious high-rises in the area, what threatens the immigrant community in Chinatown is not the class conflict, but racial injustice. 
+                <br><br>
+                "It's really about who decides the use of the land and who decides they have a right to push other people out," Yee said, "whether it's a highway or suburbanites wanting to live in the city, it's the same process of disempowering people of color."
+              </p>
+              <p class="data-diary"><em><a href="https://cynthiatu921.wixsite.com/my-site-1/post/gentrification-of-chinatown-methodology"">Learn more</a> about our methodology.
+              <br>Anthony Labuto & Duncan Novak contributed to this project.</em></p>
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- This is my footer -->
+    <footer class="footer">
+      <div class="container container-fluid text-center" >
+        <div class="row justify-content-center">
+          <div class="col-4 text-center">
+            <div>Cynthia Tu<br>Data Journalist</div>
+          </div>
+      
+          <div class="col-4 text-center">
+            <div>646 801 7087</div>
+            <div>xt2274@columbia.edu</div>
+          </div>
+          <div class="col-4 text-center">
+            <address>New York, New York<br>10027</address>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
+
