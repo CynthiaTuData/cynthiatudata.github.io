@@ -12,11 +12,11 @@
     <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
     
-    <title>NYPD Illegal Parking</title>
+    <title>Enforcer, or Offender?</title>
     
     <link rel="icon" href="../images/tab-icon.png">
   </head>
@@ -24,12 +24,12 @@
 
   <!-- AI2HTML SETTING -->
   <style>
-	#g-police_pdf-desktop, #g-police_pdf-mobile, #g-map-desktop, #g-map-mobile, #g-manhattan-Artboard_3, #g-manhattan-desktop {
+	#g-police-desktop, #g-police-mobile, #g-map-desktop, #g-map-mobile, #g-manhattan-Artboard_3, #g-manhattan-desktop {
 		display: none;
 	}
 
 	@media (max-width: 650px) {
-		#g-police_pdf-mobile {
+		#g-police-mobile {
 			display: block;
 		}
 		#g-map-mobile {
@@ -41,7 +41,7 @@
 	}
 
 	@media screen and (min-width: 650px)  {
-		#g-police_pdf-desktop {
+		#g-police-desktop {
 			display: block;
 		}
 		#g-map-desktop {
@@ -178,7 +178,6 @@
   a {
 	color: #2a73ab;
 	text-decoration: underline;
-	
   }
 
   p{
@@ -207,8 +206,6 @@
     margin-top: 2px
 
   }
-
-
 </style>
 
 <!-- chart style sheet -->
@@ -273,17 +270,6 @@
     margin-right: 40px; */
     margin-top:0px;
   }
-	span.backed{
-    color:#66C2A5;
-  }
-
-  	span.backless{
-    color:#8DA0CB;
-  }
-
-  	span.leaning{
-    color:#FC8D62;
-  }
 </style>
 
   <body style="background-color: white;">
@@ -295,7 +281,7 @@
         </a>
       </div>
     </nav> 
-    <!-- Intro -->
+    <!-- Intro
     <div class="container container-fluid">
         <div class="row content flexible justify-content-center">
             <div class="col-md-9 col-sm-12">
@@ -305,7 +291,7 @@
                 </p>
             </div>
         </div>
-    </div>            
+    </div>             -->
     <!-- Feature photo here -->
     <!-- This is my headline --> 
     <div class="banner">
@@ -348,9 +334,12 @@
                 </p>
                 <img src="13th-precinct-streetview/streetviewImg.png" style="max-width: 750px; height: auto">
                 <figcaption>Police cars parked on the curb outside Manhattan 13th precinct almost all the time. via Google StreetView</figcaption>
+                
+                <img src="image/84-fire.png" style="max-width: 1000px; height: auto">
+                <img src="image/94th-sidewalk.png" style="max-width: 1000px; height: auto">
+                <img src="image/114th-double-park.png" style="max-width: 1000px; height: auto">
+
                 <p>Many New Yorkers turned to social media to voice their complaints. 
-
-
                 <p>“The rampant illegal parking turns the whole block into an occupation zone.” wrote the owner of the Twitter account @NYPD_Parking in an email interview. 
                     They added that these illegally parked vehicles have endangered those who live in the neighborhood, 
                     forcing elders, people with disabilities, and parents with strollers off the sidewalk and into street traffic.</p>
@@ -359,246 +348,344 @@
                 The NYPD closed 84% of their complaints with the response “police action not necessary” or “no evidence of violation.” 
                 Only 9 complaints (0.2%) led to a parking ticket being issued. </p>
 
-                <!-- Chart 311 complaint provided by Twitter account -->
-                <p class="chart-head text-center">Most 311 complaints against police parking are dismissed</p>
-				<p class="chart-deck">A citizen account reported thousands of illegally parked police cars—only 0.2% received a parking ticket.</p>
+            
+                
+<!-- ai file: police.ai -->
+<style media="screen,print">
+	#g-police-box ,
+	#g-police-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-police-box p {
+		margin:0;
+	}
+	#g-police-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-police-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-police-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-police-box .g-aiPointText p { white-space: nowrap; }
+	#g-police-desktop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-police-desktop p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:17px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(62,62,62);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-police-desktop .g-pstyle0 {
+		font-weight:600;
+		line-height:26px;
+		font-size:22px;
+		color:rgb(0,0,0);
+	}
+	#g-police-desktop .g-pstyle1 {
+		font-weight:400;
+		line-height:19px;
+		font-size:16px;
+		color:rgb(84,84,84);
+	}
+	#g-police-desktop .g-pstyle2 {
+		font-weight:500;
+		line-height:16px;
+		height:16px;
+		letter-spacing:-0.05em;
+		font-size:13px;
+		text-align:center;
+		color:rgb(102,194,165);
+	}
+	#g-police-desktop .g-pstyle3 {
+		font-weight:500;
+		line-height:16px;
+		height:16px;
+		letter-spacing:-0.05em;
+		font-size:13px;
+		text-align:center;
+		color:rgb(231,138,195);
+	}
+	#g-police-desktop .g-pstyle4 {
+		font-weight:500;
+		height:17px;
+		text-align:center;
+		color:rgb(102,194,165);
+	}
+	#g-police-desktop .g-pstyle5 {
+		font-weight:500;
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+		text-align:center;
+		color:rgb(231,138,195);
+	}
+	#g-police-desktop .g-pstyle6 {
+		font-weight:500;
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+		color:rgb(255,255,255);
+	}
+	#g-police-desktop .g-pstyle7 {
+		font-weight:500;
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-police-desktop .g-pstyle8 {
+		line-height:14px;
+		font-size:12px;
+	}
+	#g-police-desktop .g-cstyle0 {
+		letter-spacing:0em;
+	}
+	#g-police-desktop .g-cstyle1 {
+		letter-spacing:-0.03em;
+	}
+	#g-police-desktop .g-cstyle2 {
+		letter-spacing:-0.05em;
+	}
+	#g-police-desktop .g-cstyle3 {
+		letter-spacing:0.029em;
+	}
+	#g-police-desktop .g-cstyle4 {
+		color:rgb(178,178,178);
+	}
+	#g-police-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-police-mobile p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:13px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:11px;
+		text-align:left;
+		color:rgb(62,62,62);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-police-mobile .g-pstyle0 {
+		font-weight:600;
+		line-height:22px;
+		font-size:18px;
+		color:rgb(0,0,0);
+	}
+	#g-police-mobile .g-pstyle1 {
+		font-weight:400;
+		line-height:14px;
+		font-size:12px;
+		color:rgb(84,84,84);
+	}
+	#g-police-mobile .g-pstyle2 {
+		font-weight:500;
+		line-height:12px;
+		height:12px;
+		letter-spacing:-0.05em;
+		font-size:10px;
+		text-align:center;
+		color:rgb(102,194,165);
+	}
+	#g-police-mobile .g-pstyle3 {
+		font-weight:500;
+		line-height:12px;
+		height:12px;
+		letter-spacing:-0.05em;
+		font-size:10px;
+		text-align:center;
+		color:rgb(231,138,195);
+	}
+	#g-police-mobile .g-pstyle4 {
+		font-weight:500;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		text-align:center;
+		color:rgb(231,138,195);
+	}
+	#g-police-mobile .g-pstyle5 {
+		font-weight:500;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		text-align:center;
+		color:rgb(102,194,165);
+	}
+	#g-police-mobile .g-pstyle6 {
+		font-weight:500;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-police-mobile .g-pstyle7 {
+		font-weight:500;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+		color:rgb(255,255,255);
+	}
+	#g-police-mobile .g-pstyle8 {
+		line-height:12px;
+		font-size:10px;
+	}
+	#g-police-mobile .g-cstyle0 {
+		letter-spacing:0em;
+	}
+	#g-police-mobile .g-cstyle1 {
+		letter-spacing:-0.03em;
+	}
+	#g-police-mobile .g-cstyle2 {
+		letter-spacing:-0.05em;
+	}
+	#g-police-mobile .g-cstyle3 {
+		letter-spacing:0.029em;
+	}
+	#g-police-mobile .g-cstyle4 {
+		color:rgb(178,178,178);
+	}
 
-                <style media="screen,print">
-                    #g-police_pdf-box ,
-                    #g-police_pdf-box .g-artboard {
-                        margin:0 auto;
-                    }
-                    #g-police_pdf-box p {
-                        margin:0;
-                    }
-                    #g-police_pdf-box .g-aiAbs {
-                        position:absolute;
-                    }
-                    #g-police_pdf-box .g-aiImg {
-                        position:absolute;
-                        top:0;
-                        display:block;
-                        width:100% !important;
-                    }
-                    #g-police_pdf-box .g-aiSymbol {
-                        position: absolute;
-                        box-sizing: border-box;
-                    }
-                    #g-police_pdf-box .g-aiPointText p { white-space: nowrap; }
-                    #g-police_pdf-desktop {
-                        position:relative;
-                        overflow:hidden;
-                    }
-                    #g-police_pdf-desktop p {
-                        font-weight:500;
-                        line-height:17px;
-                        height:auto;
-                        filter:alpha(opacity=100);
-                        -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-                        opacity:1;
-                        letter-spacing:0em;
-                        font-size:14px;
-                        text-align:left;
-                        color:rgb(255,255,255);
-                        text-transform:none;
-                        padding-bottom:0;
-                        padding-top:0;
-                        mix-blend-mode:normal;
-                        font-style:normal;
-                        position:static;
-                    }
-                    #g-police_pdf-desktop .g-pstyle0 {
-                        height:17px;
-                        letter-spacing:-0.05em;
-                        text-align:center;
-                        color:rgb(231,138,195);
-                    }
-                    #g-police_pdf-desktop .g-pstyle1 {
-                        height:17px;
-                        letter-spacing:-0.05em;
-                        text-align:center;
-                        color:rgb(102,194,165);
-                    }
-                    #g-police_pdf-desktop .g-pstyle2 {
-                        height:17px;
-                        text-align:center;
-                        color:rgb(102,194,165);
-                    }
-                    #g-police_pdf-desktop .g-pstyle3 {
-                        height:17px;
-                        text-align:center;
-                        color:rgb(231,138,195);
-                    }
-                    #g-police_pdf-desktop .g-pstyle4 {
-                        height:17px;
-                    }
-                    #g-police_pdf-desktop .g-pstyle5 {
-                        height:17px;
-                        text-align:center;
-                    }
-                    #g-police_pdf-desktop .g-cstyle0 {
-                        letter-spacing:0em;
-                    }
-                    #g-police_pdf-desktop .g-cstyle1 {
-                        letter-spacing:-0.03em;
-                    }
-                    #g-police_pdf-desktop .g-cstyle2 {
-                        letter-spacing:-0.05em;
-                    }
-                    #g-police_pdf-desktop .g-cstyle3 {
-                        letter-spacing:0.029em;
-                    }
-                    #g-police_pdf-mobile {
-                        position:relative;
-                        overflow:hidden;
-                    }
-                    #g-police_pdf-mobile p {
-                        font-weight:500;
-                        line-height:12px;
-                        height:auto;
-                        filter:alpha(opacity=100);
-                        -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-                        opacity:1;
-                        letter-spacing:0em;
-                        font-size:10px;
-                        text-align:left;
-                        color:rgb(255,255,255);
-                        text-transform:none;
-                        padding-bottom:0;
-                        padding-top:0;
-                        mix-blend-mode:normal;
-                        font-style:normal;
-                        position:static;
-                    }
-                    #g-police_pdf-mobile .g-pstyle0 {
-                        height:12px;
-                        letter-spacing:-0.05em;
-                        text-align:center;
-                        color:rgb(102,194,165);
-                    }
-                    #g-police_pdf-mobile .g-pstyle1 {
-                        height:12px;
-                        letter-spacing:-0.05em;
-                        text-align:center;
-                        color:rgb(231,138,195);
-                    }
-                    #g-police_pdf-mobile .g-pstyle2 {
-                        height:12px;
-                        text-align:center;
-                        color:rgb(231,138,195);
-                    }
-                    #g-police_pdf-mobile .g-pstyle3 {
-                        height:12px;
-                        text-align:center;
-                        color:rgb(102,194,165);
-                    }
-                    #g-police_pdf-mobile .g-pstyle4 {
-                        height:12px;
-                        text-align:center;
-                    }
-                    #g-police_pdf-mobile .g-pstyle5 {
-                        height:12px;
-                    }
-                    #g-police_pdf-mobile .g-cstyle0 {
-                        letter-spacing:0em;
-                    }
-                    #g-police_pdf-mobile .g-cstyle1 {
-                        letter-spacing:-0.03em;
-                    }
-                    #g-police_pdf-mobile .g-cstyle2 {
-                        letter-spacing:-0.05em;
-                    }
-                    #g-police_pdf-mobile .g-cstyle3 {
-                        letter-spacing:0.029em;
-                    }
+</style>
 
-                </style>
+<div id="g-police-box" class="ai2html">
 
-                <div id="g-police_pdf-box" class="ai2html">
+	<!-- Artboard: desktop -->
+	<div id="g-police-desktop" class="g-artboard" style="width:650px; height:739.616617008736px;" data-aspect-ratio="0.879" data-min-width="650">
+<div style=""></div>
+		<img id="g-police-desktop-img" class="g-aiImg" alt="" src="police-desktop.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs" style="top:1.0816%;left:4.6789%;width:89.3846%;">
+			<p class="g-pstyle0">Most 311 complaints against police parking are dismissed</p>
+			<p>&nbsp;</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs" style="top:5.1378%;left:4.6789%;width:87.5385%;">
+			<p class="g-pstyle1">A citizen account reported thousands of illegally parked police cars. Only 0.2% received a parking ticket.</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:10.2744%;margin-top:-9px;left:82.5772%;margin-left:-59.5px;width:119px;">
+			<p class="g-pstyle2">&ldquo;Summons Issued<span class="g-cstyle0">&rdquo;</span></p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:10.2744%;margin-top:-9px;left:66.4706%;margin-left:-55.5px;width:111px;">
+			<p class="g-pstyle3">&ldquo;Condition Gone<span class="g-cstyle0">&rdquo;</span></p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.0781%;margin-top:-9.3px;left:88.3113%;margin-left:-14.5px;width:29px;">
+			<p class="g-pstyle4">9</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.0321%;margin-top:-9px;left:71.5273%;margin-left:-17.5px;width:35px;">
+			<p class="g-pstyle5">18</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.3461%;margin-top:-9px;left:73.2888%;width:121px;">
+			<p class="g-pstyle6">&ldquo;Condition Fi<span class="g-cstyle1">x</span>ed&rdquo;</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:46.915%;margin-top:-9px;left:79.5921%;width:42px;">
+			<p class="g-pstyle6">538</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.3513%;margin-top:-9px;left:27.579%;width:188px;">
+			<p class="g-pstyle6"><span class="g-cstyle2">&ldquo;P</span>olice Action Not Necessa<span class="g-cstyle3">r</span>y&rdquo;</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.0554%;margin-top:-9px;left:38.2695%;width:49px;">
+			<p class="g-pstyle6">2965</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:77.8825%;margin-top:-17px;left:80.986%;margin-left:-50px;width:100px;">
+			<p class="g-pstyle7">&ldquo;No Evidence </p>
+			<p class="g-pstyle7">of Violation&rdquo;</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.9867%;margin-top:-9px;left:79.2447%;width:42px;">
+			<p class="g-pstyle6">274</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs" style="top:91.3987%;left:5.5891%;width:84.7692%;">
+			<p>Data include all parking violations reported by Twitter account @NYPD_Parking to 311 from March 2019 to March 2023<span class="g-cstyle4">.</span></p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs" style="top:96.6717%;left:5.5891%;width:87.5385%;">
+			<p class="g-pstyle8">Visualization: Cynthia Tu &middot; Source: @NYPD_Parking on Twitter</p>
+		</div>
+	</div>
 
-                    <!-- Artboard: desktop -->
-                    <div id="g-police_pdf-desktop" class="g-artboard" style="width:540px; height:585px;" data-aspect-ratio="0.923" data-min-width="600">
-                <div style=""></div>
-                        <img id="g-police_pdf-desktop-img" class="g-aiImg" alt="" src="police_pdf-desktop.png"/>
-                        <div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:2.0%;margin-top:-9.2px;left:69.5%;margin-left:-57px;width:114px;">
-                            <p class="g-pstyle0">&ldquo;Condition Gone<span class="g-cstyle0">&rdquo;</span></p>
-                        </div>
-                        <div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:2.0%;margin-top:-9.2px;left:89.5%;margin-left:-61px;width:122px;">
-                            <p class="g-pstyle1">&ldquo;Summons Issued<span class="g-cstyle0">&rdquo;</span></p>
-                        </div>
-                        <div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.0114%;margin-top:-9.6px;left:94.8027%;margin-left:-14.5px;width:29px;">
-                            <p class="g-pstyle2">9</p>
-                        </div>
-                        <div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.9574%;margin-top:-9.2px;left:76.7824%;margin-left:-18px;width:36px;">
-                            <p class="g-pstyle3">18</p>
-                        </div>
-                        <div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.1882%;margin-top:-9.2px;left:77.0%;width:124px;">
-                            <p class="g-pstyle4">&ldquo;Condition Fi<span class="g-cstyle1">x</span>ed&rdquo;</p>
-                        </div>
-                        <div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.2651%;margin-top:-9.2px;left:84.6328%;width:43px;">
-                            <p class="g-pstyle4">538</p>
-                        </div>
-                        <div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.0343%;margin-top:-9.2px;left:24.5416%;width:193px;">
-                            <p class="g-pstyle4"><span class="g-cstyle2">&ldquo;P</span>olice Action Not Necessa<span class="g-cstyle3">r</span>y&rdquo;</p>
-                        </div>
-                        <div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.2651%;margin-top:-9.2px;left:37.4814%;width:49px;">
-                            <p class="g-pstyle4">2965</p>
-                        </div>
-                        <div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.6173%;margin-top:-17.5px;left:87.0%;margin-left:-51px;width:102px;">
-                            <p class="g-pstyle5">&ldquo;No Evidence </p>
-                            <p class="g-pstyle5">of Violation&rdquo;</p>
-                        </div>
-                        <div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.4189%;margin-top:-9.2px;left:85.245%;width:43px;">
-                            <p class="g-pstyle4">274</p>
-                        </div>
-                    </div>
+	<!-- Artboard: mobile -->
+	<div id="g-police-mobile" class="g-artboard" style="max-width: 350px;max-height: 500px" data-aspect-ratio="0.7" data-min-width="0" data-max-width="649">
+<div style="padding: 0 0 142.8571% 0;"></div>
+		<img id="g-police-mobile-img" class="g-aiImg" alt="" src="police-mobile.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs" style="top:1.6%;left:3.4967%;width:95.1429%;">
+			<p class="g-pstyle0">Most 311 complaints against police parking are dismissed</p>
+			<p>&nbsp;</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs" style="top:11%;left:3.18%;width:93.4286%;">
+			<p class="g-pstyle1">A citizen account reported thousands of illegally parked police cars. Only 0.2% received a parking ticket.</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.118%;margin-top:-6.6px;left:87.0093%;margin-left:-47px;width:94px;">
+			<p class="g-pstyle2">&ldquo;Summons Issued<span class="g-cstyle0">&rdquo;</span></p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.118%;margin-top:-6.6px;left:56.2197%;margin-left:-44px;width:88px;">
+			<p class="g-pstyle3">&ldquo;Condition Gone<span class="g-cstyle0">&rdquo;</span></p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:22.118%;margin-top:-6.6px;left:61.8742%;margin-left:-16px;width:32px;">
+			<p class="g-pstyle4">18</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:22.118%;margin-top:-6.6px;left:92.9568%;margin-left:-13.5px;width:27px;">
+			<p class="g-pstyle5">9</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.1179%;margin-top:-12.6px;left:86.4691%;margin-left:-34px;width:68px;">
+			<p class="g-pstyle6">&ldquo;Condition</p>
+			<p class="g-pstyle6">Fi<span class="g-cstyle1">x</span>ed&rdquo;</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.918%;margin-top:-6.6px;left:84.2819%;width:37px;">
+			<p class="g-pstyle7">538</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.318%;margin-top:-6.6px;left:23.074%;width:146px;">
+			<p class="g-pstyle7"><span class="g-cstyle2">&ldquo;P</span>olice Action Not Necessa<span class="g-cstyle3">r</span>y&rdquo;</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.518%;margin-top:-6.6px;left:34.7163%;width:42px;">
+			<p class="g-pstyle7">2965</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.318%;margin-top:-12.6px;left:86.2395%;margin-left:-40px;width:80px;">
+			<p class="g-pstyle6">&ldquo;No Evidence </p>
+			<p class="g-pstyle6">of Violation&rdquo;</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.118%;margin-top:-6.6px;left:84.3519%;width:37px;">
+			<p class="g-pstyle7">274</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs" style="top:90.4%;left:4.374%;width:85.4286%;">
+			<p>Data include all parking violations reported by Twitter account @NYPD_Parking to 311 from March 2019 to March 2023<span class="g-cstyle4">.</span></p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs" style="top:96.4%;left:3.9811%;width:162.5714%;">
+			<p class="g-pstyle8">Visualization: Cynthia Tu &middot; Source: @NYPD_Parking on Twitter</p>
+		</div>
+	</div>
 
-                    <!-- Artboard: mobile -->
-                    <div id="g-police_pdf-mobile" class="g-artboard" style="max-width: 350px;max-height: 380px" data-aspect-ratio="0.921" data-min-width="0" data-max-width="599">
-                <div style="padding: 0 0 108.5714% 0;"></div>
-                        <img id="g-police_pdf-mobile-img" class="g-aiImg" alt="" src="police_pdf-mobile.png"/>
-                        <div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.4184%;margin-top:-6.6px;left:87.0093%;margin-left:-47px;width:94px;">
-                            <p class="g-pstyle0">&ldquo;Summons Issued<span class="g-cstyle0">&rdquo;</span></p>
-                        </div>
-                        <div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.4184%;margin-top:-6.6px;left:56.2197%;margin-left:-44px;width:88px;">
-                            <p class="g-pstyle1">&ldquo;Condition Gone<span class="g-cstyle0">&rdquo;</span></p>
-                        </div>
-                        <div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.05%;margin-top:-6.6px;left:61.8742%;margin-left:-16px;width:32px;">
-                            <p class="g-pstyle2">18</p>
-                        </div>
-                        <div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.05%;margin-top:-6.6px;left:92.9568%;margin-left:-13.5px;width:27px;">
-                            <p class="g-pstyle3">9</p>
-                        </div>
-                        <div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:42.2604%;margin-top:-12.6px;left:86.4691%;margin-left:-34px;width:68px;">
-                            <p class="g-pstyle4">&ldquo;Condition</p>
-                            <p class="g-pstyle4">Fi<span class="g-cstyle1">x</span>ed&rdquo;</p>
-                        </div>
-                        <div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.2605%;margin-top:-6.6px;left:84.2819%;width:37px;">
-                            <p class="g-pstyle5">538</p>
-                        </div>
-                        <div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.7342%;margin-top:-6.6px;left:23.074%;width:146px;">
-                            <p class="g-pstyle5"><span class="g-cstyle2">&ldquo;P</span>olice Action Not Necessa<span class="g-cstyle3">r</span>y&rdquo;</p>
-                        </div>
-                        <div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.6289%;margin-top:-6.6px;left:34.7163%;width:42px;">
-                            <p class="g-pstyle5">2965</p>
-                        </div>
-                        <div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:81.9973%;margin-top:-12.6px;left:86.2395%;margin-left:-40px;width:80px;">
-                            <p class="g-pstyle4">&ldquo;No Evidence </p>
-                            <p class="g-pstyle4">of Violation&rdquo;</p>
-                        </div>
-                        <div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.9973%;margin-top:-6.6px;left:84.3519%;width:37px;">
-                            <p class="g-pstyle5">274</p>
-                        </div>
-                    </div>
+</div>
 
-                </div>
-                <p class="chart-note text-center"><em>
-					Data include all parking violations reported by Twitter account <a href="https://twitter.com/NYPD_Parking">@NYPD_Parking</a> to 311 from March 2019 to March 2023 .
-				</em></p>
-				<p class="chart-source text-center">
-					Visualization: Cynthia Tu · Source: @NYPD_Parking</p>
-				<br>
-                <!-- End ai2html - 2023-04-03 23:20 -->
+<!-- End ai2html - 2023-04-04 18:45 -->
 
 
 				<br>
