@@ -6733,6 +6733,9 @@
 			</div>
 		</div>	
 		<div class="steps-container">
+			<div class="step" id="step-1">
+
+			</div>
 			<div class="step" id="step0">
 				<p>The Grammys have a long history of overlooking underrepresented artists.</p>
 			</div>
@@ -7184,13 +7187,22 @@
 	<script>
       
 		//  scrollytelling code goes here
+		d3.select("#step-1").on('stepin', function() {
+
+		})
+
 		d3.select("#step1").on('stepin', function() {
 		// show text
 		  d3.selectAll("#text1,#text2").classed('hidden', false)
 		// show arrow  
 		  d3.selectAll("[data-name='all-white-arrow']").classed('hidden',false)
 		//   hide non-white dots
-		  d3.selectAll("[data-name='all-non-white']").style('opacity','40%')
+		d3.selectAll("[data-name='all-white']").style('opacity','1')
+		  d3.selectAll("[data-name='all-non-white']").style('opacity','0.4')
+
+		  d3.selectAll("#text-non-white-1,#text-non-white-2").classed('hidden', true)
+		// show arrow
+		d3.selectAll("[data-name='non-white-text']").classed('hidden', true)
   
 		})
 
@@ -7199,16 +7211,21 @@
 		// hide previous text
 		  d3.selectAll("#text1, #text2").classed('hidden', true)
 		// hide previous arrow
-		  d3.selectAll("[data-name='arrow']").classed('hidden',true)
+		d3.selectAll("[data-name='all-white-arrow']").classed('hidden',true)
 		// hide white dots
-		  d3.selectAll("[data-name='all-white']").style('opacity','40%')
-
+		d3.selectAll("[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','1')
+		d3.selectAll("[data-name='not-all-white-win'],[data-name='non-white-winner']").style('opacity','1')
+		  d3.selectAll("[data-name='all-white']").style('opacity','0.4')
+		  d3.selectAll("[data-name='all-non-white']").style('opacity','1')
+		  d3.selectAll("#text-5,#text-6").classed('hidden', true)
+		// 
+		d3.selectAll("[data-name='white-winner-arrow']").classed('hidden',true)
 		// show next text
 		d3.selectAll("#text-non-white-1,#text-non-white-2").classed('hidden', false)
 		// show arrow
 		d3.selectAll("[data-name='non-white-text']").classed('hidden', false)
 		// show non-white dots
-		  d3.selectAll("[data-name='all-non-white']").style('opacity','100%')
+		
   
 		})
 		  
@@ -7219,33 +7236,53 @@
 		// show arrow
 		d3.selectAll("[data-name='non-white-text']").classed('hidden', true)
 		// show non-white dots
-		d3.selectAll("[data-name='all-white']").style('opacity','100%')
+		d3.selectAll("[data-name='not-all-non-white-win'],[data-name='white-winner']").style('opacity','1')
+		d3.selectAll("[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','1')
+		d3.selectAll("[data-name='all-white']").style('opacity','1')
   
 		// hide all white and non-white nominees
-		d3.selectAll("[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','40%')
+		d3.selectAll("[data-name='not-all-non-white-win'],[data-name='white-winner']").style('opacity','1')
+		d3.selectAll("[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','1')
+		d3.selectAll("[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','0.4')
+		d3.selectAll("[data-name='non-white-winner']").style('opacity','0.4')
 		// hide all mix and non-white winners
-		d3.selectAll("[data-name='not-all-white-win'],[data-name='non-white-winner']").style('opacity','40%')
+		d3.selectAll("[data-name='not-all-white-win'],[data-name='non-white-winner']").style('opacity','0.4')
 		  // show next text
 		d3.selectAll("#text-5,#text-6").classed('hidden', false)
 		// 
 		d3.selectAll("[data-name='white-winner-arrow']").classed('hidden',false)
+
+		// hide all non-white winners
+		
+		// hide arrow
+		d3.selectAll("[data-name='all-non-white-winner-arrow']").classed('hidden',true)
+		// hide text
+		d3.selectAll("#text-7, #text-8").classed('hidden', true)
 		})
+
 
 		d3.select("#step4").on('stepin', function() {
 		// hide all mix and white winners
-		d3.selectAll("[data-name='not-all-non-white-win'],[data-name='white-winner']").style('opacity','40%')
+		d3.selectAll("[data-name='not-all-white-win'],[data-name='non-white-winner']").style('opacity','1')
+		d3.selectAll("[data-name='white-winner']").style('opacity','0.4')
+		d3.selectAll("[data-name='not-all-non-white-win'],[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','0.4')
 		// hide previous text
 		d3.selectAll("#text-5,#text-6").classed('hidden', true)
+		d3.selectAll("#text-9, #text-10").classed('hidden', true)
 		// hide previous arrow
 		d3.selectAll("[data-name='white-winner-arrow']").classed('hidden',true)
+		d3.selectAll("[data-name='more-white-arrow']").classed('hidden', true)
+
+		
 
 		// show all non-white winners
-		d3.selectAll("[data-name='non-white-winner']").style('opacity','100%')
+		d3.selectAll("[data-name='non-white-winner']").style('opacity','1')
 		// show arrow
 		d3.selectAll("[data-name='all-non-white-winner-arrow']").classed('hidden',false)
 		// show text
 		d3.selectAll("#text-7, #text-8").classed('hidden', false)
 		})
+
 
 		d3.select("#step5").on('stepin', function() {
 		// hide previous arrow
@@ -7255,12 +7292,11 @@
 
 
 		// show everything
-		d3.selectAll("[data-name='not-all-white-win'],[data-name='not-all-non-white-win'],[data-name='white-winner'],[data-name='non-white-winner'],[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','100%')
-		// show opacity cover
-		d3.selectAll("[data-name='more-white-arrow']").classed('hidden', false)
+		d3.selectAll("[data-name='not-all-white-win'],[data-name='not-all-non-white-win'],[data-name='white-winner'],[data-name='non-white-winner'],[data-name='white-nom'],[data-name='nonwhite-nom']").style('opacity','1')
 		// show arrow
-		d3.selectAll("#text-9, #text-10").classed('hidden', false)
+		d3.selectAll("[data-name='more-white-arrow']").classed('hidden', false)
 		// show text
+		d3.selectAll("#text-9, #text-10").classed('hidden', false)
 		})
 
 	  </script>
