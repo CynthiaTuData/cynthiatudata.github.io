@@ -169,6 +169,9 @@
     margin-top:5px;
   }
 
+  .blockquote-footer{
+	color: #42280e;
+  }
 
   .footer {
     margin-top: 150px; 
@@ -243,9 +246,9 @@
 	.steps-container {
 		position: relative;
   		padding: 0 1rem;
-  		max-width: 30rem;
-  		width: 33%;
-		  padding-bottom: 3em;
+  		max-width: 450px;
+		padding-bottom: 3rem;
+		z-index: 1
 	}
 	
 	.step {
@@ -253,7 +256,7 @@
 	  margin-bottom: 25rem;
 	  margin-left: 5rem;
 	  color:  #42280e;
-	  background-color:  #ddc78f;
+	  /* background-color:  #ddc78f; */
 	}
 	
 	.step p {
@@ -298,38 +301,7 @@
 		flex-grow: 2;
 	  }
 	}
-	
-	body {
-	  margin: 0;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
-	  font-size: 1.25em;
-	}
-	
-	h1,
-	h2,
-	h3 {
-	  text-align: center;
-	}
-	
-	.title-content {
-	  background: #f8f8f6;
-	  padding: 4em 0;
-	}
-	
-	.title-container h1 {
-	  margin-top: 0;
-	}
-	
-	.body-text {
-	  text-align: justify;
-	  max-width: 800px;
-	  margin: 0 auto;
-	}
-	
-	p {
-	  margin-bottom: 2em;
-	  line-height: 1.5;
-	}
+
 	</style>
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
@@ -1188,13 +1160,13 @@
 
 			<div class="step" id="step2">
 				<p>Nowadays, the neighborhood's past glory—and the abrupt demolition that brought its properity to a halt—could only be found in the archive.</p>
-				<img src="img/hicks.png" style="width:25vw; height:auto">
+				<img src="img/hicks.png" style="min-width: 300px; width:25vw; height:auto">
 				<figcaption>Storefronts on Hamilton Avenue, between Hicks Street and Cole Street in 1929, before demolition. NYC Urban Archive</figcaption>
 			</div>
 
             <div class="step" id="step3">
 				<p>Once a vibrant immigrant enclave, the waterfront area of Red Hook was once home to fishermen, dockworkers, and shop owners.</p>
-				<img src="img/columbia.png" style="width:35vw; height:auto">
+				<img src="img/columbia.png" style="min-width: 300px; width:35vw; height:auto">
 				<figcaption>Businesses between Columbia Street and Hicks Street in 1929, the entire block was later demolished. NYC Urban Archive</figcaption>
 				
 			</div>
@@ -1202,28 +1174,29 @@
 				
 				<p>But Moses' highway project would later torn the community down to pieces.</p>
 				<p>Among the demolished lots was the Devoe and Raynolds Company, one of America's oldest paint maker whose origin could be traced back to the 1750s.</p>
-				<img src="img/devoe.png" style="width:35vw; height:auto">
+				<img src="img/devoe.png" style="min-width: 300px; width:35vw; height:auto">
 				<figcaption>Devoe and Raynolds Company in 1940, months before demolition. New York Public Library Digital Collections</figcaption>
 				
 			</div>
 			<div class="step" id="step5">
 				<p>Bricks and Debris laid in front of the Devoe and Raynolds Paint Company warehouse.</p>
 				<p>The area was later converted into the northern sector of the Belt Parkway.</p>
-				<img src="img/plant.png" style="width:33vw; height:auto">
+				<br>
+				<img src="img/plant.png" style="min-width: 300px; max-width:33vw; height:auto">
 				<figcaption>Devoe and Raynolds Company in 1940, months before demolition. New York Public Library Digital Collections</figcaption>
 				
 			</div>
             <div class="step" id="step6">
 				<p>According to the New York Times, the soon-to-be-evicted tenants brought a case to court days after the eveiction notice came.</p>
 				<p>The court eventually granted them two extra weeks to pack up everything and relocate.</p>
-				<img src="img/garnet-1.png" style="width:35vw; height:auto">
+				<img src="img/garnet-1.png" style="min-width: 300px; width:35vw; height:auto">
 				<figcaption>Eastside on Court Street, buildings were cut in half with the remaining left to be torn down. New York Public Library Digital Collections</figcaption>
 				
 			</div>
 
 			<div class="step" id="step7">
 				<p>About 400 buildings in the neighborhood were razed to make way for the highway construction to begin.</p>
-				<img src="img/nelson.png" style="width:35vw; height:auto">
+				<img src="img/nelson.png" style="min-width: 300px; width:35vw; height:auto">
 				<figcaption>Nelson Street, before & after demolition. New York Public Library Digital Collections</figcaption>
 				
 			</div>
@@ -1280,7 +1253,7 @@
 			</div>
 		</div>			
 		<div class="row content justify-content-center">		
-			<img src="img/line.png" class="mx-auto d-block" style="max-width:60vw;height:auto">
+			<img src="img/line.png" class="mx-auto d-block" style="width:600px;height:auto">
 		</div>	
 		<div class="row data-diary justify-content-center" style="margin-top:50px">
 			<div class="col-sm-7">		
