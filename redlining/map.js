@@ -4,7 +4,7 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/cynthia-tu/clk8henfo031401p79hd39az8',
     zoom: 10,
     center: [-74, 40.725],
-    maxZoom: 15,
+    maxZoom: 10,
     minZoom: 8,
     maxBounds: [[-74.45, 40.45], [-73.55, 41]]
 });
