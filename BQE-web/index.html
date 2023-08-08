@@ -1,216 +1,216 @@
-<!doctype html>
-<html lang='en'>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>BQE Mater's Project Draft</title>
-  </head>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>BQE</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="icon" type="image/x-icon" href="">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Poltawski+Nowy:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Poltawski+Nowy:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body >
 
-  <body class="story-container">
-    <div id="scrolly-container intro">
-
-      <div class="media-container">
-        <img src='media/media_placeholder.jpg'>
+<div class="story-container container-fluid">
+  
+    <div id="scrolly-container intro" class="centered">
+      <div class="media-container centered">
+        <img src="media/RH-past.jpeg" style="width:700px"/>
       </div>
-
-      <div class="steps-container">
-                   
-        <span class="step-1">
-          <p>intro text</p>
-        </span>
-        <span class="step-2">
-          <p>intro text</p>
-        </span>
-        <span class="headline"> 
-          <h1>80 Years of BQE Exodus (Working Title)</h1>
-        </span>
-        <span class="subhead">
-          <h2>How highway planning shaped a Brooklyn neighborhood over a century</h2>
-        </span>
-
-      </div> 
+      <h1>Divide One Neighborhood, Connect the Others</h1>
+      <h2>How a Highway Torn Red Hook Apart</h2> 
+     
     </div>
 
-    <div class="content">
+    <div class="content centered container-fluid">
+      <p>On July 8, 1940, a notice arrived for hundreds of people living along Hamilton Avenue, Brooklyn.<p>
+
+        <p>“The families served have ten days in which to remove their belongings,” the notice read. “If they still refuse, Sheriff Mangano faces a sterner task of putting their belongings on the street.”</p>
+        
+        <p>Tenants on Hamilton Avenue had already known that this day would come. A year earlier, the city started building the southern extension of the Brooklyn-Queens Expressway (BQE) under the instruction of Robert Moses, the head architect of New York State’s highway system. Moses proposed to build a tunnel to connect downtown Manhattan and Brooklyn. The proposal required the widening of Hamilton Avenue. These buildings were in the way.</p>
+    </div>
+
+    <div class="media-container centered container-fluid">
+      <img src="media/vacate-notice-newspaper.png" style="width:500px"/>
+    </div>
+
+    <div class="content centered container-fluid">
       <p>
-        On July 8, 1940, a piece of notice arrived for hundreds of tenants living along Hamilton Avenue, Brooklyn.
+        Eighty years ago, a modern highway project, designed to bind the city together, sliced off a working-class, immigrant-populated neighborhood from the rest of the city. The forced division tore the social fabric of Red Hook, leaving generations of people to live with its aftermath even to this day.
+      </p>
+      <h3>FORCED MIGRATION</h3>
+  
+      <p>The first wave of vacate notices was issued in May. In July came the ultimatum. While most who were displaced hustled about finding new sites for their businesses and homes, a few began a tug-of-war with the Brooklyn Supreme Court.</p>
+      <br>
+      <br>
+    </div>
+
+    <div id="scrolly-map" class="container-fluid">
+        <div id="map"></div>
+        <div id="mapInset"></div>
+        <div id="story" class="container-fluid"></div>
+    
+    
+        <script src="./config.js"></script>
+        <script src="./mapp.js"></script>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content centered">
+      <p>Though the HOLC saw the tunnel project as a “favorable influence” on Red Hook that would increase the area’s “desirability”, the highway that split Red Hook from the rest of the city did not revitalize the area as the HOLC had envisioned.</p> 
+      <p>In 1938, New York City’s Housing Authority (NYCHA) started building housing projects in Red Hook to house the growing number of workforce on the waterfront. The apartments were well-built: amenities included self-operating elevators, trash chutes in the hallways, in-building laundry rooms, and sports facilities. Most tenants were Irish and Italian dockworkers and their families.</p>
+
+      <p>However, Red Hook saw a drop in its workforce and population in the 1950s as the completion of the highway system increasingly moved manufacturing on the waterfront offshore.</p>
+      
+      <p>“Red Hook’s economy collapses from boom town to abandoned warehouses and empty lots, from a bustling shoreline to a silent, rotting one,” according to Red Hook WaterStories.</p>
+      
+      <p>As more European immigrants working in the area started to move out of Red Hook, the housing projects began to house more Black and Hispanic families. Today, Red Hook Houses accommodate about 6,000 residents, who are mostly families of color. Latinx and Black residents make up about 70% of Red Hook’s total population, according to the 2020 U.S. Census.</p>
+      
+    </div>
+
+    <div class="chart centered">
+      <p>ai2html placeholder</p>
+      <img src="media/demographic-shift.png" width="900 px">
+    </div>
+
+    <div class="content centered">
+      <p>“Redlining and highway building are often ways to devalue property based on who lives there,” said Adam Susaneck, a New York City-based architect. Susaneck runs “Segregation by Design,” a project that documents the destruction of communities of color due to redlining, urban renewal, and freeway construction.
+      </p>
+
+      <p>“The ‘urban renewal’ movement, and the construction of highways are proxies to draw financial lines between neighborhoods.” Susaneck said, “What we see is the search for new tools for continuing the old ways.” 
       </p>
 
       <p>
-        “The families served have ten days in which to remove their belongings,” the notice read, according to the Brooklyn Daily Eagle. “If they still refuse, Sheriff Mangano faces a sterner task of putting their belongings on the street.”
+        Gentrification and real estate development could be new proxies to perpetuate the racial lines into the future, he added.
       </p>
     </div>
 
-    <div class="media">
-      <img src="media/vacate-notice-newspaper.png"/>
+    <div id="neighborhood-boundary-scrolly">
+      <p>scrolly section</p>
     </div>
 
-    <div class="content">
+    <div class="content centered">
       <p>
-        Tenants on Hamilton Avenue knew that the day would come. A year ago, the city started building the southern extension of the Brooklyn-Queens Expressway (BQE), under the instruction of Robert Moses, the head architect of New York State’s highway system. A tunnel that connects Manhattan and Brooklyn will be put at the starting point of Hamilton Avenue, and the avenue will need to be widened.
+        “It's interesting that the BQE really separated and made the situation potentially worse for a lot of people in Red Hook.” Geis added.
       </p>
+      <p>
+        The highway not only splits Red Hook geographically from neighborhoods north of Hamilton Avenue but also enhanced racial segregation in the area.
+      </p> 
+      <p>
+        For Vanessa McKnight and many young folks of color living in Red Hook back in the 1970s, crossing over to the North side of BQE meant being exposed to racially-incentivized violence. On her morning commute to school on the other side of Hamilton Avenue, she recalled that a group of white young men, carrying bats and chains, would wait at the end of the overpass to beat up students coming from Red Hook.
+      </p>
+      <p>
+        “When we got to the top of the bridge, we would lower our voices, whisper, and listen. We could hear the bats and chains clanking… They would beat, especially on the black young men, they would beat them,” McKnight shared her experience with a community-led project on Red Hook residents’ interactions with the BQE. “We were forced to choose between getting beat up with bats or dropping out.”
+      </p>
+
+      <br>
+
+      <h3>RED HOOK TODAY</h3>
 
       <p>
-        The first wave of vacate notices was issued in May. In July came the ultimatum. While most who were displaced hustled about finding new sites for their businesses and homes, a few began a tug-of-war with Court Justice Charles C. Lockwood who headed the Legislative Committee of Housing.
+        Some residents in Red Hook, however, feel that the isolation has helped preserve some of Red Hook’s unique characteristics. David Sharps is the caption of the Brooklyn Waterfront Museum. He has been living on a barge that anchors off the coast of Red Hook since 1994.
       </p>
-
-    </div>
-
-    <div id="scrolly-container demolition">
-
-      <div class="media-container">
-        <img src='media/before-after.gif'>
+      <p>
+        “Being isolated, one could argue, has been a good thing for Red Hook,” Sharps said, “because of the difficulty of getting here, its isolation has kept high rises out for many years…So some of those disadvantages helped keep us with some other historic charm, cobblestones that you still find here.” 
+      </p>
+      <p>
+        But some of Red Hook’s “historic charm” are in danger now as commercial developers set sight on the neighborhood. 
+      </p>
+      <div class="chart centered">
+        <p>ai2html placeholder</p>
+        <img src="media/rh-neighborhood.png" width="800 px">
       </div>
-
-      <div class="steps-container">
-                  
-        <span class="step-1">
-          <p>Along Hamilton Avenue, about 1,000 residents were evicted, and some 400 dwellings were razed to make way for the incoming highway. Among the displaced were mom-and-pop business owners, beloved local eateries, residents who had lived in their homes for decades, and about 100 welfare tenants.</p>
-        </span>
-        <span class="step-2">
-          <p>By July 22, all but 40 families were able to comply with the order. The remaining would plead in court to have their deadline extended, while the banging sound of the power hammer played the tireless reminder.</p>
-        </span>
-      </div> 
-    </div>
-
-    <div id="scrolly-container 3d-model">
-
-      <div class="media-container">
-        <img src='media/media_placeholder.jpg'>
+      <p>
+        In 2008, IKEA opened its first New York City location in Red Hook, which sits on 22 acres of land on Red Hook’s waterfront. Before its construction, the Swedish furniture store’s proposal attracted locals’ opposition, as IKEA planned to fill the drydock on the Erin basin for parking space–a fight that IKEA won eventually. Delivery giants like Amazon and UPS also bought land in Red Hook to build last-mile delivery hubs. With more delivery trucks appearing in the area, residents raised concerns over pedestrian safety and air pollution concerns.
+      </p>
+      <p>
+        In recent years, Red Hook has attracted an influx of higher-earning populations, who came to the neighborhood seeking cheaper renting options. Walking through blocks along Van Brunt Street, one could easily sight newly developed living units and art studios transformed from old warehouses.
+      </p>
+      <p>
+        Sharps said some of his friends who had been long-time residents of Red Hook were pushed out of the neighborhood due to rent hikes. “Now that the real estate people and landlords are doubling tripling their rent of what it was 10, 15 years ago.” 
+      </p>
+      <div class="chart centered">
+        <p>ai2html placeholder</p>
+        <img src="media/income.png" width="800 px">
       </div>
-
-      <div class="steps-container">
-                  
-        <span class="step-1">
-          <p>3d model</p>
-        </span>
-        <span class="step-2">
-          <p>After the notice was served on his business at 88 Hamilton Ave, 96-year-old Thomas W. Munkenbeck hustled around town to seek a new location for his pipe and ship fitting shop. Munkenbeck had worked in his shop for 74 years - until one of the air shafts for the highway tunnel was set to be put right on the site.</p>
-        </span>
-        <span class="step-3">
-          <p>more about buildings/people/shopowners displaced, with photos.</p>
-        </span>
-        <span class="step-4">
-          <img src="media/building.jpeg"/>
-        </span>
-      </div> 
-    </div>
-
-    <div class="content">
       <p>
-        Hamilton Avenue was the artery of the buzzing neighborhood of Red Hook. 
+        With new developments coming into the area, the neighborhood's economic dynamic seems to be shifting. When Geis carried out her research in Red Hook in 2013, which was one year after Hurricane Sandy, she observed an “interesting dichotomy” between people living along Van Brunt Street and the Red Hook Houses.        
       </p>
       <p>
-        The present-day Red Hook area was first settled by the Lenape, a Native American tribe. During the summertime, the Lenape people would come to the marshes for fishing and waterfowl hunting.
+        “When I was doing interviews with people in the Red Hook houses, the effects of Hurricane Sandy were still current.” Geis recalled that residents living in the projects were still relying on generators that worked inconsistently for heating a year after the hurricane. “Whereas like some of the people who live off Brunt Street, had more money, and had some of those brownstones that were closer to the water and were affected pretty drastically at the moment–they were already talking about Hurricane Sandy in the past.” 
+      </p>
+      <h3>DETACHED FROM EVERYWHERE</h3>
+      <p>
+        For those who do not own cars, access to public transportation is another concern that looms over the residents daily. The nearest subway station to Red Hook is Smith–Ninth Streets station, which sits on the northeast side of Hamilton Avenue. Besides the MTA bus services, residents must cross the BQE to get over to the train station and other parts of Brooklyn.
       </p>
       <p>
-        Since the Dutch colonists arrived at the waterfront area in South Brooklyn in the 1600s, Red Hook had been a vibrant immigrant enclave. A diverse mix of ethnic groups: Dutch, Norwegians, Italians, Puerto Ricans, and Black people (both enslaved people brought over by the Dutches, and free blacks who fled from the South)… have called Red Hook their home. 
+        “[The highway] is not even pleasing to look at. It's super ugly. Like, no one wants to even come into Red Hook because that's the first thing they got to see,” said Quincy Phillips, a Red Hook native who has lived in the neighborhood their whole life.  “It's really messed up because Red Hook itself is such a beautiful place.”   
       </p>
-      <p>
-        From the 1840s into the 20th Century, Red Hook bustled with fishermen, dockworkers, sailors, and shop owners who visited, worked, or lived on the waterfront. “Think of it as a maritime Times Square.” wrote Carolina Salguero, founder of Red Hook Waterfront Stories. 
-      </p>
-      <p>
-        From the 1840s into the 20th Century, Red Hook bustled with fishermen, dockworkers, sailors, and shop owners who visited, worked, or lived on the waterfront. “Think of it as a maritime Times Square.” wrote Carolina Salguero, founder of Red Hook Waterfront Stories. 
-      </p>
-      <p>
-        However, in the eyes of the federal government, Red Hook was one of the least desirable neighborhoods in New York City.
-      </p>
-      <p>
-        When the Great Depression hit in 1929, foreclosures swept across cities in America. In hopes of reinforcing better real estate practices, the federal government established the Home Owners Loan Corporation (HOLC), an agency that appraises neighborhoods across the country. In the 1930s, HOLC created a series of maps that assess lending risk in different neighborhoods. Neighborhoods were classified into four grades: “best,” “desirable,” “declining,” and “hazardous.”
-      </p>
-    </div>
-
-    <div id="scrolly-container redlining">
-
-      <div class="media-container">
-        <img src='media/redlining.png'>
+      <div class="chart centered">
+        <p>ai2html placeholder</p>
+        <img src="media/transportation.png" width="800 px">
       </div>
-
-      <div class="steps-container">
-                  
-        <span class="step-1">
-          <p>The remark of the HOLC report of Red Hook reads: 
-          </p>
-        </span>
-        <span class="step-2">
-          <p>“Population: 35% Irish-Italian-Scandi-navian, predominately foreign born..
-            Occupation: unskilled labor… 
-            Detrimental Influences: Conglomerate mixture of properties. Mixed races. "Red Hook" and "Gowanus Canal" sections have been slum-type areas for many years…. 
-            Favorable Influences: Proposed Hamilton Avenue tunnel to the Battery in Manhattan.”
-            </p>
-        </span>
-        <span class="step-3">
-          <img src="media/redline-remark.png"/>
-        </span>
-        <span class="step-4">
-          <p>more blah blah</p>
-        </span>
-      </div> 
-    </div>
-
-    <div class="content">
       <p>
-      blah blah blah 
+        From February to April 2023, Phillips and a team of community organizers at Red Hook Initiative surveyed more than 600 Red Hook residents and commuters about their experiences interacting with the BQE.
       </p>
       <p>
-        But Shannon Geis, an oral historian who did extensive research on Red Hook in 2013, believes that racial discrimination added to the stigma surrounding Red Hook. “With immigrants and lower-income people working, regardless of whether it was actually a lot of crime happening in the actual neighborhood, it got that reputation. Because there's a lot of racism just associating waterfront with crime.” Geis said.
-      </p>
-    </div>
-
-    <div class="media">
-      <img src="media/RH-past.jpeg"/>
-      <img src="media/RH-present-aerial.png"/>
-    </div>
-
-    <div class="content">
-      <p>
-        80 years later, Red Hook is still suffering from the impact brought by the highway.
+        
+        There are two ways to get to the North side of Hamilton Avenue from Red Hook by foot. Pedestrians could either use the Hamilton Avenue footbridge–which goes above the BQE ground traffic and beneath the BQE corridor; or cross the intersection of West 9th Street and Hamilton Ave–which requires crossing six lanes of busy traffic.
       </p>
       <p>
-        blah blah about present day. people complaining.
+        “The footbridge–it shakes when you're like walking past. When there's like trucks under it going past it, you feel a little vibration. So people hold on to the poles and stuff,” Phillips said. 
       </p>
-    </div>
-
-    <div id="scrolly-container present">
-
-      <div class="media-container">
-        <img src='media/media_placeholder.jpg'>
-        <p>map of present day Red Hook, scrolly</p>
+      <p>
+        Residents also felt unsafe crossing the intersection, and busy traffic is only one of the many reasons. Phillips explained that the pedestrian stoplight only lasts about 20 to 25 seconds. In addition, crossing the intersection at night could be dangerous due to the lack of streetlights. Many residents also reported bad air quality at the crosswalk due to the highway traffic and trucks passing through Hamilton Avenue.
+      </p>
+      <div class="chart centered">
+        <p>ai2html placeholder</p>
+        <img src="media/footbridge.png" width="400 px">
+        <img src="media/intersection.png" width="400 px">
       </div>
-
-      <div class="steps-container">
-                  
-        <span class="step-1">
-          <p>
-            issues with footbridge
-          </p>
-        </span>
-        <span class="step-2">
-          <p>
-            issues with crosswalk
-          </p>
-        </span>
-        <span class="step-3">
-          <p>IKEA, Amazon coming in</p>
-        </span>
-        <span class="step-4">
-          <p>even more blah blah</p>
-        </span>
-      </div> 
-    </div>
-
-    <div class="content">
       <p>
-        blah blah
+        “When I'm there under that [highway] bridge. It's like, you could see empty bolts falling from the bridge. It literally looks like it's collapsing.” Phillips said, “But you know, we don’t have a choice because we’re blocked off from everywhere else.”
       </p>
       <p>
-        fin.
+      As the highway nears 80 years old, experts warned that sections of the BQE might start crumbling soon. The city’s transportation department is currently developing the “BQE Corridor Vision” project, which aims to roll out repairs and upgrades to rebuild a “safe, modern, resilient roadway we need.” 
+    </p>
+      <p>
+      The plan to keep the BQE was slammed by locals whose lives have been affected by the highway for years. Community advocates are pushing for tearing the highway down completely or transforming it into community green spaces.
       </p>
+      <p>
+      Phillips, who has witnessed community leaders in Red Hook fighting with the DOT for improvement of the BQE’s Hamilton section, felt pessimistic that the DOT might prioritize locals’ needs. He said that the DOT had been slow to respond to complaints, working on minor changes that are not current.
+      </p>
+      <p>
+      “Robert Moses came, and he wanted to build this super bridge in order for people to save time and energy. He wasn't really thinking about the actual people that were going to be affected by it,” Phillips said. “Personally, I think the DOT is doing the same thing that Robert Moses did. Not in the sense that they don't want to see changes and stuff. It's just like they're not doing the right thing right now. If they continue to go down this path, I honestly think history will repeat itself.”
+      </p>
+      <br>
+      <br>
+      <br>
     </div>
-  </body>
+
+		</div>	
+    <section id="data-diary" class="centered" style="margin-top:50px">
+      <div>
+      <h4>Data and Methods</h4>
+      <p>The buildings, maps and location data presented in this article are based on historical records.
+        <br>
+      <br>Archival photos of buildings and lots were collected from the New York Public Library and the Brooklyn Historical society. The
+        1939 and 1950 Sanborn Fire Insurance maps were used to identify the location of lots and buildings that were demolished.
+      <br>
+      </p>
+      </div>
+    </section>	
+</body>
 </html>
-

@@ -1,10 +1,292 @@
-.story-container {
+
+body {
+    margin:0;
+    padding:0;
+    background-color:#fbf9ef;
+}
+a, a:hover, a:visited {
+    color: #0071bc;
+}
+
+#content{
+    position:relative;
+    color:#fbf9ef;
+    overflow:hidden;
+    margin-bottom: 20px;
+}
+
+#map {
+    top:0;
+    height: 100vh;
+    width:100vw;
+    position: sticky;
+}
+#mapInset {
+    bottom:50px;
+    right:30px;
+    height: 180px;
+    width:250px;
+    max-width:100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+#mapInset .mapboxgl-ctrl-bottom-left{
+    display: none;
+}
+@media (max-width: 500px) {
+    #mapInset {
+        display: none;
+    }
+}
+
+h1{
+    font-family: 'Poltawski Nowy', 'Open Sans', 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight:800;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color:#42280e;
+}
+
+h2{
+    font-family: 'Merriweather','Open Sans', 'Times New Roman', Times, serif;
+    font-size: 40 px;
+    /* line-height: 40 px; */
+    font-weight: 300;
+    font-style: italic;
+    color:#42280e;
+    text-align:center
+}
+
+h3{
+    font-family: 'Merriweather','Open Sans', 'Times New Roman', Times, serif;
+    font-size: 25px;
+    line-height: 40 px;
+    font-weight: 600;
+    /* font-style: italic; */
+    color:#42280e;
+    text-align:left
+}
+
+p {
+    font-family:  'Merriweather', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-style: light;
+    font-weight: light;
+    letter-spacing: normal;
+    line-height: 150%;
+    color:  #42280e;
+    margin-bottom: 2 px;
+    overflow:hidden
+}
+
+h4{
+	font-family:  'Roboto', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 22px;
+    color:  #6d441b;
+
+ }
+ #data-diary{
+    border-top: 1px solid #6d441b;
+    margin-bottom: 50px;
+ }
+#data-diary p{
+    font-family: 'Roboto', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: normal;
+    line-height: 22px;
+    color:  #6d441b;
+    margin-bottom: 2 px;
+
+  }
+
+#features {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.hidden {
+    visibility: hidden;
+}
+.centered {
+    width: 60vw;
+    margin: 0 auto;
+}
+.lefty {
+    width: 33vw;
+    margin-left: 5vw;
+}
+.righty {
+    width: 50vw;
+    margin-left: 40vw;
+}
+.fully {
+    width: 100%;
     margin: auto;
-    width: 50%;
-    padding: 10px;
+}
+.light {
+    color: #444;
+    background-color:#fbf9efbb;
+}
+.dark {
+    color: #fafafa;
+    background-color: #444;
+}
+.step {
+    padding-bottom: 50vh;
+    /* margin-bottom: 10vh; */
+    opacity: 0.2;
+}
+
+#full-page .light, #full-page-2 .light{
+    color: #444;
+    background-color:#fbf9ef;
+    opacity: 100%;
+}
+
+.step.active {
+    opacity: 0.99;
+}
+
+.step div {
+    padding: 25px 100px;
+    /* line-height: 25px;
+    font-size: 13px; */
+}
+#full-page .step div{
+    padding: 100px 50px;
+}
+
+.step img {
+    width: 100%;
 }
 
 img{
-    width:600px;
-    height: auto;
+    max-width:90%;
+    height:auto
 }
+
+@media (max-width: 750px) {
+    .centered, .lefty, .righty {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+/* Fix issue on mobile browser where scroll breaks  */
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+    touch-action: unset;
+}
+
+.media-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* map scrolly setup */
+#neighborhood .scrolly-container {
+    position: relative;
+  }
+  
+  #neighborhood .sticky-thing {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+      top: 0;
+      left: 0;
+      bottom: auto;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    
+  }
+
+  #neighborhood .chart {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* border: 1px solid #000; */
+}
+  
+#neighborhood .steps-container {
+      position: relative;
+        padding: 0 1rem;
+        max-width: 450px;
+      padding-bottom: 3rem;
+      z-index: 1
+  }
+  
+  #neighborhood .step {
+    margin: 0 auto 2rem auto;
+    margin-bottom: 25rem;
+    margin-left: 5rem;
+    color:  #42280e;
+    /* background-color:  #ddc78f; */
+  }
+  
+  #neighborhood .step p {
+  text-align: left;
+  padding: 0rem;
+  font-family: 'Merriweather', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  font-size: 18px;
+  /* font-style: light;
+  font-weight: light; */
+  letter-spacing: normal;
+  line-height: 150%;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  /* When it's less than 700 pixels wide, do normal scrollytelling */
+  
+  @media only screen and (min-width: 700px) {
+      #neighborhood #scrolly.side-by-side {
+      display: flex;
+    }
+  
+    #neighborhood #scrolly.side-by-side > div {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      padding: 0.75em;
+    }
+  
+    #neighborhood #scrolly.side-by-side .scrolly-overlay {
+      margin-top: 70vh;
+      order: 0;
+      /* Change these to adjust sizing options */
+      min-width: 15rem;
+      max-width: 20rem;
+    }
+  
+    #neighborhood #scrolly.side-by-side .sticky-thing {
+      order: 1;
+      flex-grow: 2;
+    }
+  }
