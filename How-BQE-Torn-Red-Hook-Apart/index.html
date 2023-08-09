@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>BQE</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="icon" type="image/x-icon" href="">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Poltawski+Nowy:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Poltawski+Nowy:wght@400;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body >
+
+<div class="story-container container-fluid">
+  
+    <div id="scrolly-container intro" class="content">
+      <div class="content media-container">
+        <img src="media/headline.png"/>
+      </div>
+      <figcaption>Source: Brooklyn Public Library</figcaption>
+      <h1>Divide One Neighborhood,<br> Connect the Others</h1>
+      <h2>How a Highway Torn Red Hook Apart</h2> 
+      <div class="byline">
+        <p>By Cynthia Tu</p>
+      </div>
+     
+    </div>
+
+    <div class="content container-fluid" style="margin-top:5vh">
+      <p>On July 8, 1940, a notice arrived for hundreds of people living along Hamilton Avenue, Brooklyn.</p>
+
+      <p>“The families served have ten days in which to remove their belongings,” the notice read. “If they still refuse, Sheriff Mangano faces a sterner task of putting their belongings on the street.”</p>
+        <!-- fade in effect? -->
+        <div class="content media-container container-fluid">
+          <img src="media/vacate-notice.png"/>
+        </div>
+        <figcaption>Source: Brooklyn Daily Eagle, Brooklyn Public Library</figcaption>
+        <p>Tenants on Hamilton Avenue had already known that this day would come. A year earlier, the city started building the southern extension of the Brooklyn-Queens Expressway (BQE) under the instruction of Robert Moses, the head architect of New York State’s highway system. Moses proposed to build a tunnel to connect downtown Manhattan and Brooklyn. The proposal required the widening of Hamilton Avenue. These buildings were in the way.</p>
+
+      <p>
+        Eighty years ago, a modern highway project, designed to bind the city together, sliced off a working-class, immigrant-populated neighborhood from the rest of the city. The forced division tore the social fabric of Red Hook, leaving generations of people to live with its aftermath even to this day.
+      </p>
+      <h3>FORCED MIGRATION</h3>  
+      <p>The first wave of vacate notices was issued in May. In July came the ultimatum. While most who were displaced hustled about finding new sites for their businesses and homes, a few began a tug-of-war with the Brooklyn Supreme Court.</p>
+      <br>
+      <br>
+    </div>
+
+    <div id="scrolly-map" class="container-fluid">
+        <div id="map"></div>
+        <div id="mapInset"></div>
+        <div id="story" class="container-fluid"></div>
+    
+    
+        <script src="./config.js"></script>
+        <script src="./mapp.js"></script>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content">
+      <p>Though the HOLC saw the tunnel project as a “favorable influence” on Red Hook that would increase the area’s “desirability”, the highway that split Red Hook from the rest of the city did not revitalize the area as the HOLC had envisioned.</p> 
+      <p>In 1938, New York City’s Housing Authority (NYCHA) started building housing projects in Red Hook to house the growing number of workforce on the waterfront. The apartments were well-built: amenities included self-operating elevators, trash chutes in the hallways, in-building laundry rooms, and sports facilities. Most tenants were Irish and Italian dockworkers and their families.</p>
+
+      <p>However, Red Hook saw a drop in its workforce and population in the 1950s as the completion of the highway system increasingly moved manufacturing on the waterfront offshore.</p>
+      
+      <p>“Red Hook’s economy collapses from boom town to abandoned warehouses and empty lots, from a bustling shoreline to a silent, rotting one,” according to Red Hook WaterStories.</p>
+      
+      <p>As more European immigrants working in the area started to move out of Red Hook, the housing projects began to house more Black and Hispanic families. Today, Red Hook Houses accommodate about 6,000 residents, who are mostly families of color. Latinx and Black residents make up about 70% of Red Hook’s total population, according to the 2020 U.S. Census.</p>
+  </div>
+      <div class="chart-container">
+
+
+<!-- Generated by ai2html v0.102.0 - 2023-08-08 19:52 -->
+<!-- ai file: demographic.ai -->
+<style media="screen,print">
+	#g-demographic-box ,
+	#g-demographic-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-demographic-box p {
+		margin:0;
+	}
+	#g-demographic-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-demographic-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-demographic-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-demographic-box .g-aiPointText p { white-space: nowrap; }
+	#g-demographic-middle {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-demographic-middle p {
+		font-family:Source Sans Pro;
+		font-weight:600;
+		line-height:17px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0.01em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-demographic-middle .g-pstyle0 {
+		font-weight:200;
+		line-height:12px;
+		letter-spacing:0em;
+		font-size:10px;
+		color:rgb(51,51,51);
+	}
+	#g-demographic-middle .g-pstyle1 {
+		font-weight:200;
+		line-height:11px;
+		letter-spacing:0em;
+		font-size:9px;
+		text-align:center;
+	}
+	#g-demographic-middle .g-pstyle2 {
+		font-weight:400;
+		line-height:14px;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:center;
+	}
+	#g-demographic-middle .g-pstyle3 {
+		font-weight:200;
+		line-height:14px;
+		letter-spacing:0em;
+		font-size:12px;
+		color:rgb(56,56,57);
+	}
+	#g-demographic-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-demographic-mobile p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:14px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(56,56,57);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-demographic-mobile .g-pstyle0 {
+		font-weight:600;
+		line-height:17px;
+		letter-spacing:0.01em;
+		font-size:14px;
+		color:rgb(0,0,0);
+	}
+	#g-demographic-mobile .g-pstyle1 {
+		line-height:11px;
+		font-size:9px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-demographic-mobile .g-pstyle2 {
+		line-height:12px;
+		font-size:10px;
+		color:rgb(51,51,51);
+	}
+	#g-demographic-mobile .g-pstyle3 {
+		font-weight:400;
+		color:rgb(0,0,0);
+	}
+	#g-demographic-mobile .g-pstyle4 {
+		font-weight:400;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-demographic-desktop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-demographic-desktop p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:14px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(56,56,57);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-demographic-desktop .g-pstyle0 {
+		font-weight:600;
+		line-height:17px;
+		letter-spacing:0.01em;
+		font-size:14px;
+		color:rgb(0,0,0);
+	}
+	#g-demographic-desktop .g-pstyle1 {
+		line-height:12px;
+		font-size:10px;
+		color:rgb(51,51,51);
+	}
+	#g-demographic-desktop .g-pstyle2 {
+		line-height:11px;
+		font-size:9px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-demographic-desktop .g-pstyle3 {
+		font-weight:400;
+		color:rgb(0,0,0);
+	}
+
+</style>
+
+<div id="g-demographic-box" class="ai2html">
+
+	<!-- Artboard: middle -->
+	<div id="g-demographic-middle" class="g-artboard" style="width:550px; height:550px;" data-aspect-ratio="1" data-min-width="550" data-max-width="899">
+<div style=""></div>
+		<img id="g-demographic-middle-img" class="g-aiImg" alt="" src="ai/demographic-middle.jpg"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs" style="top:0.9091%;left:61.2996%;width:7.6364%;">
+			<p class="g-pstyle0"><20%</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs" style="top:0.9091%;left:68.7301%;width:7.6364%;">
+			<p class="g-pstyle0">40%</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs" style="top:0.9091%;left:76.5483%;width:7.6364%;">
+			<p class="g-pstyle0">60%</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs" style="top:0.9091%;left:84.28%;width:7.6364%;">
+			<p class="g-pstyle0">>80%</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs" style="top:1.2727%;left:4.956%;width:55.2727%;">
+			<p>Share of white population in Red Hook, 1940-2020</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs" style="top:4.9091%;left:75.5995%;margin-left:-11.2727%;width:22.5455%;">
+			<p class="g-pstyle1">% of White population</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs" style="top:49.2727%;left:72.436%;margin-left:-2.7273%;width:5.4545%;">
+			<p class="g-pstyle2">1960</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs" style="top:49.2727%;left:25.3973%;margin-left:-2.9091%;width:5.8182%;">
+			<p class="g-pstyle2">1940</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs" style="top:94.7273%;left:25.3763%;margin-left:-3.2727%;width:6.5455%;">
+			<p class="g-pstyle2">1990</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs" style="top:94.7273%;left:72.417%;margin-left:-12.6364%;width:25.2727%;">
+			<p class="g-pstyle2">2020</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs" style="top:97.8182%;left:4.9618%;width:119.8182%;">
+			<p class="g-pstyle3">Source: U.S. Census Beauru    Map: Cynthia Tu</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-demographic-mobile" class="g-artboard" style="max-width: 350px;max-height: 990px" data-aspect-ratio="0.354" data-min-width="0" data-max-width="549">
+<div style="padding: 0 0 282.8571% 0;"></div>
+		<img id="g-demographic-mobile-img" class="g-aiImg" alt="" src="ai/demographic-mobile.jpg"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs" style="top:0.6061%;left:20.142%;width:61.7143%;">
+			<p class="g-pstyle0">Share of white population in Red Hook, 1940-2020</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs" style="top:4.2424%;left:8.2564%;margin-left:-6.4286%;width:12.8571%;">
+			<p class="g-pstyle1">% White</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs" style="top:9.4949%;left:8.1098%;width:12%;">
+			<p class="g-pstyle2"><20%</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs" style="top:13.6364%;left:8.1098%;width:12%;">
+			<p class="g-pstyle2">40%</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs" style="top:13.8384%;left:84.9409%;width:9.1429%;">
+			<p class="g-pstyle3">1940</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs" style="top:17.5758%;left:8.1098%;width:12%;">
+			<p class="g-pstyle2">60%</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs" style="top:21.6162%;left:8.1098%;width:8.2857%;">
+			<p class="g-pstyle2">>80%</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs" style="top:37.7778%;left:85.1984%;width:8.5714%;">
+			<p class="g-pstyle3">1960</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs" style="top:54.3434%;left:-155.06%;width:188.2857%;">
+			<p>Source: U.S. Census Beauru    Map: Cynthia Tu</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs" style="top:62.1212%;left:84.3365%;width:10.2857%;">
+			<p class="g-pstyle3">1990</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs" style="top:84.9495%;left:89.4543%;margin-left:-19.8571%;width:39.7143%;">
+			<p class="g-pstyle4">2020</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs" style="top:97.0707%;left:20.1045%;width:41.4286%;">
+			<p>Source: U.S. Census Beauru   </p>
+			<p>Map: Cynthia Tu       </p>
+		</div>
+	</div>
+
+	<!-- Artboard: desktop -->
+	<div id="g-demographic-desktop" class="g-artboard" style="width:900px; height:335px;" data-aspect-ratio="2.687" data-min-width="900">
+<div style=""></div>
+		<img id="g-demographic-desktop-img" class="g-aiImg" alt="" src="ai/demographic-desktop.jpg"/>
+		<div id="g-ai2-1" class="g-Layer_1 g-aiAbs" style="top:4.7761%;left:2.5216%;width:33.7778%;">
+			<p class="g-pstyle0">Share of white population in Red Hook, 1940-2020</p>
+		</div>
+		<div id="g-ai2-2" class="g-Layer_1 g-aiAbs" style="top:5.6716%;left:41.8292%;width:4.6667%;">
+			<p class="g-pstyle1"><20%</p>
+		</div>
+		<div id="g-ai2-3" class="g-Layer_1 g-aiAbs" style="top:5.6716%;left:46.3701%;width:4.6667%;">
+			<p class="g-pstyle1">40%</p>
+		</div>
+		<div id="g-ai2-4" class="g-Layer_1 g-aiAbs" style="top:5.6716%;left:51.1478%;width:4.6667%;">
+			<p class="g-pstyle1">60%</p>
+		</div>
+		<div id="g-ai2-5" class="g-Layer_1 g-aiAbs" style="top:5.6716%;left:55.8728%;width:4.6667%;">
+			<p class="g-pstyle1">>80%</p>
+		</div>
+		<div id="g-ai2-6" class="g-Layer_1 g-aiAbs" style="top:12.5373%;left:50.481%;margin-left:-6.8889%;width:13.7778%;">
+			<p class="g-pstyle2">% of White population</p>
+		</div>
+		<div id="g-ai2-7" class="g-Layer_1 g-aiAbs" style="top:83.8806%;left:36.3553%;width:3.3333%;">
+			<p class="g-pstyle3">1960</p>
+		</div>
+		<div id="g-ai2-8" class="g-Layer_1 g-aiAbs" style="top:83.8806%;left:86.2527%;width:15.4444%;">
+			<p class="g-pstyle3">2020</p>
+		</div>
+		<div id="g-ai2-9" class="g-Layer_1 g-aiAbs" style="top:84.1791%;left:12.1551%;width:3.5556%;">
+			<p class="g-pstyle3">1940</p>
+		</div>
+		<div id="g-ai2-10" class="g-Layer_1 g-aiAbs" style="top:84.4776%;left:61.2405%;width:4%;">
+			<p class="g-pstyle3">1990</p>
+		</div>
+		<div id="g-ai2-11" class="g-Layer_1 g-aiAbs" style="top:93.4328%;left:2.3382%;width:73.2222%;">
+			<p>Source: U.S. Census Beauru     Map: Cynthia Tu       </p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-08-08 19:52 -->
+
+      </div>
+      
+    </div>
+
+
+
+    <div class="content">
+      <p>“Redlining and highway building are often ways to devalue property based on who lives there,” said Adam Susaneck, a New York City-based architect. Susaneck runs “Segregation by Design,” a project that documents the destruction of communities of color due to redlining, urban renewal, and freeway construction.
+      </p>
+
+      <p>“The ‘urban renewal’ movement, and the construction of highways are proxies to draw financial lines between neighborhoods.” Susaneck said, “What we see is the search for new tools for continuing the old ways.” 
+      </p>
+
+      <p>
+        Gentrification and real estate development could be new proxies to perpetuate the racial lines into the future, he added.
+      </p>
+<!-- neighborhood maps -->
+				<p>Shannon Geis, an oral historian who produced an oral history project on Red Hook, explained that Red Hook was once a larger area than it is today.</p>
+
+        <p>Red Hook, also called “South Brooklyn,” used to include parts of neighborhoods that are today called Columbia Waterfront District and Carroll Gardens.</p>
+        <div class="content media-container">
+          <img src="media/1919-neighborhood.png"/>
+        </div>
+        <figcaption>Brooklyn Liberty Loan Committee, Division of Districts Map, 1919<br>
+          Source: New York Public Library Digital Collection
+          </figcaption>
+
+        <p>“When the highway was put in, these neighborhoods north of the highway wanted to distinguish themselves from the bad reputation of Red Hook. And that's part of where you get some of those other neighborhood names,” she said.</p>
+        <div class="content media-container">
+          <img src="media/1950-neighborhood.png"/>
+        </div>
+        <figcaption>Map of Brooklyn neighborhoods circa 1950.<br>
+          Source: Brooklyn Historical Society
+          </figcaption>
+        <div class="content media-container">
+        <img src="media/1984-neighborhood.png"/>
+        </div>
+        <figcaption>Brooklyn on Tour: maps by Cadre Graphics; graphic design by Keith Godard of Works
+          [ca. 1984]<br>
+          Source: Brooklyn Historical Society
+          </figcaption>
+				
+
+				
+
+
+      <p>
+        “It's interesting that the BQE really separated and made the situation potentially worse for a lot of people in Red Hook,” Geis added.
+      </p>
+      <p>
+        The highway not only splits Red Hook geographically from neighborhoods north of Hamilton Avenue but also enhanced racial segregation in the area.
+      </p> 
+      <p>
+        For Vanessa McKnight and many young folks of color living in Red Hook back in the 1970s, crossing over to the North side of BQE meant being exposed to racially-incentivized violence. On her morning commute to school on the other side of Hamilton Avenue, she recalled that a group of white young men, carrying bats and chains, would wait at the end of the overpass to beat up students coming from Red Hook.
+      </p>
+      <p>
+        “When we got to the top of the bridge, we would lower our voices, whisper, and listen. We could hear the bats and chains clanking… They would beat, especially on the black young men, they would beat them,” McKnight shared her experience with a community-led project on Red Hook residents’ interactions with the BQE. “We were forced to choose between getting beat up with bats or dropping out.”
+      </p>
+
+      <br>
+
+      <h3>RED HOOK TODAY</h3>
+
+      <p>
+        Some residents in Red Hook, however, feel that the isolation has helped preserve some of Red Hook’s unique characteristics. David Sharps is the caption of the Brooklyn Waterfront Museum. He has been living on a barge that anchors off the coast of Red Hook since 1994.
+      </p>
+      <p>
+        “Being isolated, one could argue, has been a good thing for Red Hook,” Sharps said, “because of the difficulty of getting here, its isolation has kept high rises out for many years…So some of those disadvantages helped keep us with some other historic charm, cobblestones that you still find here.” 
+      </p>
+      <p>
+        But some of Red Hook’s “historic charm” are in danger now as commercial developers set sight on the neighborhood. 
+      </p>
+    </div>
+      <div class="chart-container">
+       
+<!-- Generated by ai2html v0.102.0 - 2023-08-08 21:10 -->
+<!-- ai file: redhook-neighborhood-map.ai -->
+<style media="screen,print">
+	#g-redhook-neighborhood-map-box ,
+	#g-redhook-neighborhood-map-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-redhook-neighborhood-map-box p {
+		margin:0;
+	}
+	#g-redhook-neighborhood-map-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-redhook-neighborhood-map-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-redhook-neighborhood-map-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-redhook-neighborhood-map-box .g-aiPointText p { white-space: nowrap; }
+	#g-redhook-neighborhood-map-desktop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-redhook-neighborhood-map-desktop p {
+		font-family:Source Sans Pro;
+		font-weight:400;
+		line-height:17px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0.05em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle0 {
+		font-style:italic;
+		line-height:18px;
+		letter-spacing:0.1em;
+		font-size:15px;
+		color:rgb(251,176,59);
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle1 {
+		font-weight:600;
+		line-height:10px;
+		letter-spacing:0.018em;
+		font-size:10px;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle2 {
+		font-style:italic;
+		line-height:16px;
+		height:16px;
+		filter:alpha(opacity=10);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity:0.1;
+		letter-spacing:0.1em;
+		font-size:13px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle3 {
+		font-style:italic;
+		line-height:14px;
+		height:14px;
+		filter:alpha(opacity=20);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+		opacity:0.2;
+		letter-spacing:0.1em;
+		font-size:12px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle4 {
+		line-height:10px;
+		filter:alpha(opacity=90);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+		opacity:0.9;
+		letter-spacing:0.1em;
+		font-size:10px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle5 {
+		line-height:25px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:21px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle6 {
+		font-style:italic;
+		line-height:14px;
+		height:14px;
+		filter:alpha(opacity=80);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity:0.8;
+		letter-spacing:0.1em;
+		font-size:12px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle7 {
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle8 {
+		line-height:26px;
+		filter:alpha(opacity=60);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+		opacity:0.6;
+		letter-spacing:0.1em;
+		font-size:22px;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle9 {
+		font-style:italic;
+		line-height:18px;
+		height:18px;
+		filter:alpha(opacity=80);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity:0.8;
+		letter-spacing:0.1em;
+		font-size:15px;
+		text-align:center;
+		color:rgb(251,176,59);
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle10 {
+		text-align:right;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle11 {
+		font-style:italic;
+		line-height:16px;
+		height:16px;
+		filter:alpha(opacity=10);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity:0.1;
+		letter-spacing:0.1em;
+		font-size:13px;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle12 {
+		font-style:italic;
+		line-height:15px;
+		height:15px;
+		filter:alpha(opacity=10);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity:0.1;
+		letter-spacing:0.1em;
+		font-size:13px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-desktop .g-pstyle13 {
+		line-height:14px;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		font-size:11px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 p {
+		font-family:Source Sans Pro;
+		font-weight:400;
+		line-height:14px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0.05em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle0 {
+		font-style:italic;
+		line-height:13px;
+		height:13px;
+		filter:alpha(opacity=10);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity:0.1;
+		letter-spacing:0.1em;
+		font-size:11px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle1 {
+		font-style:italic;
+		line-height:15px;
+		letter-spacing:0.1em;
+		color:rgb(251,176,59);
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle2 {
+		font-style:italic;
+		line-height:12px;
+		height:12px;
+		filter:alpha(opacity=20);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+		opacity:0.2;
+		letter-spacing:0.1em;
+		font-size:10px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle3 {
+		font-style:italic;
+		line-height:12px;
+		height:12px;
+		filter:alpha(opacity=80);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity:0.8;
+		letter-spacing:0.1em;
+		font-size:10px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle4 {
+		line-height:20px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:17px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle5 {
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle6 {
+		font-style:italic;
+		height:14px;
+		filter:alpha(opacity=80);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity:0.8;
+		letter-spacing:0.1em;
+		text-align:center;
+		color:rgb(251,176,59);
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle7 {
+		line-height:22px;
+		filter:alpha(opacity=60);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+		opacity:0.6;
+		letter-spacing:0.1em;
+		font-size:18px;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle8 {
+		font-style:italic;
+		line-height:13px;
+		height:13px;
+		filter:alpha(opacity=10);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity:0.1;
+		letter-spacing:0.1em;
+		font-size:10px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle9 {
+		text-align:right;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle10 {
+		font-style:italic;
+		line-height:13px;
+		height:13px;
+		filter:alpha(opacity=10);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity:0.1;
+		letter-spacing:0.1em;
+		font-size:11px;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle11 {
+		font-weight:600;
+		line-height:7px;
+		letter-spacing:0.018em;
+		font-size:7px;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle12 {
+		line-height:7px;
+		filter:alpha(opacity=90);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+		opacity:0.9;
+		letter-spacing:0.1em;
+		font-size:7px;
+		text-align:center;
+	}
+	#g-redhook-neighborhood-map-Artboard_2 .g-pstyle13 {
+		line-height:11px;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		font-size:9px;
+		text-align:center;
+	}
+
+</style>
+
+<div id="g-redhook-neighborhood-map-box" class="ai2html">
+
+	<!-- Artboard: desktop -->
+	<div id="g-redhook-neighborhood-map-desktop" class="g-artboard" style="width:750px; height:600px;" data-aspect-ratio="1.25" data-min-width="750">
+<div style=""></div>
+		<img id="g-redhook-neighborhood-map-desktop-img" class="g-aiImg" alt="" src="ai/redhook-neighborhood-map-desktop.jpg"/>
+		<div id="g-ai0-1" class="g-desktop-anno g-aiAbs" style="top:7.1667%;left:64.759%;width:17.3333%;">
+			<p class="g-pstyle0">Brooklyn-Queens Expressway</p>
+		</div>
+		<div id="g-ai0-2" class="g-desktop-anno g-aiAbs" style="top:5%;left:4.0678%;width:3.7333%;">
+			<p class="g-pstyle1">Detail</p>
+			<p class="g-pstyle1">area</p>
+		</div>
+		<div id="g-ai0-3" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.7474,-0.6644,0.6644,0.7474,0,0);transform-origin: 50% 55.7630075695754%;-webkit-transform: matrix(0.7474,-0.6644,0.6644,0.7474,0,0);-webkit-transform-origin: 50% 55.7630075695754%;-ms-transform: matrix(0.7474,-0.6644,0.6644,0.7474,0,0);-ms-transform-origin: 50% 55.7630075695754%;top:12.946%;margin-top:-8.7px;left:18.5763%;margin-left:-74px;width:148px;">
+			<p class="g-pstyle2">Buttermilk Channel</p>
+		</div>
+		<div id="g-ai0-4" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.6647,-0.7471,0.6738,0.7389,0,0);transform-origin: 50% 56.5582169847573%;-webkit-transform: matrix(0.6647,-0.7471,0.6738,0.7389,0,0);-webkit-transform-origin: 50% 56.5582169847573%;-ms-transform: matrix(0.6647,-0.7471,0.6738,0.7389,0,0);-ms-transform-origin: 50% 56.5582169847573%;top:12.9373%;margin-top:-7.6px;left:36.2988%;margin-left:-59px;width:118px;">
+			<p class="g-pstyle3">Atlantic Basin</p>
+		</div>
+		<div id="g-ai0-5" class="g-desktop-anno g-aiAbs" style="top:10.3333%;left:5.2%;margin-left:-4.1333%;width:8.2667%;">
+			<p class="g-pstyle4">BROOKLYN</p>
+		</div>
+		<div id="g-ai0-6" class="g-desktop-anno g-aiAbs" style="top:10.5%;left:89.0933%;margin-left:-6.9333%;width:13.8667%;">
+			<p class="g-pstyle5">CARROLL GARDENS</p>
+		</div>
+		<div id="g-ai0-7" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.5246,-0.8514,0.8514,0.5246,0,0);transform-origin: 50% 56.5582169847573%;-webkit-transform: matrix(0.5246,-0.8514,0.8514,0.5246,0,0);-webkit-transform-origin: 50% 56.5582169847573%;-ms-transform: matrix(0.5246,-0.8514,0.8514,0.5246,0,0);-ms-transform-origin: 50% 56.5582169847573%;top:25.104%;margin-top:-7.6px;left:41.9222%;margin-left:-50.5px;width:101px;">
+			<p class="g-pstyle6">Van Brunt St.</p>
+		</div>
+		<div id="g-ai0-8" class="g-desktop-anno g-aiAbs" style="top:27.6667%;left:49.9672%;margin-left:-3.6%;width:7.2%;">
+			<p class="g-pstyle7">Coffey Park</p>
+		</div>
+		<div id="g-ai0-9" class="g-desktop-anno g-aiAbs" style="top:35.8333%;left:54.4853%;width:10.4%;">
+			<p>Red Hook Houses</p>
+		</div>
+		<div id="g-ai0-10" class="g-desktop-anno g-aiAbs" style="top:43.6667%;left:29.256%;width:19.7333%;">
+			<p class="g-pstyle8">RED HOOK</p>
+		</div>
+		<div id="g-ai0-11" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.659,0.7522,-0.7522,0.659,0,0);transform-origin: 50% 55.1125867492136%;-webkit-transform: matrix(0.659,0.7522,-0.7522,0.659,0,0);-webkit-transform-origin: 50% 55.1125867492136%;-ms-transform: matrix(0.659,0.7522,-0.7522,0.659,0,0);-ms-transform-origin: 50% 55.1125867492136%;top:59.63%;margin-top:-9.8px;left:90.4163%;margin-left:-63px;width:126px;">
+			<p class="g-pstyle9">Hamilton Ave.</p>
+		</div>
+		<div id="g-ai0-12" class="g-desktop-anno g-aiAbs" style="top:53.3333%;left:71.618%;margin-left:-5.2%;width:10.4%;">
+			<p class="g-pstyle7">Red Hook </p>
+			<p class="g-pstyle7">Ball Fields</p>
+		</div>
+		<div id="g-ai0-13" class="g-desktop-anno g-aiAbs" style="top:60.8333%;left:44.2708%;margin-left:-5.2%;width:10.4%;">
+			<p class="g-pstyle7">IKEA</p>
+		</div>
+		<div id="g-ai0-14" class="g-desktop-anno g-aiAbs" style="top:64.1667%;right:68.2745%;width:10.4%;">
+			<p class="g-pstyle10">Amazon Warehouse</p>
+		</div>
+		<div id="g-ai0-15" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.6428,-0.766,0.766,0.6428,0,0);transform-origin: 50% 55.7628454049187%;-webkit-transform: matrix(0.6428,-0.766,0.766,0.6428,0,0);-webkit-transform-origin: 50% 55.7628454049187%;-ms-transform: matrix(0.6428,-0.766,0.766,0.6428,0,0);-ms-transform-origin: 50% 55.7628454049187%;top:71.6127%;margin-top:-8.7px;left:80.3264%;margin-left:-61px;width:122px;">
+			<p class="g-pstyle2">Gowanus Canal</p>
+		</div>
+		<div id="g-ai0-16" class="g-desktop-anno g-aiAbs g-aiPointText" style="top:83.3144%;margin-top:-8.9px;left:4.522%;width:109px;">
+			<p class="g-pstyle11">Gowanus Bay</p>
+		</div>
+		<div id="g-ai0-17" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.9989,-0.0461,0.0461,0.9989,0,0);transform-origin: 50% 56.2656794958086%;-webkit-transform: matrix(0.9989,-0.0461,0.0461,0.9989,0,0);-webkit-transform-origin: 50% 56.2656794958086%;-ms-transform: matrix(0.9989,-0.0461,0.0461,0.9989,0,0);-ms-transform-origin: 50% 56.2656794958086%;top:89.83%;margin-top:-8px;left:37.6919%;margin-left:-43px;width:86px;">
+			<p class="g-pstyle12">Erie Basin</p>
+		</div>
+		<div id="g-ai0-18" class="g-desktop-anno g-aiAbs" style="transform: matrix(0.9453,-0.3262,0.3262,0.9453,0,0);transform-origin: 50% 59.2533935518698%;-webkit-transform: matrix(0.9453,-0.3262,0.3262,0.9453,0,0);-webkit-transform-origin: 50% 59.2533935518698%;-ms-transform: matrix(0.9453,-0.3262,0.3262,0.9453,0,0);-ms-transform-origin: 50% 59.2533935518698%;top:97.5672%;margin-top:-5.4px;left:5.6864%;margin-left:-5.8%;width:11.6%;">
+			<p class="g-pstyle13">NORTH</p>
+		</div>
+	</div>
+
+	<!-- Artboard: Artboard_2 -->
+	<div id="g-redhook-neighborhood-map-Artboard_2" class="g-artboard" style="max-width: 450px;max-height: 498px" data-aspect-ratio="0.904" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 110.6667% 0;"></div>
+		<img id="g-redhook-neighborhood-map-Artboard_2-img" class="g-aiImg" alt="" src="ai/redhook-neighborhood-map-Artboard_2.jpg"/>
+		<div id="g-ai1-1" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.7443,-0.6678,0.6609,0.7505,0,0);transform-origin: 50% 57.2372605837868%;-webkit-transform: matrix(0.7443,-0.6678,0.6609,0.7505,0,0);-webkit-transform-origin: 50% 57.2372605837868%;-ms-transform: matrix(0.7443,-0.6678,0.6609,0.7505,0,0);-ms-transform-origin: 50% 57.2372605837868%;top:10.4234%;margin-top:-6.9px;left:10.3686%;margin-left:-63px;width:126px;">
+			<p class="g-pstyle0">Buttermilk Channel</p>
+		</div>
+		<div id="g-ai1-2" class="g-desktop-anno g-aiAbs" style="top:8.2329%;left:66.2304%;width:23.7778%;">
+			<p class="g-pstyle1">Brooklyn-Queens Expressway</p>
+		</div>
+		<div id="g-ai1-3" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.6612,-0.7502,0.6703,0.7421,0,0);transform-origin: 50% 57.7475977907241%;-webkit-transform: matrix(0.6612,-0.7502,0.6703,0.7421,0,0);-webkit-transform-origin: 50% 57.7475977907241%;-ms-transform: matrix(0.6612,-0.7502,0.6703,0.7421,0,0);-ms-transform-origin: 50% 57.7475977907241%;top:13.9465%;margin-top:-6.5px;left:27.3724%;margin-left:-50.5px;width:101px;">
+			<p class="g-pstyle2">Atlantic Basin</p>
+		</div>
+		<div id="g-ai1-4" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.521,-0.8536,0.8492,0.5281,0,0);transform-origin: 50% 57.7640457957389%;-webkit-transform: matrix(0.521,-0.8536,0.8492,0.5281,0,0);-webkit-transform-origin: 50% 57.7640457957389%;-ms-transform: matrix(0.521,-0.8536,0.8492,0.5281,0,0);-ms-transform-origin: 50% 57.7640457957389%;top:25.992%;margin-top:-6.4px;left:35.0375%;margin-left:-43.5px;width:87px;">
+			<p class="g-pstyle3">Van Brunt St.</p>
+		</div>
+		<div id="g-ai1-5" class="g-desktop-anno g-aiAbs" style="top:17.6707%;left:88.0672%;margin-left:-9.3333%;width:18.6667%;">
+			<p class="g-pstyle4">CARROLL GARDENS</p>
+		</div>
+		<div id="g-ai1-6" class="g-desktop-anno g-aiAbs" style="top:28.7149%;left:46.0115%;margin-left:-4.8889%;width:9.7778%;">
+			<p class="g-pstyle5">Coffey Park</p>
+		</div>
+		<div id="g-ai1-7" class="g-desktop-anno g-aiAbs" style="top:36.747%;left:52.2052%;width:14.2222%;">
+			<p>Red Hook Houses</p>
+		</div>
+		<div id="g-ai1-8" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.6555,0.7552,-0.7491,0.6625,0,0);transform-origin: 50% 56.5212545772966%;-webkit-transform: matrix(0.6555,0.7552,-0.7491,0.6625,0,0);-webkit-transform-origin: 50% 56.5212545772966%;-ms-transform: matrix(0.6555,0.7552,-0.7491,0.6625,0,0);-ms-transform-origin: 50% 56.5212545772966%;top:46.3187%;margin-top:-7.7px;left:93.7856%;margin-left:-53px;width:106px;">
+			<p class="g-pstyle6">Hamilton Ave.</p>
+		</div>
+		<div id="g-ai1-9" class="g-desktop-anno g-aiAbs" style="top:44.5783%;left:17.763%;width:26.8889%;">
+			<p class="g-pstyle7">RED HOOK</p>
+		</div>
+		<div id="g-ai1-10" class="g-desktop-anno g-aiAbs" style="top:54.2169%;left:75.6064%;margin-left:-7.1111%;width:14.2222%;">
+			<p class="g-pstyle5">Red Hook </p>
+			<p class="g-pstyle5">Ball Fields</p>
+		</div>
+		<div id="g-ai1-11" class="g-desktop-anno g-aiAbs" style="top:61.6466%;left:38.2729%;margin-left:-7.1111%;width:14.2222%;">
+			<p class="g-pstyle5">IKEA</p>
+		</div>
+		<div id="g-ai1-12" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.6392,-0.769,0.7631,0.6463,0,0);transform-origin: 50% 56.8706387546967%;-webkit-transform: matrix(0.6392,-0.769,0.7631,0.6463,0,0);-webkit-transform-origin: 50% 56.8706387546967%;-ms-transform: matrix(0.6392,-0.769,0.7631,0.6463,0,0);-ms-transform-origin: 50% 56.8706387546967%;top:70.5376%;margin-top:-7.3px;left:89.6568%;margin-left:-51.5px;width:103px;">
+			<p class="g-pstyle8">Gowanus Canal</p>
+		</div>
+		<div id="g-ai1-13" class="g-desktop-anno g-aiAbs" style="top:65.0602%;right:78.8413%;width:14.2222%;">
+			<p class="g-pstyle9">Amazon Warehouse</p>
+		</div>
+		<div id="g-ai1-14" class="g-desktop-anno g-aiAbs g-aiPointText" style="top:77.4967%;margin-top:-6.9px;left:-7.1117%;width:93px;">
+			<p class="g-pstyle10">Gowanus Bay</p>
+		</div>
+		<div id="g-ai1-15" class="g-desktop-anno g-aiAbs g-aiPointText" style="transform: matrix(0.9989,-0.0465,0.0457,0.999,0,0);transform-origin: 50% 56.8761751275853%;-webkit-transform: matrix(0.9989,-0.0465,0.0457,0.999,0,0);-webkit-transform-origin: 50% 56.8761751275853%;-ms-transform: matrix(0.9989,-0.0465,0.0457,0.999,0,0);-ms-transform-origin: 50% 56.8761751275853%;top:90.6168%;margin-top:-7.3px;left:29.2319%;margin-left:-37px;width:74px;">
+			<p class="g-pstyle8">Erie Basin</p>
+		</div>
+		<div id="g-ai1-16" class="g-desktop-anno g-aiAbs" style="top:89.5582%;left:86.9652%;width:4.4444%;">
+			<p class="g-pstyle11">Detail</p>
+			<p class="g-pstyle11">area</p>
+		</div>
+		<div id="g-ai1-17" class="g-desktop-anno g-aiAbs" style="top:94.1767%;left:88.298%;margin-left:-4.8889%;width:9.7778%;">
+			<p class="g-pstyle12">BROOKLYN</p>
+		</div>
+		<div id="g-ai1-18" class="g-desktop-anno g-aiAbs" style="transform: matrix(0.9443,-0.329,0.3235,0.9462,0,0);transform-origin: 50% 61.8382574667478%;-webkit-transform: matrix(0.9443,-0.329,0.3235,0.9462,0,0);-webkit-transform-origin: 50% 61.8382574667478%;-ms-transform: matrix(0.9443,-0.329,0.3235,0.9462,0,0);-ms-transform-origin: 50% 61.8382574667478%;top:97.4345%;margin-top:-4.2px;left:5.7957%;margin-left:-7.8889%;width:15.7778%;">
+			<p class="g-pstyle13">NORTH</p>
+		</div>
+	</div>
+  <figcaption>Source: Google Earth Pro. Map: Cynthia Tu</figcaption>
+</div>
+
+<!-- End ai2html - 2023-08-08 21:10 -->
+
+      </div>
+      </div>
+      <div class="content">
+      <p>
+        In 2008, IKEA opened its first New York City location in Red Hook, which sits on 22 acres of land on Red Hook’s waterfront. Before its construction, the Swedish furniture store’s proposal attracted locals’ opposition, as IKEA planned to fill the drydock on the Erin basin for parking space–a fight that IKEA won eventually. Delivery giants like Amazon and UPS also bought land in Red Hook to build last-mile delivery hubs. With more delivery trucks appearing in the area, residents raised concerns over pedestrian safety and air pollution concerns.
+      </p>
+      <p>
+        In recent years, Red Hook has attracted an influx of higher-earning populations, who came to the neighborhood seeking cheaper renting options. Walking through blocks along Van Brunt Street, one could easily sight newly developed living units and art studios transformed from old warehouses.
+      </p>
+      <p>
+        Sharps said some of his friends who had been long-time residents of Red Hook were pushed out of the neighborhood due to rent hikes. “Now that the real estate people and landlords are doubling tripling their rent of what it was 10, 15 years ago.” 
+      </p>
+      </div>
+      <div class="chart-container">
+        
+<!-- Generated by ai2html v0.102.0 - 2023-08-08 20:49 -->
+<!-- ai file: median-household-income.ai -->
+<style media="screen,print">
+	#g-median-household-income-box ,
+	#g-median-household-income-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-median-household-income-box p {
+		margin:0;
+	}
+	#g-median-household-income-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-median-household-income-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-median-household-income-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-median-household-income-box .g-aiPointText p { white-space: nowrap; }
+	#g-median-household-income-desktop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-median-household-income-desktop p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:16px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:13px;
+		text-align:left;
+		color:rgb(56,56,57);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-median-household-income-desktop .g-pstyle0 {
+		font-weight:600;
+		line-height:19px;
+		letter-spacing:0.01em;
+		font-size:16px;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-desktop .g-pstyle1 {
+		line-height:14px;
+		letter-spacing:0.05em;
+		font-size:12px;
+		color:rgb(78,79,81);
+	}
+	#g-median-household-income-desktop .g-pstyle2 {
+		line-height:14px;
+		letter-spacing:0.05em;
+		font-size:12px;
+		text-align:right;
+		color:rgb(78,79,81);
+	}
+	#g-median-household-income-desktop .g-pstyle3 {
+		font-weight:400;
+		font-style:italic;
+		line-height:14px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:12px;
+		text-align:center;
+		color:rgb(179,181,183);
+	}
+	#g-median-household-income-desktop .g-pstyle4 {
+		line-height:12px;
+		letter-spacing:0.1em;
+		font-size:10px;
+		text-align:right;
+		color:rgb(117,119,121);
+	}
+	#g-median-household-income-desktop .g-pstyle5 {
+		font-weight:400;
+		font-style:italic;
+		line-height:13px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:11px;
+		color:rgb(255,255,255);
+	}
+	#g-median-household-income-desktop .g-pstyle6 {
+		line-height:14px;
+		letter-spacing:0.1em;
+		font-size:12px;
+		text-align:right;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-desktop .g-pstyle7 {
+		font-weight:600;
+		font-style:italic;
+		line-height:17px;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		font-size:14px;
+		color:rgb(255,255,255);
+	}
+	#g-median-household-income-desktop .g-pstyle8 {
+		font-weight:400;
+		line-height:19px;
+		letter-spacing:0.05em;
+		font-size:16px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-median-household-income-mobile p {
+		font-family:Source Sans Pro;
+		font-weight:200;
+		line-height:13px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:11px;
+		text-align:left;
+		color:rgb(56,56,57);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-median-household-income-mobile .g-pstyle0 {
+		font-weight:600;
+		line-height:18px;
+		letter-spacing:0.01em;
+		font-size:15px;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-mobile .g-pstyle1 {
+		line-height:11px;
+		letter-spacing:0.05em;
+		font-size:9px;
+		text-align:center;
+		color:rgb(78,79,81);
+	}
+	#g-median-household-income-mobile .g-pstyle2 {
+		font-weight:400;
+		font-style:italic;
+		line-height:11px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:9px;
+		text-align:center;
+		color:rgb(179,181,183);
+	}
+	#g-median-household-income-mobile .g-pstyle3 {
+		line-height:9px;
+		letter-spacing:0.1em;
+		font-size:8px;
+		text-align:right;
+		color:rgb(117,119,121);
+	}
+	#g-median-household-income-mobile .g-pstyle4 {
+		font-weight:400;
+		font-style:italic;
+		line-height:10px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:8px;
+		color:rgb(255,255,255);
+	}
+	#g-median-household-income-mobile .g-pstyle5 {
+		line-height:11px;
+		letter-spacing:0.1em;
+		font-size:9px;
+		text-align:right;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-mobile .g-pstyle6 {
+		font-weight:400;
+		line-height:17px;
+		letter-spacing:0.05em;
+		font-size:14px;
+		text-align:center;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-mobile .g-pstyle7 {
+		font-weight:600;
+		font-style:italic;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		color:rgb(255,255,255);
+	}
+	#g-median-household-income-mobile .g-pstyle8 {
+		font-weight:400;
+		font-style:italic;
+		line-height:10px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:8px;
+		text-align:center;
+		color:rgb(179,181,183);
+	}
+	#g-median-household-income-mobile .g-pstyle9 {
+		line-height:8px;
+		letter-spacing:0.1em;
+		font-size:7px;
+		text-align:right;
+		color:rgb(117,119,121);
+	}
+	#g-median-household-income-mobile .g-pstyle10 {
+		font-weight:400;
+		font-style:italic;
+		line-height:9px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:7px;
+		color:rgb(255,255,255);
+	}
+	#g-median-household-income-mobile .g-pstyle11 {
+		line-height:10px;
+		letter-spacing:0.1em;
+		font-size:8px;
+		text-align:right;
+		color:rgb(0,0,0);
+	}
+	#g-median-household-income-mobile .g-pstyle12 {
+		font-weight:600;
+		font-style:italic;
+		line-height:11px;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		font-size:9px;
+		color:rgb(255,255,255);
+	}
+
+</style>
+
+<div id="g-median-household-income-box" class="ai2html">
+
+	<!-- Artboard: desktop -->
+	<div id="g-median-household-income-desktop" class="g-artboard" style="width:750px; height:463.666809357851px;" data-aspect-ratio="1.618" data-min-width="750" data-max-width="2244">
+<div style=""></div>
+		<img id="g-median-household-income-desktop-img" class="g-aiImg" alt="" src="ai/median-household-income-desktop.jpg"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs" style="top:2.5881%;left:2.379%;width:34.4%;">
+			<p class="g-pstyle0">Median household income by census tract, adjusted for inflation in 2019</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs" style="top:7.5485%;left:59.2503%;width:20.8%;">
+			<p class="g-pstyle1">Lower income</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs" style="top:7.5485%;right:2.4647%;width:20.8%;">
+			<p class="g-pstyle2">Higher income</p>
+		</div>
+		<div id="g-ai0-4" class="g-Layer_1 g-aiAbs" style="top:15.9597%;left:10.8574%;margin-left:-8%;width:16%;">
+			<p class="g-pstyle3">GOVERNORS</p>
+			<p class="g-pstyle3">ISLAND</p>
+		</div>
+		<div id="g-ai0-5" class="g-Layer_1 g-aiAbs" style="top:15.9597%;left:59.3911%;margin-left:-8%;width:16%;">
+			<p class="g-pstyle3">GOVERNORS</p>
+			<p class="g-pstyle3">ISLAND</p>
+		</div>
+		<div id="g-ai0-6" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);transform-origin: 50% 61.3281414267469%;-webkit-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-webkit-transform-origin: 50% 61.3281414267469%;-ms-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-ms-transform-origin: 50% 61.3281414267469%;top:39.5572%;margin-top:-4.4px;left:76.9601%;margin-left:-7.9333%;width:15.8667%;">
+			<p class="g-pstyle4">Van Brunt St.</p>
+		</div>
+		<div id="g-ai0-7" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);transform-origin: 50% 61.3281414267469%;-webkit-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-webkit-transform-origin: 50% 61.3281414267469%;-ms-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-ms-transform-origin: 50% 61.3281414267469%;top:40.4199%;margin-top:-4.4px;left:27.6144%;margin-left:-7.9333%;width:15.8667%;">
+			<p class="g-pstyle4">Van Brunt St.</p>
+		</div>
+		<div id="g-ai0-8" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);transform-origin: 50% 58.2352450052799%;-webkit-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-webkit-transform-origin: 50% 58.2352450052799%;-ms-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-ms-transform-origin: 50% 58.2352450052799%;top:43.7969%;margin-top:-6.1px;left:57.0385%;margin-left:-6.3333%;width:12.6667%;">
+			<p class="g-pstyle5">New York Bay</p>
+		</div>
+		<div id="g-ai0-9" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);transform-origin: 50% 58.2350729991758%;-webkit-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-webkit-transform-origin: 50% 58.2350729991758%;-ms-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-ms-transform-origin: 50% 58.2350729991758%;top:44.4439%;margin-top:-6.1px;left:7.834%;margin-left:-6.3333%;width:12.6667%;">
+			<p class="g-pstyle5">New York Bay</p>
+		</div>
+		<div id="g-ai0-10" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);transform-origin: 50% 58.3936917273436%;-webkit-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-webkit-transform-origin: 50% 58.3936917273436%;-ms-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-ms-transform-origin: 50% 58.3936917273436%;top:49.3796%;margin-top:-6px;left:37.5013%;margin-left:-2.1333%;width:4.2667%;">
+			<p class="g-pstyle6">BQE</p>
+		</div>
+		<div id="g-ai0-11" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);transform-origin: 50% 58.3933686925956%;-webkit-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-webkit-transform-origin: 50% 58.3933686925956%;-ms-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-ms-transform-origin: 50% 58.3933686925956%;top:50.2423%;margin-top:-6px;left:86.5475%;margin-left:-2.0667%;width:4.1333%;">
+			<p class="g-pstyle6">BQE</p>
+		</div>
+		<div id="g-ai0-12" class="g-Layer_1 g-aiAbs" style="top:62.3292%;left:25.173%;width:16%;">
+			<p class="g-pstyle7">RED HOOK</p>
+		</div>
+		<div id="g-ai0-13" class="g-Layer_1 g-aiAbs" style="top:62.9763%;left:73.8839%;width:16%;">
+			<p class="g-pstyle7">RED HOOK</p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);transform-origin: 50% 60.0297469160128%;-webkit-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-webkit-transform-origin: 50% 60.0297469160128%;-ms-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-ms-transform-origin: 50% 60.0297469160128%;top:81.0895%;margin-top:-5px;left:80.4337%;margin-left:-8%;width:16%;">
+			<p class="g-pstyle5">Gowanus Canal</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);transform-origin: 50% 60.0290645154803%;-webkit-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-webkit-transform-origin: 50% 60.0290645154803%;-ms-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-ms-transform-origin: 50% 60.0290645154803%;top:80.2269%;margin-top:-5px;left:31.3884%;margin-left:-6.3333%;width:12.6667%;">
+			<p class="g-pstyle5">Gowanus Canal</p>
+		</div>
+		<div id="g-ai0-16" class="g-Layer_1 g-aiAbs" style="top:89.5039%;left:25.0917%;margin-left:-8.8%;width:17.6%;">
+			<p class="g-pstyle8">2000</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs" style="top:89.5039%;left:74.7102%;margin-left:-10.0667%;width:20.1333%;">
+			<p class="g-pstyle8">2019</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs" style="top:95.1114%;left:2.0333%;width:87.8667%;">
+			<p>Source: U.S. Census 2000, American Community Survey 2019.     Map: Cynthia Tu       </p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-median-household-income-mobile" class="g-artboard" style="max-width: 350px;max-height: 612px" data-aspect-ratio="0.572" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 174.8884% 0;"></div>
+		<img id="g-median-household-income-mobile-img" class="g-aiImg" alt="" src="ai/median-household-income-mobile.jpg"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs" style="top:1.1436%;left:3.5376%;width:86.5714%;">
+			<p class="g-pstyle0">Median household income by census tract, adjusted for inflation in 2019</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs" style="top:7.515%;left:94.3254%;margin-left:-6.4286%;width:12.8571%;">
+			<p class="g-pstyle1">Lower </p>
+			<p class="g-pstyle1">income</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs" style="top:8.9853%;left:26.7035%;margin-left:-12.8571%;width:25.7143%;">
+			<p class="g-pstyle2">GOVERNORS</p>
+			<p class="g-pstyle2">ISLAND</p>
+		</div>
+		<div id="g-ai1-4" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);transform-origin: 50% 66.3205828762551%;-webkit-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-webkit-transform-origin: 50% 66.3205828762551%;-ms-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-ms-transform-origin: 50% 66.3205828762551%;top:22.8821%;margin-top:-3.1px;left:53.7977%;margin-left:-12.8571%;width:25.7143%;">
+			<p class="g-pstyle3">Van Brunt St.</p>
+		</div>
+		<div id="g-ai1-5" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);transform-origin: 50% 60.3899173787719%;-webkit-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-webkit-transform-origin: 50% 60.3899173787719%;-ms-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-ms-transform-origin: 50% 60.3899173787719%;top:25.1282%;margin-top:-4.8px;left:21.8759%;margin-left:-10.2857%;width:20.5714%;">
+			<p class="g-pstyle4">New York Bay</p>
+		</div>
+		<div id="g-ai1-6" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);transform-origin: 50% 60.5765828806848%;-webkit-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-webkit-transform-origin: 50% 60.5765828806848%;-ms-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-ms-transform-origin: 50% 60.5765828806848%;top:27.8916%;margin-top:-4.7px;left:69.5552%;margin-left:-3.4286%;width:6.8571%;">
+			<p class="g-pstyle5">BQE</p>
+		</div>
+		<div id="g-ai1-7" class="g-Layer_1 g-aiAbs" style="top:27.9362%;left:7.6335%;margin-left:-6.2857%;width:12.5714%;">
+			<p class="g-pstyle6">2000</p>
+		</div>
+		<div id="g-ai1-8" class="g-Layer_1 g-aiAbs" style="top:35.2878%;left:49.7766%;width:25.7143%;">
+			<p class="g-pstyle7">RED HOOK</p>
+		</div>
+		<div id="g-ai1-9" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);transform-origin: 50% 62.513352085302%;-webkit-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-webkit-transform-origin: 50% 62.513352085302%;-ms-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-ms-transform-origin: 50% 62.513352085302%;top:45.416%;margin-top:-4px;left:59.7331%;margin-left:-10.1429%;width:20.2857%;">
+			<p class="g-pstyle4">Gowanus Canal</p>
+		</div>
+		<div id="g-ai1-10" class="g-Layer_1 g-aiAbs" style="top:47.3771%;left:94.3954%;margin-left:-5.1429%;width:10.2857%;">
+			<p class="g-pstyle1">Higher</p>
+			<p class="g-pstyle1">income</p>
+		</div>
+		<div id="g-ai1-11" class="g-Layer_1 g-aiAbs" style="top:53.2584%;left:29.3774%;margin-left:-11.4286%;width:22.8571%;">
+			<p class="g-pstyle8">GOVERNORS</p>
+			<p class="g-pstyle8">ISLAND</p>
+		</div>
+		<div id="g-ai1-12" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);transform-origin: 50% 67.933328955585%;-webkit-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-webkit-transform-origin: 50% 67.933328955585%;-ms-transform: matrix(0.6691,-0.7431,0.7431,0.6691,0,0);-ms-transform-origin: 50% 67.933328955585%;top:65.3132%;margin-top:-2.8px;left:54.5829%;margin-left:-11.2857%;width:22.5714%;">
+			<p class="g-pstyle9">Van Brunt St.</p>
+		</div>
+		<div id="g-ai1-13" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);transform-origin: 50% 61.3882483259327%;-webkit-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-webkit-transform-origin: 50% 61.3882483259327%;-ms-transform: matrix(0.6428,0.766,-0.766,0.6428,0,0);-ms-transform-origin: 50% 61.3882483259327%;top:67.372%;margin-top:-4.4px;left:26.0648%;margin-left:-9.1429%;width:18.2857%;">
+			<p class="g-pstyle10">New York Bay</p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);transform-origin: 50% 61.5818747288116%;-webkit-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-webkit-transform-origin: 50% 61.5818747288116%;-ms-transform: matrix(0.4695,0.8829,-0.8829,0.4695,0,0);-ms-transform-origin: 50% 61.5818747288116%;top:70.6274%;margin-top:-4.3px;left:68.2594%;margin-left:-2.8571%;width:5.7143%;">
+			<p class="g-pstyle11">BQE</p>
+		</div>
+		<div id="g-ai1-15" class="g-Layer_1 g-aiAbs" style="top:73.6796%;left:7.6811%;margin-left:-5%;width:10%;">
+			<p class="g-pstyle6">2019</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs" style="top:77.1104%;left:50.2013%;width:22.8571%;">
+			<p class="g-pstyle12">RED HOOK</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs" style="transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);transform-origin: 50% 63.644751778131%;-webkit-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-webkit-transform-origin: 50% 63.644751778131%;-ms-transform: matrix(0.9397,-0.342,0.342,0.9397,0,0);-ms-transform-origin: 50% 63.644751778131%;top:86.3676%;margin-top:-3.7px;left:59.5166%;margin-left:-11.4286%;width:22.8571%;">
+			<p class="g-pstyle10">Gowanus Canal</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs" style="top:95.8979%;left:3.6975%;width:96.2857%;">
+			<p>Source: U.S. Census 2000, American Community Survey 2019.     </p>
+			<p>Map: Cynthia Tu       </p>
+		</div>
+	</div>
+
+
+</div>
+
+<!-- End ai2html - 2023-08-08 20:49 -->
+
+      <div class="content">
+      <p>
+        With new developments coming into the area, the neighborhood's economic dynamic seems to be shifting. When Geis carried out her research in Red Hook in 2013, which was one year after Hurricane Sandy, she observed an “interesting dichotomy” between people living along Van Brunt Street and the Red Hook Houses.        
+      </p>
+      <p>
+        “When I was doing interviews with people in the Red Hook houses, the effects of Hurricane Sandy were still current.” Geis recalled that residents living in the projects were still relying on generators that worked inconsistently for heating a year after the hurricane. “Whereas like some of the people who live off Brunt Street, had more money, and had some of those brownstones that were closer to the water and were affected pretty drastically at the moment–they were already talking about Hurricane Sandy in the past.” 
+      </p>
+      <h3>DETACHED FROM EVERYWHERE</h3>
+      <p>
+        For those who do not own cars, access to public transportation is another concern that looms over the residents daily. The nearest subway station to Red Hook is Smith–Ninth Streets station, which sits on the northeast side of Hamilton Avenue. Besides the MTA bus services, residents must cross the BQE to get over to the train station and other parts of Brooklyn.
+      </p>
+      <p>
+        “[The highway] is not even pleasing to look at. It's super ugly. Like, no one wants to even come into Red Hook because that's the first thing they got to see,” said Quincy Phillips, a Red Hook native who has lived in the neighborhood their whole life.  “It's really messed up because Red Hook itself is such a beautiful place.”   
+      </p>
+      </div>
+      <div class="chart-container">
+
+<!-- Generated by ai2html v0.102.0 - 2023-08-09 13:49 -->
+<!-- ai file: current-redhook-map.ai -->
+<style media="screen,print">
+	#g-current-redhook-map-box ,
+	#g-current-redhook-map-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-current-redhook-map-box p {
+		margin:0;
+	}
+	#g-current-redhook-map-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-current-redhook-map-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-current-redhook-map-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-current-redhook-map-box .g-aiPointText p { white-space: nowrap; }
+	#g-current-redhook-map-desktop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-current-redhook-map-desktop p {
+		font-family:Source Sans Pro;
+		font-weight:400;
+		font-style:normal;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0.05em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		height:auto;
+		position:static;
+	}
+	#g-current-redhook-map-desktop .g-pstyle0 {
+		line-height:14px;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		font-size:12px;
+		text-align:center;
+	}
+	#g-current-redhook-map-desktop .g-pstyle1 {
+		font-style:italic;
+		text-align:right;
+	}
+	#g-current-redhook-map-desktop .g-pstyle2 {
+		line-height:24px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:20px;
+		text-align:center;
+	}
+	#g-current-redhook-map-desktop .g-pstyle3 {
+		font-style:italic;
+		line-height:22px;
+		font-size:18px;
+	}
+	#g-current-redhook-map-desktop .g-pstyle4 {
+		font-style:italic;
+		line-height:14px;
+		filter:alpha(opacity=80);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity:0.8;
+		letter-spacing:0.1em;
+		font-size:12px;
+		color:rgb(251,176,59);
+	}
+	#g-current-redhook-map-desktop .g-pstyle5 {
+		line-height:24px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:20px;
+	}
+	#g-current-redhook-map-desktop .g-pstyle6 {
+		line-height:17px;
+		font-size:14px;
+	}
+	#g-current-redhook-map-desktop .g-pstyle7 {
+		font-style:italic;
+		line-height:14px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:12px;
+	}
+	#g-current-redhook-map-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-current-redhook-map-mobile p {
+		font-family:Source Sans Pro;
+		font-weight:400;
+		font-style:normal;
+		line-height:17px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0.05em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(255,255,255);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		height:auto;
+		position:static;
+	}
+	#g-current-redhook-map-mobile .g-pstyle0 {
+		line-height:24px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:20px;
+		text-align:center;
+	}
+	#g-current-redhook-map-mobile .g-pstyle1 {
+		font-style:italic;
+		text-align:right;
+	}
+	#g-current-redhook-map-mobile .g-pstyle2 {
+		font-style:italic;
+		line-height:20px;
+		font-size:17px;
+	}
+	#g-current-redhook-map-mobile .g-pstyle3 {
+		font-style:italic;
+		line-height:14px;
+		filter:alpha(opacity=80);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity:0.8;
+		letter-spacing:0.1em;
+		font-size:12px;
+	}
+	#g-current-redhook-map-mobile .g-pstyle4 {
+		text-align:center;
+	}
+	#g-current-redhook-map-mobile .g-pstyle5 {
+		line-height:24px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:20px;
+	}
+	#g-current-redhook-map-mobile .g-pstyle6 {
+		font-style:italic;
+		line-height:14px;
+		filter:alpha(opacity=50);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+		opacity:0.5;
+		letter-spacing:0.1em;
+		font-size:12px;
+	}
+	#g-current-redhook-map-mobile .g-pstyle7 {
+		line-height:14px;
+		filter:alpha(opacity=70);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+		opacity:0.7;
+		letter-spacing:0.1em;
+		font-size:12px;
+		text-align:center;
+	}
+
+</style>
+
+<div id="g-current-redhook-map-box" class="ai2html">
+
+	<!-- Artboard: desktop -->
+	<div id="g-current-redhook-map-desktop" class="g-artboard" style="width:750px; height:600px;" data-aspect-ratio="1.25" data-min-width="750">
+<div style=""></div>
+		<img id="g-current-redhook-map-desktop-img" class="g-aiImg" alt="" src="ai/current-redhook-map-desktop.jpg"/>
+		<div id="g-ai0-1" class="g-desktop-anno g-aiAbs" style="top:7%;left:3.7669%;margin-left:-6%;width:12%;">
+			<p class="g-pstyle0">NORTH</p>
+		</div>
+		<div id="g-ai0-2" class="g-desktop-anno g-aiAbs" style="top:14%;right:59.5643%;width:17.8667%;">
+			<p class="g-pstyle1">Brooklyn-Battery</p>
+			<p class="g-pstyle1">Tunnel Plaza</p>
+		</div>
+		<div id="g-ai0-3" class="g-desktop-anno g-aiAbs" style="top:18.8333%;left:77.2671%;margin-left:-6.6%;width:13.2%;">
+			<p class="g-pstyle2">CARROLL GARDENS</p>
+		</div>
+		<div id="g-ai0-4" class="g-desktop-anno g-aiAbs" style="top:37%;left:71.2357%;width:19.4667%;">
+			<p class="g-pstyle3">Brooklyn-Queens</p>
+			<p class="g-pstyle3">Expressway</p>
+		</div>
+		<div id="g-ai0-5" class="g-desktop-anno g-aiAbs" style="transform: matrix(0.4848,0.8746,-0.8746,0.4848,0,0);transform-origin: 50% 59.3549728927706%;-webkit-transform: matrix(0.4848,0.8746,-0.8746,0.4848,0,0);-webkit-transform-origin: 50% 59.3549728927706%;-ms-transform: matrix(0.4848,0.8746,-0.8746,0.4848,0,0);-ms-transform-origin: 50% 59.3549728927706%;top:51.8908%;margin-top:-5.3px;left:65.6993%;margin-left:-11.3333%;width:22.6667%;">
+			<p class="g-pstyle4">Hamilton Ave.</p>
+		</div>
+		<div id="g-ai0-6" class="g-desktop-anno g-aiAbs" style="top:47.1667%;left:18.9333%;width:18.6667%;">
+			<p class="g-pstyle5">RED HOOK</p>
+		</div>
+		<div id="g-ai0-7" class="g-desktop-anno g-aiAbs" style="top:61%;left:81.7239%;width:11.7333%;">
+			<p class="g-pstyle6">Smith-9th St </p>
+			<p class="g-pstyle6">MTA Station</p>
+		</div>
+		<div id="g-ai0-8" class="g-desktop-anno g-aiAbs" style="transform: matrix(0.342,-0.9397,0.9397,0.342,0,0);transform-origin: 50% 59.3552034022157%;-webkit-transform: matrix(0.342,-0.9397,0.9397,0.342,0,0);-webkit-transform-origin: 50% 59.3552034022157%;-ms-transform: matrix(0.342,-0.9397,0.9397,0.342,0,0);-ms-transform-origin: 50% 59.3552034022157%;top:81.5574%;margin-top:-5.3px;left:72.1873%;margin-left:-6.2%;width:12.4%;">
+			<p class="g-pstyle7">Gowanus Canal</p>
+		</div>
+		<div id="g-ai0-9" class="g-desktop-anno g-aiAbs" style="transform: matrix(0.9397,0.342,-0.342,0.9397,0,0);transform-origin: 50% 57.6581388436749%;-webkit-transform: matrix(0.9397,0.342,-0.342,0.9397,0,0);-webkit-transform-origin: 50% 57.6581388436749%;-ms-transform: matrix(0.9397,0.342,-0.342,0.9397,0,0);-ms-transform-origin: 50% 57.6581388436749%;top:86.7548%;margin-top:-6.5px;left:8.9894%;margin-left:-6.2%;width:12.4%;">
+			<p class="g-pstyle7">New York Bay</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-current-redhook-map-mobile" class="g-artboard" style="max-width: 450px;max-height: 600px" data-aspect-ratio="0.75" data-min-width="0" data-max-width="749">
+<div style="padding: 0 0 133.3333% 0;"></div>
+		<img id="g-current-redhook-map-mobile-img" class="g-aiImg" alt="" src="ai/current-redhook-map-mobile.jpg"/>
+		<div id="g-ai1-1" class="g-mobile g-aiAbs" style="top:7.3333%;left:81.1066%;margin-left:-11%;width:22%;">
+			<p class="g-pstyle0">CARROLL GARDENS</p>
+		</div>
+		<div id="g-ai1-2" class="g-mobile g-aiAbs" style="top:14%;right:74.2222%;width:25.7778%;">
+			<p class="g-pstyle1">Brooklyn-Battery</p>
+			<p class="g-pstyle1">Tunnel Plaza</p>
+		</div>
+		<div id="g-ai1-3" class="g-mobile g-aiAbs" style="top:28.6667%;left:67.3995%;width:29.7778%;">
+			<p class="g-pstyle2">Brooklyn-Queens</p>
+			<p class="g-pstyle2">Expressway</p>
+		</div>
+		<div id="g-ai1-4" class="g-mobile g-aiAbs" style="transform: matrix(0.4226,0.9063,-0.9063,0.4226,0,0);transform-origin: 50% 59.3552037494847%;-webkit-transform: matrix(0.4226,0.9063,-0.9063,0.4226,0,0);-webkit-transform-origin: 50% 59.3552037494847%;-ms-transform: matrix(0.4226,0.9063,-0.9063,0.4226,0,0);-ms-transform-origin: 50% 59.3552037494847%;top:56.2241%;margin-top:-5.3px;left:60.7665%;margin-left:-18.8889%;width:37.7778%;">
+			<p class="g-pstyle3">Hamilton Ave.</p>
+		</div>
+		<div id="g-ai1-5" class="g-mobile g-aiAbs" style="top:50%;left:89.0212%;margin-left:-12.5556%;width:25.1111%;">
+			<p class="g-pstyle4">Smith-9th</p>
+			<p class="g-pstyle4">MTA Station</p>
+		</div>
+		<div id="g-ai1-6" class="g-mobile g-aiAbs" style="top:53.5%;left:14.6094%;width:31.1111%;">
+			<p class="g-pstyle5">RED HOOK</p>
+		</div>
+		<div id="g-ai1-7" class="g-mobile g-aiAbs" style="transform: matrix(0.342,-0.9397,0.9397,0.342,0,0);transform-origin: 50% 59.3554957325105%;-webkit-transform: matrix(0.342,-0.9397,0.9397,0.342,0,0);-webkit-transform-origin: 50% 59.3554957325105%;-ms-transform: matrix(0.342,-0.9397,0.9397,0.342,0,0);-ms-transform-origin: 50% 59.3554957325105%;top:86.7241%;margin-top:-5.3px;left:70.6504%;margin-left:-10.3333%;width:20.6667%;">
+			<p class="g-pstyle6">Gowanus Canal</p>
+		</div>
+		<div id="g-ai1-8" class="g-mobile g-aiAbs" style="top:97%;left:6.1243%;margin-left:-10%;width:20%;">
+			<p class="g-pstyle7">NORTH</p>
+		</div>
+	</div>
+
+</div>
+<figcaption>Source: Google Earth Pro. Map: Cynthia Tu</figcaption>
+
+<!-- End ai2html - 2023-08-09 13:49 -->
+
+      </div>
+      
+      <div class="content container-fluid">
+      <p>
+        From February to April 2023, Phillips and a team of community organizers at Red Hook Initiative surveyed more than 600 Red Hook residents and commuters about their experiences interacting with the BQE.
+      </p>
+      <p>
+        
+        There are two ways to get to the North side of Hamilton Avenue from Red Hook by foot. Pedestrians could either use the Hamilton Avenue footbridge–which goes above the BQE ground traffic and beneath the BQE corridor; or cross the intersection of West 9th Street and Hamilton Ave–which requires crossing six lanes of busy traffic.
+      </p>
+      <p>
+        “The footbridge–it shakes when you're like walking past. When there's like trucks under it going past it, you feel a little vibration. So people hold on to the poles and stuff,” Phillips said. 
+      </p>
+      <p>
+        Residents also felt unsafe crossing the intersection, and busy traffic is only one of the many reasons. Phillips explained that the pedestrian stoplight only lasts about 20 to 25 seconds. In addition, crossing the intersection at night could be dangerous due to the lack of streetlights. Many residents also reported bad air quality at the crosswalk due to the highway traffic and trucks passing through Hamilton Avenue.
+      </p>
+      </div>
+      <div class="street-container">
+        <div class="child">
+        <img src="media/footbridge.png">
+        <br>
+        <figcaption>Overpass above Hamilton Ave.</figcaption>
+        </div>
+        <div class="child">
+        <img src="media/intersection.png">
+        <br>
+        <figcaption>Intersection at Hamilton Ave. and West-9th St.</figcaption>
+        </div>
+      </div>
+      <figcaption>Source: Google StreetView</figcaption>
+     <div class="content container-fluid">
+      <p>
+        “When I'm there under that [highway] bridge. It's like, you could see empty bolts falling from the bridge. It literally looks like it's collapsing.” Phillips said, “But you know, we don’t have a choice because we’re blocked off from everywhere else.”
+      </p>
+      <p>
+      As the highway nears 80 years old, experts warned that sections of the BQE might start crumbling soon. The city’s transportation department is currently developing the “BQE Corridor Vision” project, which aims to roll out repairs and upgrades to rebuild a “safe, modern, resilient roadway we need.” 
+    </p>
+      <p>
+      The plan to keep the BQE was slammed by locals whose lives have been affected by the highway for years. Community advocates are pushing for tearing the highway down completely or transforming it into community green spaces.
+      </p>
+      <p>
+      Phillips, who has witnessed community leaders in Red Hook fighting with the DOT for improvement of the BQE’s Hamilton section, felt pessimistic that the DOT might prioritize locals’ needs. He said that the DOT had been slow to respond to complaints, working on minor changes that are not current.
+      </p>
+      <p>
+      “Robert Moses came, and he wanted to build this super bridge in order for people to save time and energy. He wasn't really thinking about the actual people that were going to be affected by it,” Phillips said. “Personally, I think the DOT is doing the same thing that Robert Moses did. Not in the sense that they don't want to see changes and stuff. It's just like they're not doing the right thing right now. If they continue to go down this path, I honestly think history will repeat itself.”
+      </p>
+      <br>
+      <br>
+      <br>
+    </div>
+
+		</div>	
+    <section id="data-diary" class="content" style="margin-top:50px">
+      <div>
+      <h4>Data and Methods</h4>
+      <p>The buildings, maps and location data presented in this article are based on historical records.
+        <br>
+      <br>Archival photos of buildings and lots were collected from the New York Public Library and the Brooklyn Historical society. The
+        1939 and 1950 Sanborn Fire Insurance maps were used to identify the location of lots and buildings that were demolished.
+      <br>
+      </p>
+      </div>
+    </section>	
+</body>
+</html>
