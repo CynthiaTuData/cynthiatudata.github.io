@@ -329,3 +329,7 @@
         // setup resize event
         window.addEventListener('resize', scroller.resize);
 
+        d3.select("#full-page").on('stepin', function() {
+            d3.select(".mapbox-gl-canvas").classed('hidden',true)
+		})
+

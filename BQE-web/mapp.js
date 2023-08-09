@@ -80,7 +80,7 @@ config.chapters.forEach((record, idx) => {
     }
 
     if (record.chapterDiv) {
-        var story = document.createElement('p');
+        var story = document.createElement('div');
         story.innerHTML = record.chapterDiv;
         chapter.appendChild(story);
     }
@@ -142,7 +142,9 @@ if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
 }
-
+d3.select("#full-page").on('stepin', function() {
+    d3.select("#map").classed('hidden',true)
+})
 // instantiate the scrollama
 var scroller = scrollama();
 
@@ -212,3 +214,4 @@ map.on("load", function() {
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);
+

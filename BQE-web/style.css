@@ -8,13 +8,18 @@ a, a:hover, a:visited {
     color: #0071bc;
 }
 
-#content{
+.content{
     position:relative;
     color:#fbf9ef;
     overflow:hidden;
     margin-bottom: 20px;
+    width: 45vw;
+    margin: 0 auto;
 }
 
+.story-container{
+    margin-top: 10vh
+}
 #map {
     top:0;
     height: 100vh;
@@ -44,7 +49,7 @@ a, a:hover, a:visited {
 
 h1{
     font-family: 'Poltawski Nowy', 'Open Sans', 'Times New Roman', Times, serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight:800;
     font-style: normal;
     letter-spacing: normal;
@@ -54,12 +59,25 @@ h1{
 
 h2{
     font-family: 'Merriweather','Open Sans', 'Times New Roman', Times, serif;
-    font-size: 40 px;
+    font-size: 35 px;
     /* line-height: 40 px; */
-    font-weight: 300;
+    font-weight: 200;
     font-style: italic;
     color:#42280e;
     text-align:center
+}
+
+.byline p{
+    font-family: 'Roboto', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 22px;
+    color:  #191510;
+    margin-bottom: 2 px;
+    text-align: center;
+    margin-top: 5vh
 }
 
 h3{
@@ -69,7 +87,8 @@ h3{
     font-weight: 600;
     /* font-style: italic; */
     color:#42280e;
-    text-align:left
+    text-align:left;
+    margin-top: 6vh
 }
 
 p {
@@ -78,7 +97,7 @@ p {
     font-style: light;
     font-weight: light;
     letter-spacing: normal;
-    line-height: 150%;
+    line-height: 170%;
     color:  #42280e;
     margin-bottom: 2 px;
     overflow:hidden
@@ -110,6 +129,21 @@ h4{
 
   }
 
+  .media-container{
+    display: flex;
+    justify-content: center;
+    /* padding: 0 3vh ; */
+    width: 45vw; 
+    margin: 4vh 0;  
+}
+
+ .media-container img{
+    justify-content: center;
+    object-fit: contain;
+    max-width: 45vw;
+    max-height: auto;
+}
+
 #features {
     padding-top: 10vh;
     padding-bottom: 10vh;
@@ -118,7 +152,7 @@ h4{
     visibility: hidden;
 }
 .centered {
-    width: 60vw;
+    width: 100%;
     margin: 0 auto;
 }
 .lefty {
@@ -135,8 +169,23 @@ h4{
 }
 .light {
     color: #444;
-    background-color:#fbf9efbb;
+    background-color:#fbf9ef00;
+    padding: 0 10vw;
 }
+
+.light div div{
+    color: #444;
+    background-color:#fbf9efcf;
+    padding: 2vh 5vw;
+    margin: 2vh 20vw
+}
+
+.light div img{
+    width:100%;
+    margin: 5vh 0;
+
+}
+
 .dark {
     color: #fafafa;
     background-color: #444;
@@ -153,26 +202,44 @@ h4{
     opacity: 100%;
 }
 
+#full-page img{
+    width:55% !important;
+    display:block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: overlay
+}
 .step.active {
     opacity: 0.99;
 }
 
 .step div {
-    padding: 25px 100px;
+    padding: 5vh 5vw;
     /* line-height: 25px;
     font-size: 13px; */
+    /* background-color:#fbf9ef; */
 }
-#full-page .step div{
-    padding: 100px 50px;
+#full-page .light div p {
+    padding: 0 18vw;
 }
 
+#full-page .light div h3 {
+    padding: 0 18vw;
+}
+
+#full-page-2 .light div{
+    padding: 3vh 18vw;
+}
 .step img {
-    width: 100%;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-img{
-    max-width:90%;
-    height:auto
+#holc{
+ color:rgb(104, 97, 97);
+ font-family: monospace, Times, serif;
 }
 
 @media (max-width: 750px) {
@@ -188,105 +255,34 @@ img{
     touch-action: unset;
 }
 
-.media-container{
-    display: flex;
-    justify-content: center;
+/* Mobile CSS Setup */
+	#g-demographic-middle, #g-demographic-mobile, #g-demographic-desktop, #g-chance-Artboard_3 {
+		display: none;
+	}
+/* mobile */
+	@media (max-width: 490px) {
+		#g-demographic-mobile {
+			display: block;
+		}
+		#g-chance-Artboard_3 {
+			display: block;
+		}
+	}
+/* desktop*/
+    @media (min-width: 490px) and (max-width: 900px) {
+		#g-demographic-middle {
+			display: block;
+		}
+		#g-chance-Artboard_3 {
+			display: block;
+		}
+	}
+ /* large */
+ @media (min-width: 900px)  {
+    #g-demographic-desktop {
+        display: block;
+    }
+    #g-chance-desktop {
+        display: block;
+    }
 }
-
-
-/* map scrolly setup */
-#neighborhood .scrolly-container {
-    position: relative;
-  }
-  
-  #neighborhood .sticky-thing {
-    position: -webkit-sticky;
-    position: sticky;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    z-index: 0;
-    top: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    justify-content: center;
-    overflow: hidden;
-      top: 0;
-      left: 0;
-      bottom: auto;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    
-  }
-
-  #neighborhood .chart {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  /* border: 1px solid #000; */
-}
-  
-#neighborhood .steps-container {
-      position: relative;
-        padding: 0 1rem;
-        max-width: 450px;
-      padding-bottom: 3rem;
-      z-index: 1
-  }
-  
-  #neighborhood .step {
-    margin: 0 auto 2rem auto;
-    margin-bottom: 25rem;
-    margin-left: 5rem;
-    color:  #42280e;
-    /* background-color:  #ddc78f; */
-  }
-  
-  #neighborhood .step p {
-  text-align: left;
-  padding: 0rem;
-  font-family: 'Merriweather', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-  font-size: 18px;
-  /* font-style: light;
-  font-weight: light; */
-  letter-spacing: normal;
-  line-height: 150%;
-  }
-  
-  .hidden {
-    visibility: hidden;
-  }
-  
-  /* When it's less than 700 pixels wide, do normal scrollytelling */
-  
-  @media only screen and (min-width: 700px) {
-      #neighborhood #scrolly.side-by-side {
-      display: flex;
-    }
-  
-    #neighborhood #scrolly.side-by-side > div {
-      flex-basis: 0;
-      flex-grow: 1;
-      flex-shrink: 1;
-      padding: 0.75em;
-    }
-  
-    #neighborhood #scrolly.side-by-side .scrolly-overlay {
-      margin-top: 70vh;
-      order: 0;
-      /* Change these to adjust sizing options */
-      min-width: 15rem;
-      max-width: 20rem;
-    }
-  
-    #neighborhood #scrolly.side-by-side .sticky-thing {
-      order: 1;
-      flex-grow: 2;
-    }
-  }
