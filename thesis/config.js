@@ -3,13 +3,13 @@ let opening_text =
 
 let text_1 = 
 '<div><p>After the notice was served on his business, 96-year-old Thomas W. Munkenbeck hustled around town to seek a new location for his pipe and ship fitting shop. He had worked in his shop for 74 years–until one of the air shafts for the highway tunnel was set to be put right on the site.</p>' +
-'<p>“He suddenly became ill,” said his son Earl Mukenbeck, who ran the business with elder Munkenbeck, according to the Brooklyn Daily Eagle. The son showed up at Brooklyn Supreme Court in place of his father. The court granted them until December to leave the premises.</p></div>'
+'<p>“He suddenly became ill,” said his son Earl Munkenbeck, who ran the business with elder Munkenbeck, according to the Brooklyn Daily Eagle. The son showed up at Brooklyn Supreme Court in place of his father. The court granted them until December to leave the premises.</p></div>'
 
 let text_2 = ''
 
-let text_3 = "<div><p>When insepectors stepped into Mr.Berggren's machine shop to examine the condition, 'machines, lathes and drills, weighing hundreds of pounds, were still whirling.' Berggren appealed for an extension as he struggled to have the power installed at the new site.</p></div>"
+let text_3 = "<div><p>When inspectors stepped into Mr. Berggren's machine shop to examine the condition, 'machines, lathes and drills, weighing hundreds of pounds, were still whirling.' Berggren appealed for an extension as he struggled to have the power installed at the new site.</p></div>"
 
-let text_4 = '<div><p>Between 2nd Avenue and 3rd Avenue, the entire block north of Hamilton Avenue were demolished.</p> <p>One of the tenants, Mary E. Feeney, had lived in the tenament on 5 16St for 50 years. She was premitted to vacate her home by August 5th— two weeks after the deadline.</p></div>'
+let text_4 = '<div><p>Between 2nd Avenue and 3rd Avenue, the entire block north of Hamilton Avenue were demolished.</p> <p>One of the tenants, Mary E. Feeney, had lived in the tenement on 5 16St for 50 years. She was permitted to vacate her home by August 5th— two weeks after the deadline.</p></div>'
 
 let text_5 ='<div><img id="video" src="media/banner-vid.gif"style="filter: drop-shadow(0 0 0.1rem black);"><figcaption>MTA Bridges & Tunnels Special Archive</figcaption><p>Along Hamilton Avenue, about 1,000 residents were evicted, and some 400 dwellings were razed to make way for the incoming highway.</p></div>'
 
@@ -24,7 +24,7 @@ let text_7='<div><p>Red Hook was marked as “hazardous” and thus <span style=
 
 let text_8 ='<p>These documents, now known as the “redlining” maps, would dictate America’s urban planning policies, resulting in economic inequality and residential segregation.</p>'+
 
-"<p>“It's crystal clear the role that race,and on a highly lesser extent, ethnicity plays in it,” said Dr. Rober Nelson, director of America Panorama: An Atlas of United States History at the University of Richmond. “You did have this hierarchy of ethnic populations, and they’re not all treated the same.” <p/>" +
+"<p>“It's crystal clear the role that race, and on a highly lesser extent, ethnicity plays in it,” said Dr. Robert Nelson, director of America Panorama: An Atlas of United States History at the University of Richmond. “You did have this hierarchy of ethnic populations, and they’re not all treated the same.” <p/>" +
 
 "<p>Take European immigrant communities as an example. Nelson explained that HOLC tended to give higher grades to immigrant communities coming from Western and Protestant Europe, while Eastern and Southern Europe or Catholic countries tend to receive lower grades. Black neighborhoods were also redlined regardless of their socioeconomic status.</p>"+
 
