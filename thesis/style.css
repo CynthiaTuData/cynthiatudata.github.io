@@ -4,9 +4,20 @@ body {
     padding:0;
     background-color:#fbf9ef;
 }
-a, a:hover, a:visited {
-    color: #0071bc;
-}
+
+a:hover {
+    opacity:  70%;
+   }
+ 
+   a:link {
+     color:#42280e;
+     background-color: transparent;
+     text-decoration: underline;
+   }
+ 
+   a {
+       color:#42280e; ;
+   }
 
 .content{
     position:relative;
@@ -102,7 +113,7 @@ p {
     font-family:  'Merriweather', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     font-style: light;
-    font-weight: light;
+    /* font-weight: light; */
     letter-spacing: normal;
     line-height: 170%;
     color:  #42280e;
@@ -130,7 +141,8 @@ h4{
     line-height: 20px;
     color:  #42280e;
     margin-top: 2px;
-	text-align: center;
+	text-align: match-parent;
+    display:block
   }
 
  #data-diary{
@@ -165,6 +177,7 @@ h4{
     max-width: 650px;
     min-width: 280px;
     max-height: auto;
+    display:block
 }
 .street-container{
     display:flex;
