@@ -9,7 +9,7 @@ let text_2 = ''
 
 let text_3 = "<div><p>When inspectors stepped into Mr. Berggren's machine shop to examine the condition, 'machines, lathes and drills, weighing hundreds of pounds, were still whirling.' Berggren appealed for an extension as he struggled to have the power installed at the new site.</p></div>"
 
-let text_4 = '<div><p>Between 2nd Avenue and 3rd Avenue, the entire block north of Hamilton Avenue were demolished.</p> <p>One of the tenants, Mary E. Feeney, had lived in the tenement on 5 16St for 50 years. She was permitted to vacate her home by August 5th— two weeks after the deadline.</p></div>'
+let text_4 = '<div><p>Between 2nd Avenue and 3rd Avenue, the entire block north of Hamilton Avenue was demolished.</p> <p>One of the tenants, Mary E. Feeney, had lived in the tenement on 5 16St for 50 years. She was permitted to vacate her home by August 5th— two weeks after the deadline.</p></div>'
 
 let text_5 ='<div><img id="video" src="media/banner-vid.gif"style="filter: drop-shadow(0 0 0.1rem black);"><figcaption>MTA Bridges & Tunnels Special Archive</figcaption><p>Along Hamilton Avenue, about 1,000 residents were evicted, and some 400 dwellings were razed to make way for the incoming highway.</p></div>'
 
